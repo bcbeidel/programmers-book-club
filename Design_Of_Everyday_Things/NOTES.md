@@ -1,6 +1,4 @@
-##Title: The Design of Everyday Things
-##Author: Don Norman
----
+# _Design of everyday things_ by Don Norman
 #Chapter: The Psycology Of Everyday Actions
 ###Falsely Blaming Yourself
 >If an error is possible, someone will make it. The designer must assume that all possible errors will occur and design so as to minimize the chance of the error in the first place, or its effects once it gets made. Errors should be easy to detect, they should have minimal consequences, and, if possible, their effects should be reversible.

@@ -2,9 +2,7 @@ Programmer's Book Club
 =======
 
 This is a collection of notes, discussion questions, exercises on books that have some pertinance to developing quality, value driven software.
-=======
 
-=======
 # Reading List
 #### Software - Technology Agnostic
 * [_Clean Code_ by Robert Martin](/Clean_Code/NOTES.md)
@@ -16,7 +14,7 @@ This is a collection of notes, discussion questions, exercises on books that hav
 * _Structure and Interpretation of Computer Programs_ by Harold Abelson and Gerald Jay Sussman with Julie Sussman [[LINK]](http://mitpress.mit.edu/sicp/full-text/book/book.html)
 
 ####Design
-* _The Design of Everyday Things_ by Don Norman [[NOTES]](../master/Design_Of_Everyday_Things/notes.md)
+* [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/NOTES.md) 
 
 #### Software - Technology Specific
 ##### Scala
@@ -32,7 +30,6 @@ This is a collection of notes, discussion questions, exercises on books that hav
 ##### AngularJS
 * _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/)
 
----
 
 #### Other 
 * _The Lean Startup_ by Eric Ries
