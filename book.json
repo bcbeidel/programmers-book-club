@@ -1,14 +1,11 @@
 {
-    "plugins": ["disqus", "richquotes"],
+    "plugins": [],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "BUCHNAME"
-        }
     },
     "links": {
         "home": null,
 
-        "about": "https://www.xing.com/profile/Bjoern_Schotte",
+        "about": null,
         "issues": null,
         "edit": null,
 
