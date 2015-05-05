@@ -5,7 +5,7 @@ This is a collection of notes, discussion questions, exercises on books that hav
 
 # Reading List
 #### Software - Technology Agnostic
-* [_Clean Code_ by Robert Martin](/Clean_Code/NOTES.md)
+* [_Clean Code_ by Robert Martin](/Clean_Code/main.md)
 * _Domain Driven Design_ by Eric Evans
 * _Refactoring_ by Martin Fowler
 * _Economics of Software Quality_ by Capers Jones and Oliver Bonsingour
