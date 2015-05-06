@@ -3,7 +3,8 @@
 Bad code is expensive to maintain, modify and migrate from.  Clean code is less expensive to maintain and modify.  Time spent 'wading' through bad code is time lost to otherwise productive pursuits.
 
 ___
-#### Key Takeaways
+
+#### Key Takeaways:
 1. **Bad code is expensive to maintain.**  As we come back to make changes, it is harder to understand the impact of our changes in bad code making the changes take longer (and are more expensive)
 
 2. **'Clean Code'** can have many definitions but some attributes from text included:
@@ -17,6 +18,7 @@ ___
 	* __We spend more time reading code than writing it.__  (10:1 ratio p.13)
 	* When touching code, quick comprehension is key, 'making it easier to read actually makes it easier to write' (p.14)
 
-#### Potential Discussion Questions:
+___
 
-**[Question]** There are an abundance of definitions of what defines 'Clean Code', do any in particular seem more or less pertinent to you?  Do any of these seem dated?
+#### Potential Discussion Questions:
+* There are an abundance of definitions of what defines 'Clean Code', do any in particular seem more or less pertinent?  Do any of them seem dated, or dependent upon limitations no longer present in modern languages?

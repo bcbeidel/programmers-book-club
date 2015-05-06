@@ -3,7 +3,8 @@
 **Good names are important.**  Clear intent of code by way of deliberate naming saves time when coming back to change code. __(i.e. the reduction of cost of task switching through faster comprehension)__
 
 ___
-#### Key Takeaways
+
+#### Key Takeaways:
 1. **A good name answers the following questions:**
 	* Why does it exist?
 	* What does it do?
@@ -18,3 +19,11 @@ ___
 	* **Avoid colloquialisms, turn-a-phrase, or puns.**  If it requires a specific background to understand it muddles the meaning
 	* **One Word One Concept.**  Consitent verbage for concepts keeps it simple when switching around in code.
 	* **Provides *sufficient* not *excessive* context**
+
+___
+
+#### Potential Discussion Questions:
+
+* Are there any tools or methods you use to help define your common vocabulary for a project?  
+* In situations where this overlapp between 'Domain' and 'Techincal' keywords, how do you ensure there is no confusion?  Can you describe any specific scenarios and how the overlap was handled them well (or poorly)?
+* Are there any qualities of 'good' names that were mentioned in this chapter that don't seem to provide dated guidance? Why?

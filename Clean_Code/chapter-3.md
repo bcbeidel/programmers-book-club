@@ -30,3 +30,10 @@ The longer, more complex, and more convoluted a function, the more difficult the
 * Doesn't repeat another function (DRY)
 * Extracts Try Catch Blocks into functions of their own.
 	> * Potential Exercise:  Provide an example of a nasty pseudo-code function and then have a subsequently clean / extracted try catch for quick discussion.
+
+___
+
+#### Potential Discussion Questions:
+
+* The primary driving force in this chapter lends itself to small, focused functions.  Are there any instances where longer functions are more commonplace or perhaps even appropriate?
+* Are there any other themes or rules of thumb that would complement the rules outlined in this chapter?	
