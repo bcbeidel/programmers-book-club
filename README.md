@@ -1,10 +1,11 @@
-Programmer's Book Club
-=======
+#Programmer's Book Club
+This is a collection of notes, discussion questions, exercises on books that have been recommend for developing quality, value driven software.  The intent is to read through a series of texts glean the most valuable parts, and provide a common lexicon for those interested in writing better software.
 
-This is a collection of notes, discussion questions, exercises on books that have some pertinance to developing quality, value driven software.
+This is by no measure a comprehensive list, merely a collection of things that have been recommended to me.
 
-# Reading List
-#### Software - Technology Agnostic
+___
+
+#### Software Books - Technology Agnostic
 * [_Clean Code_ by Robert Martin](/Clean_Code/main.md)
 * _Domain Driven Design_ by Eric Evans
 * _Refactoring_ by Martin Fowler
@@ -13,26 +14,32 @@ This is a collection of notes, discussion questions, exercises on books that hav
 * _Growing Object-Oriented Software, Guided By Tests_ By Steve Freeman and Nat Pryce
 * _Structure and Interpretation of Computer Programs_ by Harold Abelson and Gerald Jay Sussman with Julie Sussman [[LINK]](http://mitpress.mit.edu/sicp/full-text/book/book.html)
 
-####Design
+#### Design Books
 * [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/main.md) 
 
-#### Software - Technology Specific
-##### Scala
-* _Scala for the Impatient_ by Cay Horstmann
+#### Software Books - Technology Specific
+* Angular.JS
+	* _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/) 
+* Javascript
+	* _Javascript: The Definitive Guide_ by David Flanagan
+* MongoDB
+	* _The Little MongoDB Book_ [[LINK]](http://openmymind.net/mongodb.pdf)
+* Node.JS
+	* _The Node Beginner Book: A comprehensive Node.js tutorial_ [[LINK]](https://leanpub.com/nodebeginner)
+	* _Hands-On Node.JS_ [[LINK]](https://leanpub.com/hands-on-nodejs)
+* PHP
+	* _Laravel: Code Bright_ by Dayle Rees
+* Python
+	* _Programming Python_ by Mark Lutz
+	* _The Python Tutorial_ [[LINK]](https://leanpub.com/python-tutorial-27)
+	* _Real Python_ [[LINK]](https://realpython.com/)
+* Scala
+	* _Scala for the Impatient_ by Cay Horstmann
 
-##### Python
-* _Real Python_ [[LINK]](https://realpython.com/)
-* _Programming Python_ by Mark Lutz
-
-##### PHP/Laravel
-* _Laravel: Code Bright_ by Dayle Rees
-
-##### AngularJS
-* _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/)
-
-
-#### Other 
+#### Other Recommended Books
 * _The Lean Startup_ by Eric Ries
 * _The Social Animal_ by David Brooks
 * _Thinking Fast And Slow_ by Daniel Kahneman
 * _The Signal and the Noise_ by Nate Silver
+* _Cracking the Coding Interview_ by Gaylee Laakmann
+* _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
