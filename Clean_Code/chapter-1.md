@@ -1,6 +1,6 @@
 ### Chapter One: Clean Code
 #### Short Synopsis: 
-**Good names are important.**  Clear intent of code by way of deliberate naming saves time when coming back to change code. __(i.e. the reduction of cost of task switching through faster comprehension)__
+Bad code is expensive to maintain, modify and migrate from.  Clean code is less expensive to maintain and modify.  Time spent 'wading' through bad code is time lost to otherwise productive pursuits.
 
 ___
 #### Key Takeaways
