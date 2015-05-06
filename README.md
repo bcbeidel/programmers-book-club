@@ -14,7 +14,7 @@ This is a collection of notes, discussion questions, exercises on books that hav
 * _Structure and Interpretation of Computer Programs_ by Harold Abelson and Gerald Jay Sussman with Julie Sussman [[LINK]](http://mitpress.mit.edu/sicp/full-text/book/book.html)
 
 ####Design
-* [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/NOTES.md) 
+* [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/main.md) 
 
 #### Software - Technology Specific
 ##### Scala

@@ -1,17 +1,21 @@
 ### Chapter One: Clean Code
+#### Short Synopsis: 
+**Good names are important.**  Clear intent of code by way of deliberate naming saves time when coming back to change code. __(i.e. the reduction of cost of task switching through faster comprehension)__
+
+___
 #### Key Takeaways
 1. **Bad code is expensive to maintain.**  As we come back to make changes, it is harder to understand the impact of our changes in bad code making the changes take longer (and are more expensive)
 
 2. **'Clean Code'** can have many definitions but some attributes from text included:
-> * Can be read and modfied by someone other than the the origional author
-> * The intent of the code is clear.  There are no suprises when looking at methods or objects.  I.E. you get what you are expecting
-> * All components of the code, classes, functions etc... are focused on doing one thing and doing it well.
-> * Includes and runs tests
-> * Does not create excessively complex abstractions, and limits the number of classes and objects
+	* Can be read and modfied by someone other than the the origional author
+	* The intent of the code is clear.  There are no suprises when looking at methods or objects.  I.E. you get what you are expecting
+	* All components of the code, classes, functions etc... are focused on doing one thing and doing it well.
+	* Includes and runs tests
+	* Does not create excessively complex abstractions, and limits the number of classes and objects
 
 3. **The Boy Scout Rule:** _'Try and leave this world a little better than you found it...'_
-> * We spend more time reading code than writing it.  (10:1 ratio p.13)
-> * When touching code, quick comprehension is key, 'making it easier to read actually makes it easier to write' (p.14)
+	* __We spend more time reading code than writing it.__  (10:1 ratio p.13)
+	* When touching code, quick comprehension is key, 'making it easier to read actually makes it easier to write' (p.14)
 
 #### Potential Discussion Questions:
 
