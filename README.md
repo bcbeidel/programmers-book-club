@@ -13,6 +13,9 @@ ___
 * _The Pragmatic Programmer_ by Andrew Hunt and David Thomas
 * _Growing Object-Oriented Software, Guided By Tests_ By Steve Freeman and Nat Pryce
 * _Structure and Interpretation of Computer Programs_ by Harold Abelson and Gerald Jay Sussman with Julie Sussman [[LINK]](http://mitpress.mit.edu/sicp/full-text/book/book.html)
+* _Restful APIs_ by Leonard Richardson and Mike Amundsen
+* _Extreme Programming Explained: Embrace Change_ by Kent Beck
+* _User Stories Applied: For Agile Software Development_ by Mike Cohn
 
 #### Design Books
 * [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/main.md) 
@@ -30,9 +33,13 @@ ___
 * PHP
 	* _Laravel: Code Bright_ by Dayle Rees
 * Python
+	* _Learn Python the Hard Way_ [[LINK]](http://learnpythonthehardway.org/)
 	* _Programming Python_ by Mark Lutz
 	* _The Python Tutorial_ [[LINK]](https://leanpub.com/python-tutorial-27)
 	* _Real Python_ [[LINK]](https://realpython.com/)
+* Ruby
+	* _Learn Ruby The Hard Way_ [[LINK]](http://learncodethehardway.org/ruby/)
+	* _Ruby on Rails Tutorials_ [[LINK]](https://www.railstutorial.org/)
 * Scala
 	* _Scala for the Impatient_ by Cay Horstmann
 
@@ -43,3 +50,5 @@ ___
 * _The Signal and the Noise_ by Nate Silver
 * _Cracking the Coding Interview_ by Gaylee Laakmann
 * _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
+* _The Goal_ By Eliyahu Goldratt
+* _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
