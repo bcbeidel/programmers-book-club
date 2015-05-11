@@ -5,7 +5,7 @@ This is by no measure a comprehensive list, merely a collection of things that h
 
 ___
 
-#### Software Books - Technology Agnostic
+#### Software Quality Books - Technology Agnostic
 * [_Clean Code_ by Robert Martin](/Clean_Code/main.md)
 * _Domain Driven Design_ by Eric Evans
 * _Refactoring_ by Martin Fowler
@@ -17,8 +17,12 @@ ___
 * _Extreme Programming Explained: Embrace Change_ by Kent Beck
 * _User Stories Applied: For Agile Software Development_ by Mike Cohn
 
-#### Design Books
+#### Design and Usability
 * [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/main.md) 
+* _Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems_ by Steve Krug
+* _Don't Make Me Think! A Common Sense Approach to Web Usability_ by Steve Krug
+* _Hooked: How to Build Habit-Forming Products_ by Nir Eyal
+
 
 #### Software Books - Technology Specific
 * Angular.JS
