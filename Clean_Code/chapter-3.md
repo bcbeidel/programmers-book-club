@@ -9,20 +9,64 @@ The longer, more complex, and more convoluted a function, the more difficult the
 * Are Small.  2-5 lines.
 * "Functions Should Do One Thing.  They should do it well.  They should do it only." 
 	* This appears to be a more thoughtful implementation of the Don't Repeat Yourself (DRY) Principle
+* Try to use the 'TO' Paragraph as a level of composition.  A method should do a single thing and can be described in a simple paragraph as the example below (p. 35-36 from Clean Code)
 
+``` java
+public static String renderPageWithSetupsAndTeardowns(
+  PageData pageData, boolean isSuite) throws Exception {
+  if (isTestPage(pageData))
+    includeSetupAndTeardownPages(pageData, isSuite);
+  return pageData.getHtml();
+ }
 ```
-Potential Exercise: Generate a 'TO' paragraph to determine how many 'things' a particular method is doing.  
-For this, I believe two examples, one of a bad method.  And one of an unrelated good method.
-```
+> TO RenderPageWithSetupsAndTeardowns, we check to see whether the page is a test page and if so, we include the setups and teardowns. In either case we render the page in HTML. 
 
 * Contain a single level of abstraction
 	* Each method should read like a narrative, where each subsequent call is a 'single step' down into the story rather than a giant leap.
 * Avoids switch statements
-	* Switch statements inherently mean that a function is doing multiple things.  If you have to use a switch statement, try embedding the switch statement to generate one of a group of polymorphic classes (polymorphism).  (I.E. bury the switch logic that chooses which class is generated)
-
+	* Switch statements inherently mean that a function is doing multiple things.  If you have to use a switch statement, try embedding the switch statement to generate one of a group of polymorphic classes (polymorphism).  The example in the text uses employees who are paid in various ways and have different pay methods. Ultimately this is encouraging the logic that differentiates the employees to be buried in the final classes, rather than maintained at the higher level of inheritance.
+	
+##### Avoid Switch Statments - Bad Example (p. 38)
+``` Java
+public Money calculatePay(Employee e)
+throws InvalidEmployeeType {
+   switch (e.type) {
+     case COMMISSIONED:
+       return calculateCommissionedPay(e);
+     case HOURLY:
+       return calculateHourlyPay(e);
+     case SALARIED:
+       return calculateSalariedPay(e);
+     default:
+        throw new InvalidEmployeeType(e.type);
+   }
+ }
 ```
-Potential Exercise: I think the example that is provided is pretty clear on this one.  
-Perhaps if we were just to walk through it together.
+##### Avoid Switch Statments, use polymorphic classes (p. 39)
+``` Java
+public abstract class Employee {
+  public abstract boolean isPayday();
+  public abstract Money calculatePay();
+  public abstract void deliverPay(Money pay);
+}
+-----------------
+public interface EmployeeFactory {
+  public Employee makeEmployee(EmployeeRecord r) throws InvalidEmployeeType;
+}
+-----------------
+public class EmployeeFactoryImpl implements EmployeeFactory {
+  public Employee makeEmployee(EmployeeRecord r) throws InvalidEmployeeType {
+  switch (r.type) {
+    case COMMISSIONED:
+      return new CommissionedEmployee(r) ;
+    case HOURLY:
+      return new HourlyEmployee(r);
+    case SALARIED:
+      return new SalariedEmploye(r);
+    default:
+      throw new InvalidEmployeeType(r.type);
+  }
+}
 ```
 
 * Uses consistent, descriptive names
