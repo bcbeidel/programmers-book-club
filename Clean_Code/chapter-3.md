@@ -122,7 +122,7 @@ public class UserValidator {
 
 * Is not excessively complex (i.e. Reduces Cyclomatic Complexity)
 	* The more ways in or out of a function the more difficult it is to comprehend.
-___
+	* Recommended Talk: [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
 
 #### Potential Discussion Questions:
 
