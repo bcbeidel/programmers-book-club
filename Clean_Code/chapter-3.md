@@ -75,30 +75,49 @@ public class EmployeeFactoryImpl implements EmployeeFactory {
 * Limits the number of input arguments
 	* The more arguments that are involved to use a function the more room there is for interpretive error.
 	* Example (p.42):  AssertEquals(message, expected, actual) - If the order matters then keeping these in line is imperative to proper use, more arguments means more opportunity for interpretive error.
-	
-```
-Potential Exercise: Find examples of a dyadic and triadic method, and see how we can refactor into a form that takes fewer arguments (i.e. with some kind of argument object)
-```
-
 * Has No Side Effects
 	* __"Side effects are lies. Your function promises to do one thing, but it also does another hidden thing."__ (Side Effect) (p.44)
 	
-```
-Potential Exercise: Again, I think the example that is provided is pretty clear on this one.  
-Perhaps if we were just to walk through it together.
+``` java
+public class UserValidator {
+ private Cryptographer cryptographer;
+   public boolean checkPassword(String userName, String password) {
+     User user = UserGateway.findByName(userName);
+     if (user != User.NULL) {
+       String codedPhrase = user.getPhraseEncodedByPassword();
+       String phrase = cryptographer.decrypt(codedPhrase, password);
+       if ("Valid Password".equals(phrase)) {
+         Session.initialize();  // Initializing the session is the Side Effect!
+         return true;
+       }
+     }
+     return false;
+   }
+ }
 ```
 
 * Avoids Output Arguments
-
-```
-ToDo:  Find a clear example of the distinction between a return value and an output argument. This one is still fuzzy in my head. 
-```
-
 * Doesn't repeat another function (DRY)
-* Extracts Try Catch Blocks into functions of their own.
-
-```
-Potential Exercise:  Provide an example of a nasty pseudo-code function and then have a subsequently clean / extracted try catch for quick discussion.
+* Extracts Try Catch Blocks into functions of their own. See the example below:
+``` java
+ public void delete(Page page) {
+   try {
+     deletePageAndAllReferences(page); 
+   }
+   catch (Exception e) {
+     logError(e);
+   }
+ }
+ 
+ private void deletePageAndAllReferences(Page page) throws Exception {
+   deletePage(page);
+   registry.deleteReference(page.name);
+   configKeys.deleteKey(page.name.makeKey());
+ }
+ 
+ private void logError(Exception e) {
+   logger.log(e.getMessage());
+ }
 ```
 
 * Is not excessively complex (i.e. Reduces Cyclomatic Complexity)
