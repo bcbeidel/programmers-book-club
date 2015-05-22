@@ -6,6 +6,6 @@ Formatting.  Formatting.  Formatting.
 ___
 
 #### Key Takeaways:
-* Stuff.
+### Vertical Formatting
 * Things.
 * More Stuff and Things.
