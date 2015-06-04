@@ -6,6 +6,9 @@ The relationship between an object and a user that determines what actions are p
 # Constraint 
 A restriction that helps avoid errors.
 
+# Conceptual Affinity
+The degree to which to ideas are related.  Ideas that are closely related have greater conceptual affinity, those that are loosely related have less conceptual affinity.
+
 # Conceptual Model 
 An explanation, usually highly simplified, of how something works.
 
