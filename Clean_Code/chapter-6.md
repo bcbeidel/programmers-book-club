@@ -1,7 +1,7 @@
 ### Chapter Six:  Objects & Data Structures
 #### Short Synopsis: 
 
-Objects.  Objects.  Data.  Data.  Structures.  Structures.
+__Objects hide their data between abstractions and expose functions that operate on that data.  Data Structures expose their data and have no meaningful functions__
 
 ___
 
