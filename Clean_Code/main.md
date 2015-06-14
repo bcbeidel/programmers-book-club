@@ -6,3 +6,4 @@
 * [Chapter 4 - Comments](Chapter-4.md)
 * [Chapter 5 - Formatting](Chapter-5.md)
 * [Chapter 6 - Objects and Data Structures](Chapter-6.md)
+* [Chapter 7 - Error Handling](Chapter-7.md)

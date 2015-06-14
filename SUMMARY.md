@@ -10,5 +10,6 @@ Book Notes:
 	* [Comments](Clean_Code/chapter-4.md)
 	* [Formatting](Clean_Code/chapter-5.md)
 	* [Objects and Data Structures](Clean_Code/chapter-6.md)
+	* [Error Handling](Clean_Code/chapter-7.md)
 * [Design of Everyday Things](DOET/main.md)
 	* [The Psychopathology of Everyday Things](DOET/chapter-1.md)
