@@ -56,4 +56,4 @@ ___
 * _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
-* _The Challenger Sale_ by Matthew Dixon and Brent Adamson
+* [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger_Sale/main.md)

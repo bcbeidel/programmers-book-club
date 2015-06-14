@@ -3,6 +3,8 @@
 Book Notes:
 
 * [Glossary](GLOSSARY.md)
+* [The Challenger Sale](Challenger_Sale/main.md)
+	* [The Evolving Journey of Solution Selling](Challenger_Sale/chapter-1.md)
 * [Clean Code](Clean_Code/main.md)
 	* [Clean Code](Clean_Code/chapter-1.md)
 	* [Meaningful Names](Clean_Code/chapter-2.md)
@@ -13,3 +15,4 @@ Book Notes:
 	* [Error Handling](Clean_Code/chapter-7.md)
 * [Design of Everyday Things](DOET/main.md)
 	* [The Psychopathology of Everyday Things](DOET/chapter-1.md)
+
