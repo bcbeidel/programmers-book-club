@@ -1,12 +1,9 @@
-#Programmer's Book Club
-This is a collection of notes, discussion questions, exercises on books that have been recommend for developing quality, value driven software.  The intent is to read through a series of texts glean the most valuable parts, and provide a common lexicon for those interested in writing better software.
-
-This is by no measure a comprehensive list, merely a collection of things that have been recommended to me.
-
+#notes
+A collection of notes from books, articles, trainings and other sources. Read something. 
 ___
 
 #### Software Quality Books - Technology Agnostic
-* [_Clean Code_ by Robert Martin](/Clean_Code/main.md)
+* [_Clean Code_ by Robert Martin](/Clean-Code/main.md)
 * _Domain Driven Design_ by Eric Evans
 * _Refactoring_ by Martin Fowler
 * _Economics of Software Quality_ by Capers Jones and Oliver Bonsingour
@@ -18,7 +15,8 @@ ___
 * _User Stories Applied: For Agile Software Development_ by Mike Cohn
 
 #### Design and Usability
-* [_The Design of Everyday Things_ by Don Norman](Design_Of_Everyday_Things/main.md) 
+* [_The Design of Everyday Things_ by Don Norman](DOET/main.md)
+* [_Material Design_ published by Google](Material-Design/main.md)
 * _Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems_ by Steve Krug
 * _Don't Make Me Think! A Common Sense Approach to Web Usability_ by Steve Krug
 * _Hooked: How to Build Habit-Forming Products_ by Nir Eyal
@@ -26,7 +24,7 @@ ___
 
 #### Software Books - Technology Specific
 * Angular.JS
-	* _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/) 
+	* _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/)
 * Javascript
 	* _Javascript: The Definitive Guide_ by David Flanagan
 * MongoDB
@@ -56,4 +54,4 @@ ___
 * _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
-* [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger_Sale/main.md)
+* [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
