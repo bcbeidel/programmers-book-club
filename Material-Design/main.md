@@ -15,16 +15,22 @@ Content is independent of material.  It is applied to material and provides the 
 * Content does not add thickness to Material
 * Content can behave independently of the Material, but is limited within the bounds of the Material.
 
-
 #### Physical Attributes of Material
-Material is solid.  
-No two peices of material can occupy the same space (i.e. use elevation to seperate)
-Material cannot pass through other Material
-Material can transform
-Material can change shape along the x and y axis
-Material cannot bend or fold
-Material can split, heal, merge with other Material
-Material Movement
-Material can be generated or destroyed from anywhere
-Material can move along any axis
-Movement along the z-axis normally indicates user interaction
+Getting a little more tactical when thinking about the attributes of Material, Google has key points to consider
+
+* Material is solid.  
+* No two pieces of material can occupy the same space (i.e. use elevation to separate)
+* Material cannot pass through other Material
+* Material can transform
+* Material can change shape along the x and y axis
+* Material cannot bend or fold
+* Material can split, heal, merge with other Material
+
+#### [Moving material]((https://www.google.com/design/spec/what-is-material/material-properties.html#material-properties-transforming-material))
+When moving material through space, Google had additional suggestions.
+
+* Material can be generated or destroyed from anywhere
+* Material can move along any axis
+* Movement along the z-axis normally indicates user interaction
+
+The rest of the text is focused on being a living, document to provide tactile examples of how to implement these core concepts into web and mobile applications.  Check out their content at https://www.google.com/design/spec/material-design/introduction.html
