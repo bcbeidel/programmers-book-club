@@ -25,6 +25,7 @@ ___
 #### Software Books - Technology Specific
 * Angular.JS
 	* _ng-book: The Complete Book On Angular JS_ by Ari Lerner [[LINK]](https://www.ng-book.com/)
+	* _ng-book2: The Complete Book on Angular JS 2_ by Ari Lerner [[LINK]](https://www.ng-book.com/2/)
 * Javascript
 	* _Javascript: The Definitive Guide_ by David Flanagan
 * MongoDB
