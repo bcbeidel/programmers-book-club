@@ -40,6 +40,7 @@ ___
 	* _Programming Python_ by Mark Lutz
 	* _The Python Tutorial_ [[LINK]](https://leanpub.com/python-tutorial-27)
 	* _Real Python_ [[LINK]](https://realpython.com/)
+	* _Automate the Boring Stuff with Python_ [[LINK]](https://automatetheboringstuff.com/)
 * Ruby
 	* _Learn Ruby The Hard Way_ [[LINK]](http://learncodethehardway.org/ruby/)
 	* _Ruby on Rails Tutorials_ [[LINK]](https://www.railstutorial.org/)
