@@ -57,3 +57,4 @@ ___
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
 * [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
+* _Predictable Revenue_ by Aaron Ross
