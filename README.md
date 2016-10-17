@@ -46,6 +46,11 @@ ___
 	* _Ruby on Rails Tutorials_ [[LINK]](https://www.railstutorial.org/)
 * Scala
 	* _Scala for the Impatient_ by Cay Horstmann
+	
+#### Computer Networking
+* Introductory Materials
+	* _Introduction to Networking: How the Internet Works_ By Dr. Charles R Severance (2015) [[LINK]](http://do1.dr-chuck.net/net-intro/EN_us/net-intro.pdf)
+	* _Tubes: A Journey to the Center of the Internet_ by Andrew Blum (2013) [[LINK]](https://www.amazon.com/Tubes-Journey-Internet-Andrew-Blum/dp/0061994952)
 
 #### Other Recommended Books
 * _The Lean Startup_ by Eric Ries
