@@ -1,6 +1,6 @@
 # _The Tao of Pooh_ by Benjamin Hoff
 
-## _The How of Pooh?_
+## Chapter: _The How of Pooh?_ (p.1-7)
 ### _"The Vinegar Tasters"_
 In Eastern art, there is an allegorical image of three men dipping their fingers into a vat of vinegar.  The image shows the three men who have dipped their fingers into the vat and each with a unique reaction.  Each man represents one of the masters of an Eastern Philosophy, specifically Confucius   (Confucianism), Buddha (Buddhism) and Lao-tse (Taoism).  (p.2)
 
@@ -26,3 +26,17 @@ Lao-Tse is smiling in the image, despite having tasted the same vinegar as the o
 ##### __ ** Tao - "The Way" ** __
 * The universe cannot be described in words; but a quiet understanding is possible.
 > A subtle sense of humor is apparent even in the most profound Taoist writings
+
+## Chapter: _The Tao of Who?_ (p. 9-21)
+#### P'u - _ "The Uncarved Block" _ 
+> The Essence of the principle of the Uncarved Block is that things in their original simplicity contain their own natural power, power that is easily spoiled and lost when that simplicity is changed. (p. 10)
+
+One common definition is 'natural, simple, plain or honest.'  The author is keen to point out that simplemindedness does not equate to stupidity. In fact, he looks to the other characters in the 'Winnie The Pooh' stories as the embodiment of less ideal approaches to life.
+
+* Rabbit represents the use of intelligence to for the sake of seeming clever
+* Eeyore's attitude and constant complaining is an impediment to progressing through life
+* Owl represents the pursuit of knowledge for the sake of being perceived as wise
+
+> When you discard arrogance, complexity, and a few other things that get in the way, sooner or later you will discover that simple, childlike and mysterious secret known to those of the Uncarved Block: Life is Fun. (p. 20)
+
+With the state of the Uncarved Block comes the opportunity to embrace the wide-eyed, roll-with-the-punches approach to life with sprite-like enthusiasm.
