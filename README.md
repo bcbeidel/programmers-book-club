@@ -53,6 +53,10 @@ ___
 	* _Introduction to Networking: How the Internet Works_ By Dr. Charles R Severance (2015) [[LINK]](http://do1.dr-chuck.net/net-intro/EN_us/net-intro.pdf)
 	* _Tubes: A Journey to the Center of the Internet_ by Andrew Blum (2013) [[LINK]](https://www.amazon.com/Tubes-Journey-Internet-Andrew-Blum/dp/0061994952)
 
+#### Sales and Growth
+* [_Traction: How Any Startup Can Achieve Explosive Customer Growth_ by Gabriel Weinberg and Justin Mares](Traction/main.md)
+* [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
+
 #### Other Recommended Books
 * _The Social Animal_ by David Brooks
 * _Thinking Fast And Slow_ by Daniel Kahneman
