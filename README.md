@@ -1,5 +1,5 @@
 #notes
-A collection of notes from books, articles, trainings and other sources. Read something. 
+A collection of notes from books, articles, trainings and other sources. Read something.
 ___
 
 #### Software Quality Books - Technology Agnostic
@@ -61,6 +61,7 @@ ___
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
 * [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
+* [_Zen and the Art of Motorcycle Maintenance by Robert Pirsig](Zen-And-Motorcycle-Maintenance/main.md)
 
 #### Decision-Making, Psycology, Philosophy, and other good reads
 * _The Social Animal_ by David Brooks
