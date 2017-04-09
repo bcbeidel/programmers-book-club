@@ -24,6 +24,9 @@ Communicates where the action should take place.
 # System Image.
 Needs Definition.
 
+# Traction
+Quantitative evidence of customer demand.
+
 # Mapping
 The spatial correspondence between the layout of the controls of a system and the devices being controlled. (ex. car seat adjustment control)
 
