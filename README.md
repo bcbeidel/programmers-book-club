@@ -60,6 +60,7 @@ ___
 * _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
+* [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
 
 #### Decision-Making, Psycology, Philosophy, and other good reads
 * _The Social Animal_ by David Brooks
