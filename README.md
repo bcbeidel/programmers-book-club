@@ -53,13 +53,25 @@ ___
 	* _Introduction to Networking: How the Internet Works_ By Dr. Charles R Severance (2015) [[LINK]](http://do1.dr-chuck.net/net-intro/EN_us/net-intro.pdf)
 	* _Tubes: A Journey to the Center of the Internet_ by Andrew Blum (2013) [[LINK]](https://www.amazon.com/Tubes-Journey-Internet-Andrew-Blum/dp/0061994952)
 
+#### Other Recommended Books
+* _The Social Animal_ by David Brooks
+* _Thinking Fast And Slow_ by Daniel Kahneman
+* _The Signal and the Noise_ by Nate Silver
+* _Cracking the Coding Interview_ by Gaylee Laakmann
+
 #### Startups, Sales, Marketing, Project Management and other business related
 * [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
 * _The Lean Startup_ by Eric Ries
 * _Predictable Revenue_ by Aaron Ross
 * _The Mythical Man-Month: Essays on Software Engineering_ by Frederick Brooks
+
+#### Process
 * _The Goal_ By Eliyahu Goldratt
 * _The Phoenix Project_ by Gene Kim, George Spafford, and Kevin Behr
+* _The Lean Startup_ by Eric Ries
+
+#### Sales
+* [_Predictable Revenue_ by Aaron Ross & Marylou Tyler](Predictable-Revenue/main.md)
 * [_The Challenger Sale_ by Matthew Dixon and Brent Adamson](Challenger-Sale/main.md)
 * [_Zen and the Art of Motorcycle Maintenance by Robert Pirsig](Zen-And-Motorcycle-Maintenance/main.md)
 

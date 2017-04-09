@@ -1,15 +1,15 @@
 Perceived meanings for key terms from readings.  
 
 # Affordance
-The relationship between an object and a user that determines what actions are possible. 
+The relationship between an object and a user that determines what actions are possible.
 
-# Constraint 
+# Constraint
 A restriction that helps avoid errors.
 
 # Conceptual Affinity
 The degree to which to ideas are related.  Ideas that are closely related have greater conceptual affinity, those that are loosely related have less conceptual affinity.
 
-# Conceptual Model 
+# Conceptual Model
 An explanation, usually highly simplified, of how something works.
 
 # Cyclomatic Complexity
@@ -18,17 +18,35 @@ The cyclomatic complexity of a section of source code is the number of linearly 
 # Side Effect
 In computer science, a function or expression is said to have a side effect if, in addition to returning a value, it also modifies some state or has an observable interaction with calling functions or the outside world. (Source: Wikipedia)
 
-# Signifier 
+# Signifier
 Communicates where the action should take place.
 
-# System Image. 
+# System Image.
 Needs Definition.
 
-# Mapping 
+# Mapping
 The spatial correspondence between the layout of the controls of a system and the devices being controlled. (ex. car seat adjustment control)
 
 # Polymorphism
 In programming languages and type theory, polymorphism is the provision of a single interface to entities of different types. A polymorphic type is a type whose operations can also be applied to values of some other type, or types. (Source: Wikipedia)
 
-# Feedback 
+# Feedback
 Communicates the results of an action.
+
+# Sales Development Representative (or “SDR”)
+This is a Cold Calling 2.0 or “outbound” sales rep. Ideally they are specialized, just generating outbound leads. They neither close deals nor qualify inbound website leads.
+
+# Outbound Sales Rep
+Another term for an “SDR.”
+
+# Account Executive (or “AE”)
+A quota-carrying salesperson, whether they are an inside sales rep or in the field.
+
+# Market Response Rep (or “MRR”)
+An inside salesperson who only qualifies leads coming in from a website.
+
+# Sales Force Automation (or “SFA”)
+Software or internet-based services that sales teams use to manage all of their contacts and accounts, automate sales processes, and report on sales results.
+
+# Customer Relationship Management (or “CRM”)
+Software- or internet-based services that typically include Sales Force Automation functions plus features for marketing and customer service, so that all of the main ways a company interacts with customers is managed through a single system.

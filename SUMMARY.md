@@ -17,5 +17,6 @@ Notes:
 * [Design of Everyday Things](DOET/main.md)
 	* [The Psychopathology of Everyday Things](DOET/chapter-1.md)
 * [Google Material Design](Material-Design/main.md)
+* [Predictable Revenue](Predictable-Revenue/main.md)
 * [Zen and The Art of Motorcycle Maintenance by Robert Pirsig](Zen-And-Motorcycle-Maintenance/main.md)
 * [The Tao of Pooh](TOP/main.md)
