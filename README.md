@@ -68,8 +68,17 @@
 
 ## Decision-Making, Psychology, Philosophy, and other good reads
 
-* _The Social Animal_ by David Brooks
+
 * _Thinking Fast And Slow_ by Daniel Kahneman
 * _The Signal and the Noise_ by Nate Silver
 * _The Tao of Pooh_ by Benjamin Hoff 
+* _The Social Animal_ by David Brooks
 * _Zen and the Art of Motorcycle Maintenance by Robert Pirsig 
+
+## Communication, Storytelling, Presenting Data
+
+* _If I Understood You, Would I Have This Look On My Face?_ by Alan Alda
+* _Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations_ by Scott Berinato
+* _The Wall Street Journal Guide to Information Graphics: The Dos and Don'ts of Presenting Data, Facts, and Figures_ by Dona M. Wong
+* _The Visual Display of Quantitative Information_ by Edward Tufte
+* _Visualize This: The Flowing Data Guide to Design, Visualization, and Statistic_ by Nathan Yau
