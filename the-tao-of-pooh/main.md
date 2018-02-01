@@ -1,6 +1,6 @@
 # _The Tao of Pooh_ by Benjamin Hoff
 
-## Chapter: _The How of Pooh?_ (p.1-7)
+## Chapter: _The How of Pooh?_
 ### _"The Vinegar Tasters"_
 In Eastern art, there is an allegorical image of three men dipping their fingers into a vat of vinegar.  The image shows the three men who have dipped their fingers into the vat and each with a unique reaction.  Each man represents one of the masters of an Eastern Philosophy, specifically Confucius   (Confucianism), Buddha (Buddhism) and Lao-tse (Taoism).  (p.2)
 
@@ -23,11 +23,11 @@ Lao-Tse is smiling in the image, despite having tasted the same vinegar as the o
 * _"The further that man moves from the universal laws, the more struggles that are inevitable"_
 * The world is not a setter of traps, but instead a teacher of valuable lessons
 
-##### __ ** Tao - "The Way" ** __
+##### Tao "The Way"  
 * The universe cannot be described in words; but a quiet understanding is possible.
 > A subtle sense of humor is apparent even in the most profound Taoist writings
 
-## Chapter: _The Tao of Who?_ (p. 9-21)
+## Chapter: _The Tao of Who?_
 #### P'u - _ "The Uncarved Block" _ 
 > The Essence of the principle of the Uncarved Block is that things in their original simplicity contain their own natural power, power that is easily spoiled and lost when that simplicity is changed. (p. 10)
 

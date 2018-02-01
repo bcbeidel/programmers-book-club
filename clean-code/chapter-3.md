@@ -1,14 +1,17 @@
-###Chapter Three: Functions
-#### Short Synopsis: 
+# Chapter Three: Functions
+
+## Synopsis
+
 The longer, more complex, and more convoluted a function, the more difficult the function is to understand and change.
 
 ---
 
-#### Key Takeaways: 
-#####Qualities of Good Functions:
+## Key Takeaways
+
+### Qualities of Good Functions:
 * Are Small.  2-5 lines.
 * "Functions Should Do One Thing.  They should do it well.  They should do it only." 
-	* This appears to be a more thoughtful implementation of the Don't Repeat Yourself (DRY) Principle
+    * This appears to be a more thoughtful implementation of the Don't Repeat Yourself (DRY) Principle
 * Try to use the 'TO' Paragraph as a level of composition.  A method should do a single thing and can be described in a simple paragraph as the example below (p. 35-36 from Clean Code)
 
 ``` java
@@ -22,11 +25,12 @@ public static String renderPageWithSetupsAndTeardowns(
 > TO RenderPageWithSetupsAndTeardowns, we check to see whether the page is a test page and if so, we include the setups and teardowns. In either case we render the page in HTML. 
 
 * Contain a single level of abstraction
-	* Each method should read like a narrative, where each subsequent call is a 'single step' down into the story rather than a giant leap.
+    * Each method should read like a narrative, where each subsequent call is a 'single step' down into the story rather than a giant leap.
 * Avoids switch statements
-	* Switch statements inherently mean that a function is doing multiple things.  If you have to use a switch statement, try embedding the switch statement to generate one of a group of polymorphic classes (polymorphism).  The example in the text uses employees who are paid in various ways and have different pay methods. Ultimately this is encouraging the logic that differentiates the employees to be buried in the final classes, rather than maintained at the higher level of inheritance.
-	
-##### Avoid Switch Statments - Bad Example (p. 38)
+    * Switch statements inherently mean that a function is doing multiple things.  If you have to use a switch statement, try embedding the switch statement to generate one of a group of polymorphic classes (polymorphism).  The example in the text uses employees who are paid in various ways and have different pay methods. Ultimately this is encouraging the logic that differentiates the employees to be buried in the final classes, rather than maintained at the higher level of inheritance.
+    
+### Avoid Switch Statements - Bad Example (p. 38)
+
 ``` Java
 public Money calculatePay(Employee e)
 throws InvalidEmployeeType {
@@ -42,7 +46,8 @@ throws InvalidEmployeeType {
    }
  }
 ```
-##### Avoid Switch Statments, use polymorphic classes (p. 39)
+### Avoid Switch Statments, use polymorphic classes (p. 39)
+
 ``` Java
 public abstract class Employee {
   public abstract boolean isPayday();
@@ -70,14 +75,14 @@ public class EmployeeFactoryImpl implements EmployeeFactory {
 ```
 
 * Uses consistent, descriptive names
-	* Using carefully chosen and descriptive terms help reach the point where there are no surprises when reading the code, and the way a method is implemented matches the descriptive name, using terminology that is uniform across the project (i.e. a door, is a door, is a door).
-	* "You know you are working on clean code when each routine turns out to be pretty much what you expect."  -Ward Cunningham (p.11)
+    * Using carefully chosen and descriptive terms help reach the point where there are no surprises when reading the code, and the way a method is implemented matches the descriptive name, using terminology that is uniform across the project (i.e., a door, is a door, is a door).
+    * "You know you are working on clean code when each routine turns out to be pretty much what you expect."  -Ward Cunningham (p.11)
 * Limits the number of input arguments
-	* The more arguments that are involved to use a function the more room there is for interpretive error.
-	* Example (p.42):  AssertEquals(message, expected, actual) - If the order matters then keeping these in line is imperative to proper use, more arguments means more opportunity for interpretive error.
+    * The more arguments that are involved to use a function the more room there is for interpretive error.
+    * Example (p.42):  AssertEquals(message, expected, actual) - If the order matters then keeping these in line is imperative to proper use, more arguments means more opportunity for interpretive error.
 * Has No Side Effects
-	* __"Side effects are lies. Your function promises to do one thing, but it also does another hidden thing."__ (Side Effect) (p.44)
-	
+    * __"Side effects are lies. Your function promises to do one thing, but it also does another hidden thing."__ (Side Effect) (p.44)
+    
 ``` java
 public class UserValidator {
  private Cryptographer cryptographer;
@@ -98,7 +103,7 @@ public class UserValidator {
 
 * Avoids Output Arguments
 * Doesn't repeat another function (DRY)
-* Extracts Try Catch Blocks into functions of their own. See the example below:
+* Extracts Try-Catch Blocks into functions of their own. See the example below:
 ``` java
  public void delete(Page page) {
    try {
@@ -120,11 +125,13 @@ public class UserValidator {
  }
 ```
 
-* Is not excessively complex (i.e. Reduces Cyclomatic Complexity)
-	* The more ways in or out of a function the more difficult it is to comprehend.
-	* Recommended Talk: [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
+* Is not excessively complex (i.e., Reduces Cyclomatic Complexity)
+    * The more ways in or out of a function, the more difficult it is to comprehend.
+    * Recommended Talk: [Simple Made Easy](http://www.infoq.com/presentations/Simple-Made-Easy)
 
-#### Potential Discussion Questions:
+---
+
+## Potential Discussion Questions:
 
 * The primary driving force in this chapter lends itself to small, focused functions.  Are there any instances where longer functions are more commonplace or perhaps even appropriate?
 * Are there any other themes or rules of thumb that would complement the rules outlined in this chapter?
