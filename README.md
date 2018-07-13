@@ -14,6 +14,7 @@
 * _User Stories Applied: For Agile Software Development_ by Mike Cohn
 * _Cracking the Coding Interview_ by Gaylee Laakmann
 
+
 ## Product Design and Usability
 
 * _The Design of Everyday Things_ by Don Norman
@@ -68,7 +69,6 @@
 
 ## Decision-Making, Psychology, Philosophy, and other good reads
 
-
 * _Thinking Fast And Slow_ by Daniel Kahneman
 * _The Signal and the Noise_ by Nate Silver
 * _The Tao of Pooh_ by Benjamin Hoff 
@@ -82,3 +82,7 @@
 * _The Wall Street Journal Guide to Information Graphics: The Dos and Don'ts of Presenting Data, Facts, and Figures_ by Dona M. Wong
 * _The Visual Display of Quantitative Information_ by Edward Tufte
 * _Visualize This: The Flowing Data Guide to Design, Visualization, and Statistic_ by Nathan Yau
+
+## Recommended by others...to read and categorize...
+
+* _Rework_ by Jason Fried
