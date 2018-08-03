@@ -24,4 +24,6 @@ ___
 
 ## Potential Discussion Questions
 
-* There are an abundance of definitions of what defines 'Clean Code,' do any, in particular, seem more or less pertinent?  Do any of them seem dated, or dependent upon limitations no longer present in modern languages?
+* Of the multiple definitions for 'Clean Code' provided in the first chapter, did any definitions seem more or less relevant to you?  
+* Where there any recurring themes that stood out across multiple definitions?
+* What are some strategies that you have used to balance speed of delivery and code quality?
