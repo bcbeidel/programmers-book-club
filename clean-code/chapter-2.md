@@ -27,6 +27,6 @@ ___
 
 ## Potential Discussion Questions:
 
-* Are there any tools or methods you use to help define your common vocabulary for a project?  
+* Are there any tools or techniques you use to help define your common vocabulary for a project?  
 * In situations where this overlap between 'Domain' and 'Techincal' keywords, how do you ensure there is no confusion?  Can you describe any specific scenarios and how the overlap was handled them well (or poorly)?
 * Are there any qualities of 'good' names that were mentioned in this chapter that don't seem to provide dated guidance? Why?
