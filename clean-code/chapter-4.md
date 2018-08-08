@@ -17,4 +17,3 @@ ___
 ## Potential Discussion Questions
 
 - Are there scenarios outlined in this chapter that are appropriate variations for the use of comments?
-- 
