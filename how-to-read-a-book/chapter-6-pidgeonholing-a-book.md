@@ -52,4 +52,4 @@ Adler suggests 3 subdivisions of theoretical books: history, science, and philos
   - Bases argument on common experience
   - 'armchair thinking'
 
-> This does not mean that the philosopher is a pure thinker and the scientist is merely an observer.  Both have to observe and think, but they think about different sorts of observations.  And however they may have arrived at the conclusions that they want to prove, they prove them in different ways, the scientist by pointing to the results of his special experiences, the philosopher by pointing to experiences that are common to all.
+> This does not mean that the philosopher is a pure thinker and the scientist is merely an observer.  Both have to observe and think, but they think about different sorts of observations.  And however they may have arrived at the conclusions that they want to prove, they prove them in different ways, the scientist by pointing to the results of his special experiences, the philosopher by pointing to experiences that are common to all. (p. 72)
