@@ -23,4 +23,7 @@ Example:
 - "wealth" is a technical word for Adam Smith
 - "species" is a technical word for Darwin
 
-## Finding the meaning
+## Finding the meanings
+
+> You have to discover the meaning of a word you do not understand by using the meanings of the all the words in the context that you do understand (p. 106)
+
