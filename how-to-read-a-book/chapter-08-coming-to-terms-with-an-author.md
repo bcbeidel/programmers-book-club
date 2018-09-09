@@ -1,4 +1,4 @@
-# Coming to Terms with an Author
+# Chapter 8: Coming to Terms with an Author
 
 A term is the basic element of communicable knowledge.  A term is not a just word, it is a word or collection of words used to communicate a concept unambiguously.  An author might use many words to explain the same term (i.e., a many words to one term) or one word can be the vessel for many terms (i.e., a one word to many terms) but by identifying those key terms they can provide indications that you have discovered an important location in the book.
 

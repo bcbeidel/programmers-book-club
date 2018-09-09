@@ -1,4 +1,4 @@
-# Determining an Author's Message
+# Chapter 9: Determining an Author's Message
 
 > propositions are nothing but expressions of personal opinion unless they are supported by reasons. (p. 114)
 
