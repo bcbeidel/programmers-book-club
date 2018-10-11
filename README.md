@@ -43,11 +43,15 @@
     * _The Python Tutorial_ [[LINK]](https://leanpub.com/python-tutorial-27)
     * _Real Python_ [[LINK]](https://realpython.com/)
     * _Automate the Boring Stuff with Python_ [[LINK]](https://automatetheboringstuff.com/)
+* R
+    * _R for Data Science_ by Garrett Grolemund and Hadley Wickham [[LINK](http://r4ds.had.co.nz/)]
+    * _Advanced R_ by Hadley Wickham
 * Ruby
     * _Learn Ruby The Hard Way_ [[LINK]](http://learncodethehardway.org/ruby/)
     * _Ruby on Rails Tutorials_ [[LINK]](https://www.railstutorial.org/)
 * Scala
     * _Scala for the Impatient_ by Cay Horstmann
+
     
 ## Computer Networking
 
@@ -74,6 +78,7 @@
 * _The Tao of Pooh_ by Benjamin Hoff 
 * _The Social Animal_ by David Brooks
 * _Zen and the Art of Motorcycle Maintenance_ by Robert Pirsig 
+* _How to Read a Book_ by Mortimer Adler and Charles Van Doren
 
 ## Communication, Storytelling, Presenting Data
 
