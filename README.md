@@ -88,6 +88,10 @@
 * _The Visual Display of Quantitative Information_ by Edward Tufte
 * _Visualize This: The Flowing Data Guide to Design, Visualization, and Statistic_ by Nathan Yau
 
+## Machine Learning (NLP)
+
+- __Speech and Language Processing (3rd ed. draft)__ Dan Jurafsky and James H. Martin [[URL]](https://web.stanford.edu/~jurafsky/slp3/) [[Notes]](speech-and-language-processing-3rd-edition)
+
 ## Recommended by others...to read and categorize...
 
 * _Rework_ by Jason Fried
