@@ -30,9 +30,11 @@ __regular expression:__ language for expressing search strings, algebraic notati
 
 __corpus:__ in linguistics, a corpus (plural corpora) or text corpus is a large and structured set of texts In corpus linguistics
 
-__disjunction (regex):__ a notation suggesting one of multiple characters could meet a regex criteria; indicated by `[]`
+__character set (regex):__ a notation suggesting one of multiple characters could meet a regex criteria; indicated by `[]`
 
-__range (regex):__ regex pattern marked by the pattern `/[a-z]/` where `a` and `z` are any character and it matches any character matches any ordered character between the two, incluzive.  In this case any lower case letter would match `/[a-z]/`
+__range (regex):__ regex pattern marked by the pattern `/[a-z]/` where `a` and `z` are any character and it matches any character matches any ordered character between the two, inclusive.  In this case any lower case letter would match `/[a-z]/`
+
+__disjunction (regex):__ provides an `or` operator for a set of text.  If we wanted "cat" or "dog" we would identify that with a disjunction, identified with the pipe operator.  (i.e., "`/[cat|dog]/`" )
 
 ---
 
@@ -55,8 +57,32 @@ __range (regex):__ regex pattern marked by the pattern `/[a-z]/` where `a` and `
 - notation suggesting one of multiple characters could meet a regex criteria; indicated by `[]`
 - ex: `/[wW]/` could match "w" or "W"
 
-| regex            | example match              |
+| regex            | matches                    |
 | ---------------- | ---------------------------|
 | `/[Ww]oodchuck/` | "woodchuck" or "Woodchuck" |
 | `/[abc]/`        | "a" or "b" or "c"          |
 | `/[0123456789]/` | "plenty of 9 to 5"         |
+
+### regex: range (i.e., `/[X-X]/`)
+
+- marked with the pattern `/[X-X]/`
+- matches with any character between the two characters, inclusive
+
+| regex     |              matches |
+| --------- | -------------------- |
+| `/[A-Z]/` | any uppercase letter |
+| `/[a-z]/` | any lowercase letter |
+| `/[0-9]/` | any single digit     |
+
+### regex negation (i.e., `^` at beginning of set)
+
+- square brackets can be used to specify what a single character cannot be.  For instance "`/[^a]/`" would match any character except "a".
+- must be at the beginning of set declaration to be used this way
+
+| regex      |              matches                      |
+| ---------- | ---------------------------------------   | 
+| `/[^A-Z]/` | anything other than an uppercase letter   | 
+| `/[^Ss]/`  | neither "S" nor "s"                       |
+| `/[^\.]/`  | not a "." (period)                        |
+| `/[e^]/`   | either "e" or "^", this is not a negation |
+| `/[a^b]/`  | the pattern "a^b", this is not a negation |
