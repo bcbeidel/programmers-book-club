@@ -4,6 +4,7 @@
 
 * _Clean Code_ by Robert Martin
 * _Domain Driven Design_ by Eric Evans
+* _Domain-Driven Design Distilled_ by Vaugh Vernon [[NOTES]](/domain-driven-design-distilled)
 * _Refactoring_ by Martin Fowler
 * _Economics of Software Quality_ by Capers Jones and Oliver Bonsingour
 * _The Pragmatic Programmer_ by Andrew Hunt and David Thomas
