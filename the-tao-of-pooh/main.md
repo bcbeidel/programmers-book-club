@@ -2,7 +2,7 @@
 
 ## Chapter: _The How of Pooh?_
 ### _"The Vinegar Tasters"_
-In Eastern art, there is an allegorical image of three men dipping their fingers into a vat of vinegar.  The image shows the three men who have dipped their fingers into the vat and each with a unique reaction.  Each man represents one of the masters of an Eastern Philosophy, specifically Confucius   (Confucianism), Buddha (Buddhism) and Lao-tse (Taoism).  (p.2)
+In Eastern art, there is an allegorical image of three men dipping their fingers into a vat of vinegar.  The image shows the three men who have dipped their fingers into the vat and each with a unique reaction.  Each man represents one of the masters of an Eastern Philosophy, specifically Confucius (Confucianism), Buddha (Buddhism) and Lao-tse (Taoism).  (p.2)
 
 #### Confucius, aka notorious Kong Fuzi (Confucianism)
 Confucius has the look of 'sour-grapes' on his face.  The author summarizes his this reaction in the following manner to embody the philosophy.  (p.3)

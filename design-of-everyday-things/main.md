@@ -10,11 +10,11 @@ If an error is possible, someone will make it. The designer must assume that all
 
 Mental models, our conceptual models of the way objects work, events take place, or people behave, result from our tendency to form explanations of things. These models are essential in helping us understand our experiences, predict the outcomes of our actions, and handle unexpected occurrences. We base our models on whatever knowledge we have, real or imaginary, naive or sophisticated.
 
-Mental models are often constructed from fragmentary evidence, with but a poor understanding of what is happening, and with a kind of naive psychology that postulates causes, mechanisms, and relationships even where there are none. Some faulty models lead to the frustrations of everyday life, as in the case of my unsettable refrigerator, where my mental model of its operation (figure 1.9 A) did not correspond to reality (figure 1.9 B). Far more serious are faulty models of such complex systems as an industrial plant or passenger airplane. Misunderstanding there can lead to devastating accidents.
+Mental models are often constructed from fragmentary evidence, with but a poor understanding of what is happening, and with a kind of naive psychology that postulates causes, mechanisms, and relationships even where there are none. Some faulty models lead to the frustrations of everyday life, as in the case of my un-settable refrigerator, where my mental model of its operation (figure 1.9 A) did not correspond to reality (figure 1.9 B). Far more serious are faulty models of such complex systems as an industrial plant or passenger airplane. Misunderstanding there can lead to devastating accidents.
 
 #### Blaming the Wrong Cause
 
-In all cases, whether a person is inappropriately accepting blame for the inability to work simple objects or attributing behavior to environ- ment or personality, a faulty mental model is at work.
+In all cases, whether a person is inappropriately accepting blame for the inability to work simple objects or attributing behavior to environment or personality, a faulty mental model is at work.
 
 #### Learned Helplessness 
 
