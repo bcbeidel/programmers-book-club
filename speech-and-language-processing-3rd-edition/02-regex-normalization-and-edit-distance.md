@@ -36,6 +36,20 @@ __range (regex):__ regex pattern marked by the pattern `/[a-z]/` where `a` and `
 
 __disjunction (regex):__ provides an `or` operator for a set of text.  If we wanted "cat" or "dog" we would identify that with a disjunction, identified with the pipe operator.  (i.e., "`/[cat|dog]/`" )
 
+__Kleene star `*` (regex):__ "cleany star" - indicates that zero or more instances of the previous statement must be present to get a match
+
+__Kleene plus `+` (regex):__ "cleany plus" - indicates that one ore more instances of a the previous regex statement must be present to match
+
+__wildcard `.` (regex):__
+
+__anchor - beginning of text `^` (regex):__
+
+__anchor - end of text `$` (regex):__
+
+__anchor - word boundary `\b` (regex):__
+
+__anchor - non-word boundary `\B` (regex):__
+
 ---
 
 ## 2.1 Regular Expressions (p.11)
@@ -74,7 +88,7 @@ __disjunction (regex):__ provides an `or` operator for a set of text.  If we wan
 | `/[a-z]/` | any lowercase letter |
 | `/[0-9]/` | any single digit     |
 
-### regex negation (i.e., `^` at beginning of set)
+### regex: negation (i.e., `^` at beginning of set)
 
 - square brackets can be used to specify what a single character cannot be.  For instance "`/[^a]/`" would match any character except "a".
 - must be at the beginning of set declaration to be used this way
@@ -86,3 +100,32 @@ __disjunction (regex):__ provides an `or` operator for a set of text.  If we wan
 | `/[^\.]/`  | not a "." (period)                        |
 | `/[e^]/`   | either "e" or "^", this is not a negation |
 | `/[a^b]/`  | the pattern "a^b", this is not a negation |
+
+### regex: optional characters with "?"
+
+- the question mark "?" indicates that the previous statement is optional
+- This could also be considered to be saying "match either zero or one instances of the previous statement
+
+| regex          |          matches            |
+| -------------- | --------------------------- |
+| `/woodchucks?/`| "woodchuck" or "woodchucks" |
+| `/colou?r/`    | "color" or "colour"         |
+
+### regex: Kleene star `*`
+
+- `*` indicates that zero or more instances of the previous character must match 
+- for example `/[ab]*/` could be stated as match zero or more of any instance of the character "a" or the character "b".  This would be very inclusive and could contain instances where neither "a" nor "b" exist 
+
+| regex     |          match examples             |
+| --------- | ----------------------------------- |
+| `/a*/`    | "a", "baa", "zoo" (i.e., zero case) |
+| `/[ab]*/` | "cat", "ball", "boy", "dog", "zoo"  |
+
+### regex: Kleene plus `+`
+
+- `+` indicates one or more occurrences of previous characters mst be present in order to match
+
+| regex      |          matches                       |
+| ---------  | -------------------------------------- |
+| `/[0-9]+/` | one more digits "How many fingers? 5." |
+| `/[A-Z]+/` | one or more capital letters "John"     |
