@@ -1,3 +1,60 @@
+## S3
+
+### S3: Exam Tips
+
+- `S3` is object based storage.  i.e., it allows you to upload files
+- Files can be from 0 Bytes to 5 TB
+- Unlimited storage
+- Files are stored in buckets (i.e., online folders)
+- S3 is a universal namespace, Bucket names are universally unique
+
+- Not suitable for installing and OS
+- All buckets are private by default, can be managed down the the individual file level
+    - Manageable by Bucket policies
+    - Access control lists
+
+### S3: Fundamentals
+
+- Key (name of the object) 
+- Value (data, i.e., sequence of bytes)
+- Version ID (important for versioning)
+- Metadata (data about data you are storing)
+
+### S3: Data Consistency
+
+- new object `PUTS` --> Read after Write consistency
+- overwrite `PUTS` and `DELETES` --> eventual consistency (some time to propogate) 
+
+## S3: Classes of Storage
+
+1) S3 Standard
+    - 99.99% availability
+    - 99.99999999% durability
+    - stored redundantly across multiple devices
+    - designed so sustain the loss of to facilities concurrently
+2) S3 IA (Infrequently Accessed)
+    - for data accessed less frequently, but requires rapid low-latency access when you need it.
+    - lower fee than `S3` but you are charged an access fee
+3) S3 One Zone - IA (Infrequently Accessed)
+    - lower fee than IA
+    - no multi-Availability Zone data resilience
+4) S3 - Intelligent Tiering
+    - uses ML to move storage to cost effective tier
+5) S3 - Glacier
+    - secure, durable and low-cost
+    - configurable retrieval time from a few minutes to a few hours
+6) S3 - Glacier Deep Archive
+    - lowest cost storage class
+    - retrieval time of 12 hours is acceptable
+
+## S3: Encryption
+
+- Encryption In Transit
+    - SSL/TLS
+- Encryption at Rest
+    - S3 Managed Keys - SSE-S3
+    - AWS Key Management Service - Managed Keys - SSE-KMS
+
 # S3 overview
 
 ## Basics
