@@ -4,18 +4,13 @@ A content delivery network (CDN) that delivers web pages and other assets to use
 
 It gives the bang for the buck by putting content closer to the point of consumption, reducing network time.
 
-
 https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html
 
 ## Definitions
 
-- Edge Location 
-    - Location where content will be cached
-- Origin
-    - The original source of content (S3 bucket, or other things)
-- Distribution 
-    - Name given to the CDN, which includes all the edge location
-
+- **Edge Location:** Location where content will be cached
+- **Origin:** The original source of content (S3 bucket, or other things)
+- **Distribution:** Name given to the CDN, which includes all the edge location
 
 ## Workflow
 
@@ -25,13 +20,18 @@ https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-
 4) Additional users who request content get content from edge location while it is still valid
 5) After `time-to-live` edge location gets new content if requested
 
-## Notes
+## Additional Notes
 
-- Edge locations are not read-only (i.e., transfer acceleration)
+- Edge locations are not read-only
+    - i.e., upload for transfer acceleration
 - Objects are cached for the TTL (Time to live)
-    - You can invalidate the cache and push out content
+- You can invalidate the cache and push out content
 
 ## Types of distribution
+
+- Network > Cloudfront > Web Distribution
+
+Can take 10-15 minutes to enable.
 
 - Web (Primary)
 - RTMP (Adobe Flash Media Server)
