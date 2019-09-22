@@ -1,5 +1,19 @@
 # Chapter 3: N-gram Language Models
 
+Predicting the next word in a sequence is a fundamental component that feeds into many NLP tasks.  It requires that we assign `probabilities` to the next word a in a sequence.  It applies to tasks such as:
+
+- speech recognition
+- handwriting recognition
+- spelling correction
+- machine translation (language to language)
+- augmentative communications
+
+- **Language Models:** models that assign probabilities to sequences of words
+
+- **n-gram:** a sequence of _N_ words. bi-gram (2), tri-gram (3), 
+
+- **n-gram model:** Language model leveraging sequences of _N_ words to predict probabilities for a the last word in the _n-gram_ sequence 
+
 ## 3.1 N-Grams (p. 38)
 
 ## 3.2 Evaluating Language Models (p. 43)
