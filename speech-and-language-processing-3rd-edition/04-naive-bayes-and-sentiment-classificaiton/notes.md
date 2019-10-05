@@ -46,6 +46,112 @@ Assuming that a feature _f_ is the existence of a word in a bag-of-words, we can
 - w<sub>i</sub> is our feature that we care about (i.e., it represents the presence of a word).
 - c is the concatenation of all documents in the corpus that match the label we care about (not the full corpus)
 
-> `P(w<sub>i</sub>|c) = count(w<sub>i</sub>, c) / Σ count(w, c)
-> 4.12
+> P(w<sub>i</sub>|c) = count(w<sub>i</sub>, c) / Σ count(w, c)
 
+For instance, if we were trying to estimate the likelihood of the word "fantastic" given that the document is classified as _positive_.  Our formula would look something like the following:
+
+> P("fantastic" | positive) = count("fantastic", positive) / Σ count(ω, positive)) 
+
+Or in words.  The probability maximum  likelihood estimate of the word "fantastic" occurring in a document, given that the document is labeled as positive is equal to the total count of occurance for the word "fantastic" in all documents labeled as _positive_ divided by to total number words in all documents labeled _positive_.
+
+With Laplace smoothing:
+
+> P("fantastic" | positive) = </p>
+> (count("fantastic", positive) + 1 ) / </p> 
+> Σ count(ω, positive) + |V|)
+
+- **stop words:** words like _a_ or _the_ that are so common that some algorithms choose to ignore them, rather than calculate probabilities.  Include articles, filler words, or other 'spacers'
+
+### Training a Naive Bayes Classifier
+
+```text
+function train_naive_bayes(D, 
+                           C)
+                           returns log P(c) 
+                                   log P (w|c)
+
+    for each class c ∈ C           # Calculates P(c) terms
+        N-doc = number of documents in D
+        N-c   = number of documents in D in class C
+
+        logprior[c] <- log ( N-c / N-doc )
+
+        V <- Vocabulary of D
+
+        bigdoc[c] <- append(d) for d ∈ D with class c
+        
+        # Calculate P(w|c)
+        for each word w in V         
+            count(w, c) <- # number of occurrences of w in bigdoc[c]
+            loglikelihood[w,c] <- log (
+                (count(w, c) + 1) /
+                (Σw′ in V (count (w′,c) + 1))
+            )
+
+    return logprior, loglikelihood, V
+
+function test_naive_bayes(testdoc, 
+                         logprior, 
+                         loglikelihood, 
+                         C, 
+                         V) returns best c
+
+    for each class c ∈ C 
+        sum[c] <- logprior[c]
+        for each position i in testdoc
+            word <- testdoc[i]
+
+            # Only handle known words, drop unknown words
+            if word ∈ V
+                sum[c] <- sum[c] + loglikelihood[word,c]
+    return argmax sum[c]
+
+```
+
+### 4.3 Worked Example
+
+#### Training
+
+| Category | Document                              |
+| ---------| ------------------------------------- |
+| negative | just plain boring                     |
+| negative | entirely predictable and lacks energy |
+| negative | no surprises and very few laughs      |
+| positive | very powerful                         |
+| positive | the most fun film of the summer       |
+
+#### Test
+
+| Category | Document                              |
+| ---------| ------------------------------------- |
+|     ?    | predictable with no fun               |
+
+
+"with" does not exist in Vocabulary (V) for the training set, so we disregard and must calculate the probabilities of the remaining words.  Focusing on conditional probabilities of the remaining words and using Laplace Smoothing.
+
+```
+# Identify Priors
+P(-) = 3/5
+P(+) = 2/5
+
+|V| = 20
+V[positive] = 9
+V[negative] = 14 
+
+n1 = P("predictable" | negative) = 1 + 1 / (14 + 20)
+n2 = P("no"          | negative) = 1 + 1 / (14 + 20)
+n3 = P("fun"         | negative) = 0 + 1 / (14 + 20)
+
+p1 = P("predictable" | positive) = 0 + 1 / (9 + 20)
+p2 = P("no"          | positive) = 0 + 1 / (9 + 20)
+p3 = P("fun"         | positive) = 1 + 1 / (9 + 20)
+
+P(-)P(S|-) = P(-) * n1 * n2 * n3
+# 6.1 * 10^-5
+P(+)P(S|+) = P(+) * p1 * p2 * p3
+# 3.2 * 10^-5
+
+## Test doc is classified as negative
+```
+
+## 4.4 Optimizing for Sentiment Analysis
