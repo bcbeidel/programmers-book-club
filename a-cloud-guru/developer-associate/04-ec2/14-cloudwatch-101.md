@@ -29,17 +29,22 @@ Often a trick question, try to mix up CloudTrail and CloudWatch.
 
 CloudWatch is a big CCTV inside your AWS account.
 
-**Cloudtrail** tracks users and accounts that make API calls, including the source IP and when called. 
+**CloudTrail** tracks users and accounts that make API calls, including the source IP and when called. 
 
 
 ## Exam Tips
 
-- Cloudwatch monitors performance
+### CloudWatch v. CloudTrail
+
+- CloudWatch monitors performance
 - CloudTrail monitors API calls in the AWS platform
+
+### CloudWatch Features
 
 - CloudWatch is used for monitoring performance
 - CloudWatch can monitor most of AWS as well as your applications that run on AWS
 - CloudWatch with EC2 will monitor events every 5 minutes by default.
 - Detailed monitoring can increase that frequency to 1 minute
 - You can create CloudWatch alarms which trigger notifications
+- CloudWatch permits you to generate dashboards and events
 - CloudWatch is about performance, CloudTrail is about auditing.
