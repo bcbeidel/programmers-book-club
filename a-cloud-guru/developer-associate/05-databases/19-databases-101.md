@@ -36,4 +36,24 @@ Cloud-Based Data Warehouse Solution
 Web Service that makes it easy to deploy, operate and scale in-memory cache in the cloud, rather than relying entirely on slower disk-based databases.  i.e., handle frequent, identical queries
 
 
+## Additional Notes
 
+- RDS runs on Virtual Machines
+- You cannot log into the Operating Systems
+- Patching of the RDS Operating is Amazons 
+- RDS is not serverless
+- Aurora is serverless
+
+## Read Replicas
+
+- Can be Multi-AZ
+- Used to increase performance
+- Must have backups turned on
+- Can be in different regions
+- Can be MySQL, PostgreSQL, MariaDB, Oracle, Aurora
+- Can be promoted to master, will break read replica
+
+## Multi-AZ
+
+- Used for disaster recovery
+- You can trigger fail-over by rebooting the instance
