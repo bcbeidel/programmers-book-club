@@ -155,3 +155,50 @@ P(+)P(S|+) = P(+) * p1 * p2 * p3
 ```
 
 ## 4.4 Optimizing for Sentiment Analysis
+
+
+### 4.4.1 Transform to Binary over Frequency
+
+For sentiment classification, the presence of a word appears to be more important than the frequency. Simplification:
+
+- **binary multi-nomial naive Bayes:** Remove all duplicate words prior to concatenation into a large document. i.e., only allow one count per individual document
+
+### 4.4.2 Handle Negation
+
+Simple version: during normalization prepend the prefix `NOT_` to every word after a token of a logical negation (n't, not, no, never) until the next punctuation mark.
+
+> didnt like this movie, but I
+
+becomes
+
+> didnt NOT_like NOT_this NOT_movie , but I
+
+### 4.4.3 Use Sentiment Leixcons
+
+In cases where not enough labeled training data is available, the use of a pre-defined **sentiment lexicon** may help to determine sentiment
+
+- **sentiment lexicon:** A lexical resource for sentiment analysis, also referred to as a Sentiment Lexicon, is a database of lexical units for a language along with their sentiment orientations. This can be expressed as a set of tuples of the form (lexical unit, sentiment)
+
+Often, the usage is to create a feature for counts of positive and negative words in the lexicons, rather than for each individual word.
+
+May help when training data is sparse or nor representative of test set.
+
+## 4.5 Naive Bayes for other text classification tasks
+
+### 4.5.1 Spam Detection
+
+Predefined features can be used in addition to lexicon.
+
+Sample features from `SpamAssassin`
+
+- Email subject is in all capital letters
+- Contains phrases of urgency like "urgent reply"
+- Email subject line contains "online pharmaceutical"
+- HTML has unbalanced "head" tags
+- Claims you can be removed from list
+
+### 4.5.2 Language Identification
+
+For language detection, words aren't used but byte n-grams.  Spaces count as bytes.  Trained on multilingual text such as wikipedia.
+
+## 4.6 Naive Bayes as a Language Model
