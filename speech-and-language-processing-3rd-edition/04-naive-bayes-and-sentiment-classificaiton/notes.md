@@ -155,3 +155,103 @@ P(+)P(S|+) = P(+) * p1 * p2 * p3
 ```
 
 ## 4.4 Optimizing for Sentiment Analysis
+
+### 4.4.1 Transform to Binary over Frequency
+
+For sentiment classification, the presence of a word appears to be more important than the frequency. Simplification:
+
+- **binary multi-nomial naive Bayes:** Remove all duplicate words prior to concatenation into a large document. i.e., only allow one count per individual document
+
+### 4.4.2 Handle Negation
+
+Simple version: during normalization prepend the prefix `NOT_` to every word after a token of a logical negation (n't, not, no, never) until the next punctuation mark.
+
+> didnt like this movie, but I
+
+becomes
+
+> didnt NOT_like NOT_this NOT_movie , but I
+
+### 4.4.3 Use Sentiment Leixcons
+
+In cases where not enough labeled training data is available, the use of a pre-defined **sentiment lexicon** may help to determine sentiment
+
+- **sentiment lexicon:** A lexical resource for sentiment analysis, also referred to as a Sentiment Lexicon, is a database of lexical units for a language along with their sentiment orientations. This can be expressed as a set of tuples of the form (lexical unit, sentiment)
+
+Often, the usage is to create a feature for counts of positive and negative words in the lexicons, rather than for each individual word.
+
+May help when training data is sparse or nor representative of test set.
+
+## 4.5 Naive Bayes for other text classification tasks
+
+### 4.5.1 Spam Detection
+
+Predefined features can be used in addition to lexicon.
+
+Sample features from `SpamAssassin`
+
+- Email subject is in all capital letters
+- Contains phrases of urgency like "urgent reply"
+- Email subject line contains "online pharmaceutical"
+- HTML has unbalanced "head" tags
+- Claims you can be removed from list
+
+### 4.5.2 Language Identification
+
+For language detection, words aren't used but byte n-grams.  Spaces count as bytes.  Trained on multilingual text such as wikipedia.
+
+## 4.6 Naive Bayes as a Language Model
+
+NB classifier has strong similarities to uni-gram language model when
+
+    - we only use the features of the words themselves
+    - we use all the words in a text
+
+If you take the case where the only features are the words themselves, NB classifier can be viewed on a set of class-specific uni-gram models.
+
+## 4.7 Evaluation: Precision, Recall, F-measure
+
+- **gold labels:** the 'true' labels from human assignment
+
+- **contingency table:** (also known as a cross tabulation or crosstab) is a type of table in a matrix format that displays the (multivariate) frequency distribution of the variables. Confusion Matrix is a subtype of contingency table
+
+- **precision:**  the percentage of the items that the system detected as positive that are in fact positive 
+
+```
+Precision = True Positive / (True Positive + False Positive)
+```
+
+- **recall:** the percentage of positive items detected by the system. (also called the true positive rate, sensitivity, or probability of detection in some fields)
+
+```
+Recall = True Positive / (True Positive + False Negative)
+```
+
+- **F-measure:** weighted harmonic mean of precision and recall. Where β parameter differentially weights the importance of recall and precision
+
+> F<sub>β</sub> = ((β<sup>2</sup> + 1) * P * R) / (β<sup>2</sup> * P + R)
+
+- **F-1 Statistic** F-measure where β is 1
+
+> F<sub>1</sub> = (2 * P * R )/ (P + R)
+
+## 4.7.1 More than two classes
+
+- **multi-label classification (any-of):** a document may be assigned any number of available classes.  Each is determined by a per-class binary classifier
+
+- **multi-nomial classification (one-of):** a document may only be assigned a single class.  A classifier is run for each class, the highest probability is the winner.
+
+## 4.8 Test sets and Cross-validation
+
+- **cross-validation:** we randomly choose a training and test set division of
+our data, train our classifier, and then compute the error rate on the test set
+
+## 4.9 Statistical Significance Testing
+
+> In language processing we don’t generally use traditional statistical approaches like paired t-tests to compare system outputs because **most metrics are not normally distributed**, violating the assumptions of the tests. The standard approach to computing p-value(x) in natural language processing is to use non-parametric tests
+
+- **null hypothesis:** the hypothesis that there is no significant difference between specified populations, any observed difference being due to sampling or experimental error.
+
+Mechanisms for performing these non-parametric tests include **bootstrap tests**, and **approximate randomization**
+
+- **bootstrapping:** repeatedly drawing large numbers of smaller samples with replacement 
