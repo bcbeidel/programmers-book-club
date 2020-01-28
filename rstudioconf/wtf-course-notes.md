@@ -47,6 +47,12 @@ A number of interactive exercises are accessible with `usethis::use_course`. The
 - Concept: Custom Installation of R Packages
   - course_name: `rstd.io/wtf-source-package`
   
+- Concept: purrr
+  - course_name: `rstd.io/row-work`
+  - related_readings:
+    - <https://github.com/jennybc/row-oriented-workflows#readme>
+    - <https://github.com/cwickham/purrr-tutorial>
+  
 ## Other Resources
 
 - Book: <https://rstats.wtf/>
