@@ -45,7 +45,6 @@ A number of interactive exercises were made availible with the `usethis` package
   - course_name: `rstd.io/wtf-read-source`
   
 - Concept: Custom Installation of R Packages
-  - related_readings
   - course_name: `rstd.io/wtf-source-package`
 
 ## Other Resources
