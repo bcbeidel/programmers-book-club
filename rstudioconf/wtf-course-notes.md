@@ -23,7 +23,7 @@ Day 2
 
 ## Exercises
 
-A number of interactive exercises were made availible with the `usethis` package.  They can be installed with the `use_course` function. The exercises were:
+A number of interactive exercises are accessible with `usethis::use_course`. The exercises were:
 
 - Concept: Understanding And Exploring R Libraries 
   - course_name: `rstd.io/wtf-explore-libraries`
@@ -52,5 +52,4 @@ A number of interactive exercises were made availible with the `usethis` package
 - Book: <https://rstats.wtf/>
 - Rstudio: Reproducible Environments <https://environments.rstudio.com/>
 - Github: Read-Only Mirror Of CRAN <https://github.com/cran>
-- GIthub: here (r-package) -- A simpler way to find your files: <https://github.com/r-lib/here>
-
+- Github: here (r-package) -- A simpler way to find your files: <https://github.com/r-lib/here>
