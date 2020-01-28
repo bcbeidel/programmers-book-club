@@ -62,3 +62,5 @@ A number of interactive exercises are accessible with `usethis::use_course`. The
 - purrr tutorials
   - <https://github.com/jennybc/row-oriented-workflows#readme>
   - <https://github.com/cwickham/purrr-tutorial>
+- Why Functional Programming? 
+  - <https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch1.md/>

@@ -18,17 +18,18 @@ if(!require(here)) install.packages("here")
 #'  
 
 exercises <- c(
-  "wtf-explore-libraries",
-  "wtf-packages-report",
-  "wtf-debugging",
-  "wtf-read-source",
-  "wtf-startup",
-  "wtf-source-package"
+  "rstd.io/wtf-explore-libraries",
+  "rstd.io/wtf-packages-report",
+  "rstd.io/wtf-debugging",
+  "rstd.io/wtf-read-source",
+  "rstd.io/wtf-startup",
+  "rstd.io/wtf-source-package",
+  "rstd.io/row-work"
 )
 if (!dir.exists(here::here("wtf"))){
   dir.create(here::here("wtf"))
 }
 
 for (exercise in exercises){
-  usethis::use_course(file.path("rstd.io", exercise), destdir = here::here("wtf"))
+  usethis::use_course(exercise, destdir = here::here("wtf"))
 }
