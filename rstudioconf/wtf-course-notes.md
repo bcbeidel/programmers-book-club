@@ -46,10 +46,13 @@ A number of interactive exercises are accessible with `usethis::use_course`. The
   
 - Concept: Custom Installation of R Packages
   - course_name: `rstd.io/wtf-source-package`
-
+  
 ## Other Resources
 
 - Book: <https://rstats.wtf/>
 - Rstudio: Reproducible Environments <https://environments.rstudio.com/>
 - Github: Read-Only Mirror Of CRAN <https://github.com/cran>
 - Github: here (r-package) -- A simpler way to find your files: <https://github.com/r-lib/here>
+- purrr tutorials
+  - <https://github.com/jennybc/row-oriented-workflows#readme>
+  - <https://github.com/cwickham/purrr-tutorial>
