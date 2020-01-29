@@ -1,3 +1,5 @@
+# https://github.com/rstudio-conf-2020/what-they-forgot/blob/master/materials/purrr.pdf
+
 animals <- c("cat", "dog")
 legs    <- c(4,      3)
 output <- glue::glue("{animals} has {legs} legs")
