@@ -3,14 +3,7 @@ title: "Neural Networks and Deep Learning"
 subtitle: "[Deep Learning Specialization: Course 1 of 5](https://www.coursera.org/learn/neural-networks-deep-learning)"
 author: "Brandon Beidel"
 date: "2020/05/15"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["default", "default-fonts", "custom.css"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +16,7 @@ library(MASS)
 library(reticulate)
 ```
 
-class: inverse
+
 
 ## Week 1: [Introduction to deep learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/week/1)
 
@@ -40,7 +33,7 @@ class: center middle inverse
 
 ## What is a neural network?
 
-???
+
 
 Objective: Use a simple example to provide an intuition around what a neural network is.
 
@@ -50,7 +43,7 @@ Objective: Use a simple example to provide an intuition around what a neural net
 
 ![House Size v. Price](img/01-size-v-price-no-fit.png)
 
-???
+
 
 Consider a dataset of home prices; we have many attributes.
 
@@ -67,7 +60,7 @@ Can we build a model that will help predict the outcome price?
 
 ![House Size v. Price: Regression](img/02-size-v-price-linear-fit.png)
 
-???
+
 
 - simplistic approach: we could apply linear fit on the size of home v. price
 - limitations: negative, predicted prices 
@@ -78,7 +71,7 @@ Can we build a model that will help predict the outcome price?
 
 ![House Size v. Price: ReLU](img/03-size-v-price-relu.png)
 
-???
+
 
 - What if we make a simple rule, we won't accept negative prices out of the model, so an output of zero.
 - Our model is no longer linear, but it provides something more realistic, still not perfect
@@ -90,7 +83,7 @@ Can we build a model that will help predict the outcome price?
 ![House Size v. Price: A single neuron](img/04-size-v-price-relu-with-definition.png)
 
 
-???
+
 
 - In the simplest sense, we have created a model with a single 'neuron'
 - To generate a prediction, the neuron:
@@ -110,7 +103,7 @@ Can we build a model that will help predict the outcome price?
 
 ![Building Networks of Neurons](img/05-combining-neurons-intuition.png)
 
-???
+
 
 Consider composite features, features not available in the raw dataset, but manufactured by the user.  Each is a function of "upstream" raw inputs.
 
@@ -126,7 +119,7 @@ We may have a belief that we can build interpret-able features, with inputs and 
 
 ![Building Networks of Neurons](img/06-combining-neurons-in-practice.png)
 
-???
+
 
 - In Deep Neural Networks (DNN); we don't have that manual control, or interpret-ability instead:
   - Each neuron connects to all neurons in the layer below; - Densely connected
@@ -147,7 +140,7 @@ We may have a belief that we can build interpret-able features, with inputs and 
 | English Text     | Chinese Text          | Translation        | Recurrent NN     |
 | Image, Radar     | Position of a car(s)    | Autonomous Driving  | Custom/Hybrid    |
 
-???
+
 
 - Neural Networks have applications across industries
 - Major buckets described
@@ -184,7 +177,7 @@ dplyr::tibble(
 
 ```
 
-???
+
 
 - At low levels of data volume, other modeling techniques can perform better
 - Speed of iteration is the key to success for large NN
@@ -197,7 +190,7 @@ dplyr::tibble(
 
 ---
 
-class: inverse
+
 
 ## Week 2: [Neural Networks Basics](https://www.coursera.org/learn/neural-networks-deep-learning/home/week/2)
 
@@ -233,7 +226,7 @@ This is predicated on the definition of a sigmoid function $\sigma$, which effec
 
 > $\sigma(z) = \frac{1}{1 + e^{-z}}$
 
-???
+
 
 - predict a probability of the positive class, given the input
 - inputs is an n-dimensional vector of real numbers, one for each observation
@@ -254,7 +247,7 @@ When applied across $m$ observations, the cost function is as follows:
 
 > $J(\omega, b) = \frac{1}{m} \sum\limits_{i=1}^m \mathcal{L}(\hat{y}^{(i)}, y^{(i)})$
 
-???
+
 
 Consider the extremes, $y = 1$ and $y = 0$...
 
@@ -293,7 +286,7 @@ $b := \omega - \alpha \frac{\partial{J(\omega, b)}}{\partial{b}}$
 
 ![Calculating Derivatives with Compulation Graphs](img/08-derivatives-with-computation-graphs.png)
 
-???
+
 
 Consider a multivariate system, in which we want to calculate the derivative with respect to each of the input variables.
 
@@ -305,7 +298,7 @@ Computation graphs provide a way to visually break down the computations, and th
 
 ![Logistic Regression Graident Descent](img/09-logistic-regression-gradient-descent.png)
 
-???
+
 
 Consider the same paradigm of computation graphs. We have three intermediates inside our single neuron that include:
 
@@ -395,7 +388,7 @@ def predict(w, b, X, threshold = 0.5):
 
 ---
 
-class: inverse
+
 
 ## Week 3: [Shallow Neural Networks](https://www.coursera.org/learn/neural-networks-deep-learning/home/week/3)
 
@@ -414,7 +407,7 @@ class: inverse
 
 ![Neural Network Representations](img/10-neural-network-represenations.png)
 
-???
+
 
 - Subscript indicates which neuron in that layer
 - superscript indicates the current layer
@@ -437,7 +430,7 @@ We are not limited to the use of the sigmoid function as an activation function.
 
 ![Activation Functions](img/12-activation-functions.png)
 
-???
+
 
 Recommendations:
 
@@ -555,7 +548,7 @@ def update_parameters(parameters, grads, learning_rate = 1.2):
 
 ---
 
-class: inverse
+
 
 ## Week 4: [Deep Neural Networks](https://www.coursera.org/learn/neural-networks-deep-learning/home/week/4)
 

@@ -3,14 +3,7 @@ title: "Improving Deep Neural Networks"
 subtitle: "[Deep Learning Specialization: Course 2 of 5](https://www.coursera.org/learn/deep-neural-network)"
 author: "Brandon Beidel"
 date: "2020/05/20"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["default", "default-fonts", "custom.css"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +13,7 @@ library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-class: inverse
+
 
 ## Week 1: [Practical Aspects Of Deep Learning](https://www.coursera.org/learn/deep-neural-network/home/week/1)
 
@@ -92,7 +85,7 @@ The catch, the test, and development sets should come from the *same distributio
   - Regularization
   - Consider Alternative NN Infrastructures
 
-???
+
 
 Collecting more data, trained on a more extensive network, is often a viable approach.  The "tradeoff" portion of the bias-variance tradeoff less relevant as there are multiple techniques to address either bias or variance without significantly impacting the other.
 
@@ -102,7 +95,7 @@ class: center middle inverse
 
 ## Regularization
 
-???
+
 
 In cases of overfitting (i.e., high variance), regularization reduction techniques are viable ways to reduce variance.  Especially when collecting more data is not possible or cheap.
 
@@ -125,7 +118,7 @@ In this case, the regularization term $||w^{[l]}||^{2}_F$ is called the "Frobeni
 
 $$||w^{[l]}||^{2}_F = \sum_{i=1}^{n^{[l-1]}} \sum_{j=1}^{n^{[l]}} (w_{ij}^{[l]})^{2}$$
 
-???
+
 
 What about $L_1$? The techniques use of absolute value tends to drive weights to zero, where $L_2$ use of the squared of weights encourages small non-zero numbers. The output of $L_1$ tends to be a more sparsely populated weight matrix, which can be helpful for model compression.  The instructor discounted the benefits of this as a compression mechanism.
 
@@ -145,7 +138,7 @@ a3 = np.multiply(a3, keep_nodes) # drop other neurons to
 a3 = a3 / keep_prob # ensure expected value of a3 remains by rescaling
 ```
 
-???
+
 
 Why does dropout work?
 
@@ -210,7 +203,7 @@ Setup:
 
 ![Gradient Check: Algorithm](img/21-gradient-check-algorithm.png)
 
-???
+
 
 Notes:
 
@@ -222,7 +215,7 @@ Notes:
 
 ---
 
-class: inverse
+
 
 ## Week 2: [Optimization algorithms](https://www.coursera.org/learn/deep-neural-network/home/week/2)
 
@@ -283,7 +276,7 @@ This can be applied as `momentum` to the update rule for gradient descent, given
 2. It calculates an exponentially weighted average of the squares of the past gradients and stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
 3. It updates parameters in a direction based on combining information from "1" and "2".
 
-???
+
 
 - Hyperparameters
 
@@ -304,8 +297,6 @@ Using different learning rates, $\alpha$, during the training process is a frequ
 Multiple implementations of this adaptive learning rate concept exist.
 
 ---
-
-class: inverse
 
 ## Week 3: [Hyperparameter tuning, Batch Normalization, and Programming Frameworks](https://www.coursera.org/learn/deep-neural-network/home/week/3)
 
@@ -339,7 +330,7 @@ Can we normalize activations (mean = 0 and $\sigma^2$ = 1) for $a^{[l]}$ given l
 
 ![Batch Normalization](img/23-implementing-batch-norm.png)
 
-???
+
 
 - Reduces the instability of activation layers, which may make learning difficult on layer layers. It allows layers to learn more independently.
 

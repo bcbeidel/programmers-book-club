@@ -3,14 +3,7 @@ title: "Structuring Machine Learning Projects"
 subtitle: "[Deep Learning Specialization: Course 3 of 5](https://www.coursera.org/learn/machine-learning-projects)"
 author: "Brandon Beidel"
 date: "2020/05/25"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["default", "default-fonts", "custom.css"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -19,8 +12,6 @@ library(ggplot2)
 library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-class: inverse
 
 ## Week 1: [ML Strategy](https://www.coursera.org/learn/machine-learning-projects/home/week/1)
 
@@ -49,8 +40,6 @@ The instructor extends this to tuning an ML model, with a chain of assumptions f
   - To Fix: Bigger Dev Set; Ensure correct distribution
 4. Performs well in the real world
  - To Fix: Change Dev Set; Change Cost function
-
-???
 
 In another framing, this is a separation of concerns concerning inputs.  Each 'knob' represents the tuning of an element that does not impact the others. In the geometric sense, these could be considered knobs that make changes along unit vectors perpendicular to one another.
 
@@ -85,13 +74,13 @@ Improving a model is a cost-optimization problem. Deciding where to apply effort
 
 Based on the scenario above, we can look to improve our model by reducing 5% of avoidable bias. (10% Train - 5% Human error, i.e., the proxy for Bayes error). Compare this to 2% of our variance problem. We should focus on the bias error first.
 
-???
+
 
 Eventually, models may surpass human performance, leaving us without a proxy for Bayes error. This tends to occur with structural data, not based on human perception, where there is a lot of data. (i.e. online marketing, product recommendation, logistics, loan approvals)Improving a model is a cost-optimization problem. Deciding where to apply effort for the greatest benefit requires a few additional concepts.
 
 ---
 
-class: inverse
+
 
 ## Week 2: [ML Strategy](https://www.coursera.org/learn/machine-learning-projects/home/week/2)
 
