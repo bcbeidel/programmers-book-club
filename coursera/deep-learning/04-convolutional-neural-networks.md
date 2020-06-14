@@ -1,7 +1,7 @@
 Convolutional Neural Networks
 ================
 Brandon Beidel
-2020/06/01
+2020/06/14
 
 ## Week 1: [Foundations of Convolutional Neural Networks](https://www.coursera.org/learn/convolutional-neural-networks/home/week/1)
 

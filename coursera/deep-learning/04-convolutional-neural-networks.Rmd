@@ -2,7 +2,7 @@
 title: "Convolutional Neural Networks"
 subtitle: "[Deep Learning Specialization: Course 4 of 5](https://www.coursera.org/learn/convolutional-neural-networks)"
 author: "Brandon Beidel"
-date: "2020/06/01"
+date: "2020/06/14"
 output: github_document
 ---
 
