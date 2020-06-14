@@ -3,14 +3,7 @@ title: "Convolutional Neural Networks"
 subtitle: "[Deep Learning Specialization: Course 4 of 5](https://www.coursera.org/learn/convolutional-neural-networks)"
 author: "Brandon Beidel"
 date: "2020/06/01"
-output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: ["default", "default-fonts", "custom.css"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -19,8 +12,6 @@ library(ggplot2)
 library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-class: inverse
 
 ## Week 1: [Foundations of Convolutional Neural Networks](https://www.coursera.org/learn/convolutional-neural-networks/home/week/1)
 
@@ -151,8 +142,6 @@ The *sparsity of connections*, (i.e., a given output unit is dependent on only a
 
 ---
 
-class: inverse
-
 ## Week 2: [Deep convolutional models: case studies](https://www.coursera.org/learn/convolutional-neural-networks/home/week/2)
 
 Learn about the practical tricks and methods used in deep CNNs straight from the research papers.
@@ -168,8 +157,6 @@ Learn about the practical tricks and methods used in deep CNNs straight from the
 
 ---
 
-class: inverse
-
 ## Week 3: [Object detection](https://www.coursera.org/learn/convolutional-neural-networks/home/week/3)
 
 Learn how to apply your knowledge of CNNs to one of the tightest but hottest fields of computer vision: Object detection.
@@ -181,6 +168,52 @@ Learn how to apply your knowledge of CNNs to one of the tightest but hottest fie
 - Understand and implement intersection over union
 - Understand how we label a dataset for an object detection application
 - Remember the vocabulary of object detection (landmark, anchor, bounding box, grid, ...)
+
+---
+
+## Object Localization
+
+As an output, provide a class label and the attributes of a bounding box, $( p_{c}, b_{x}, b_{y}, b_{h}, b_{w} )$.
+
+For the cost functions, only consider the class label, $\mathcal{L}(\hat{y}, y)$ not the bounding boxes.
+
+---
+
+## Landmark Detection
+
+Rather than outputing a bounding box; we can instead output the coordiantes of important points.  i.e., provide string of points outlinining the points on a face.
+
+Example use-cases include points of faces, postures, outlines of objects.
+
+---
+
+## Object Detection: Sliding Window Algorithm
+
+- Given a classifier, trained on close cropped images
+- move around an image, checking specific windows 
+- start with a small region, increase size small region and increase size w/ iteration
+
+This is computationally intensive, however, it can be implemented with convoltions, adding complexity, but leveraging the shared computations.
+
+---
+
+## Bounding Boxes Predictions
+
+---
+
+## Intersection over Union
+
+---
+
+## Non Max Supression
+
+---
+
+## Anchor Boxes
+
+---
+
+## YOLO
 
 ---
 
