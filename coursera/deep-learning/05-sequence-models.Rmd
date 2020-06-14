@@ -1,0 +1,15 @@
+---
+title: "Sequential Models"
+subtitle: "[Deep Learning Specialization: Course 5 of 5](https://www.coursera.org/learn/nlp-sequence-models\)"
+author: "Brandon Beidel"
+date: "2020/06/01"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
