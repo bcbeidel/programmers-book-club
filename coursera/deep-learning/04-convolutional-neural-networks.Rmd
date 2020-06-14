@@ -163,7 +163,7 @@ Learn how to apply your knowledge of CNNs to one of the tightest but hottest fie
 
 ## Key Concepts
 
-- Understand the challenges of Object Localization, Object Detection and Landmark Finding
+- Understand the challenges of Object Localization, Object Detection, and Landmark Finding
 - Understand and implement non-max suppression
 - Understand and implement intersection over union
 - Understand how we label a dataset for an object detection application
@@ -175,49 +175,81 @@ Learn how to apply your knowledge of CNNs to one of the tightest but hottest fie
 
 As an output, provide a class label and the attributes of a bounding box, $( p_{c}, b_{x}, b_{y}, b_{h}, b_{w} )$.
 
-For the cost functions, only consider the class label, $\mathcal{L}(\hat{y}, y)$ not the bounding boxes.
+For the cost functions, only consider the class label, $\mathcal{L}(\hat{y}, y)$, not the bounding boxes.
+
+![Object Localization](img/38-bounding-boxes.png)
 
 ---
 
 ## Landmark Detection
 
-Rather than outputing a bounding box; we can instead output the coordiantes of important points.  i.e., provide string of points outlinining the points on a face.
+Rather than outputting a bounding box, we can instead output the coordinates of essential points.  i.e., provide a string of points outlining the points on a face.
 
 Example use-cases include points of faces, postures, outlines of objects.
+
+![Landmark Detection](img/39-landmark-detection.png)
 
 ---
 
 ## Object Detection: Sliding Window Algorithm
 
-- Given a classifier, trained on close cropped images
+- Given a classifier, trained on close-cropped images
 - move around an image, checking specific windows 
-- start with a small region, increase size small region and increase size w/ iteration
+- start with a small region, increase small size region and increase size w/ iteration
 
-This is computationally intensive, however, it can be implemented with convoltions, adding complexity, but leveraging the shared computations.
+![sliding window algorithm](img/40-sliding-windows.png)
 
----
+This is computationally intensive. However, it can be implemented with convolutions, adding complexity, but leveraging the shared computations.
 
-## Bounding Boxes Predictions
+![Sliding Windows With Convolutions](img/41-sliding-windows-with-convolutions.png)
+![Sliding Windows With Convolutions](img/42-sliding-windows-with-convolutions.png)
 
----
-
-## Intersection over Union
 
 ---
 
-## Non Max Supression
+## Bounding Boxes Predictions: Intersection Over Union
+
+Intersection over union is an evaluation metric used to measure the accuracy of a predictor on a particular dataset. It considers the number of pixels that overlap between the two bounding boxes (intersection) as it relates to the size of the union set of both boxes.
+
+![Intersection Over Union](img/43-intersection-over-union.png)
+
+---
+
+## Non-Max Suppression
+
+In cases where many grid-cells think they have the midpoint of an object, this algorithm is used to suppress non-maximal values.
+
+1. Identify a grid where `p` is high.
+2. Eliminate and other predicted objects where `IoU` is above a given threshold
+
+The thresholds are configurable parameters...
+
+![Non Max Supression](img/44-non-max-supression.png)
 
 ---
 
 ## Anchor Boxes
 
+For each grid-cell, multiple boxes can be filled.  At prediction time, each grid cell will get a prediction for each bounding box.
+
+![Anchor Boxes](img/45-anchort-box-algorithm.png)
+
+![Anchor Box Example](img/46-anchor-box-example.png)
+
 ---
 
 ## YOLO
 
----
+YOLO combines these concepts into a consolidated algorithm
 
-class: inverse
+- Images are broken down into grid cells
+- Multiple anchor boxes permitted per cell
+- Non-max suppression algorithm applied to final output
+
+![Yolo Training](img/47-yolo-training.png)
+![Yolo Predictions](img/48-yolo-prediction.png)
+![Yolo No-Max Supression](img/49-yolo-non-max-supression.png)
+---
 
 ## Week 4: [Special applications: Face recognition & Neural style transfer](https://www.coursera.org/learn/convolutional-neural-networks/home/week/4)
 
@@ -225,3 +257,72 @@ Discover how CNNs can be applied to multiple fields, including art generation an
 
 ---
 
+## Facial Verification
+
+ - Input is an image; a name, and an id
+ - Output answer the question: Is this an image of the claimed person?
+
+## Facial Recognition
+
+- Have a list of `K` persons
+- Input an image
+- Output: id of a person, if there is a match
+
+![Recognition vs. Verification](img/50-recogition-vs-verification.png)
+
+## One-Shot Learning
+
+For many facial recognition tasks, you need to recognize a person given just a single example.  Instead of training these conv-nets traditionally, there is a desire to learn a similarity function and determine the degree of difference between the two images.
+
+If the images are close together (i.e., very similar), then they are the same, else they are different.
+
+![One Shot Learning and Simliarity](img/51-similarity-function.png)
+
+## Siamese Networks
+
+1. Take two images
+2. Generate encodings based on the trained model
+3. Determine the distance between two images, as the norm of the difference between two vectors
+
+![Siamese Networks](img/52-siamese-network.png)
+
+## Triplet Loss Function
+
+We want to define a loss function in terms of three inputs, an Anchor Image (A), a positive Image (P) (i.e., same class), and a negative image (N) (i.e., not the same category).  We want A & P to be close together, and A & N to be far apart.  When we talk about distance, we are referring to the norm of the difference.  A margin term is added to the triplet loss, alpha.
+
+## Triplet Loss: Learning Objective
+
+![Triplet Loss: Learning Objective](img/53-triplet-loss-learning-objective.png)
+
+## Triplet Loss: Definition
+
+![Triplet Loss: Definition](img/54-triplet-loss-algorithm.png)
+
+## Triplet Loss: Picking Triplets
+
+During training, if A, P, N are chosen randomly, then `d(A, P) + alpha < d(A, N)` is easily satisfied. Instead, by selecting triplets that are hard to train on the rate of learning can increase.
+
+![Triplet Loss: Picking Pairs](img/55-triplet-loss-picking-pairs.png)
+
+## Triplet Loss as Binary Classification
+
+Rather than solely relying on the Triplet loss, we can use a binary output that combines with our similarity function to determine if the outputs are the same.
+
+![Facial Recogntion as Binary Classification](img/56-facial-recognition-as-binary-classification.png)
+
+## Neural Style Transfer
+
+![Neural Style Tansfer](img/57-neural-style-transfer-intuition.png)
+
+## Neural Style Transfer: Cost Function
+
+![NST: Cost Funciton](img/58-neural-style-transfer-loss.png)
+
+## Neural Style Transfer: Content Cost Function
+
+![Content Cost Function](img/59-content-cost-function.png)
+
+## Neural Style Transfer: Style Cost Function
+
+![Style Cost Function](img/60-style-cost-function.png)
+![Gram Matrix Definition](img/61-style-cost-gram-matrix.png)
