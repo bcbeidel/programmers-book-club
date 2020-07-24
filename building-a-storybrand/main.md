@@ -30,8 +30,7 @@ Notes on [_Building a Storybrand: Clarify Your Message So Customers Will Listen_
 
 ## Additional Resources
 
-- [[PDF] Audio Book Images](./Building-a-StoryBrand-Audio-Book-Images.pdf))
-- [[Primary Website] Building A Storybrand](https://buildingastorybrand.com/)
+- [[PDF] Audio Book Images](./Building-a-StoryBrand-Audio-Book-Images.pdf)
 - [[Online Tool] MyStoryBrand.com](https://www.mystorybrand.com/)
 - [[Video] How to Become a Communication Ninja](https://storybrand.com/how-to-become-a-communication-ninja-video/)
 - [[Audio] The Secret of How Customers Think](https://storybrand.com/basb-pre-order-dl-video-audio-bonus/)
