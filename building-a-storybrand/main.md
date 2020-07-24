@@ -4,6 +4,41 @@ Notes on [_Building a Storybrand: Clarify Your Message So Customers Will Listen_
 
 ## Section 1: Why Most Marketing Is A Money Pit
 
+Two primary mistakes, that muddle the message.
+
+1. Failing to focus on what will make _the customer_ survive and thrive
+2. You make the customer burn too many calories to understand the offer.
+
+In short, noise is your enemy. Your customer is the hero. Don't make them think too hard to understand what you are offering them.
+
+### Anecdote: Apple And Story
+
+Apple started with multi-page tech focused writeup for macs, those ads bombed; simplified to the 'Think Different' billboard met with success.
+
+### Story in a Nutshell
+
+Every compelling story has a few core components:  A **CHARACTER** who wants something encounters **A PROBLEM** before they can get it.  At the peak of their despair, A **GUIDE** steps into their lives, gives them a **PLAN**, and **CALLS THEM TO ACTION**.  That action helps them avoid **FAILURE** and ends in a **SUCCESS**.
+
+Examples:
+
+> [Hunger Games] Katniss has to compete in fight to the death tournament.  Meets Haymitch who teaches her to play the PR game and get sponsors.  That gives her the edge to survive and avoided death to win.
+> [Star Wars] Luke must defeat the Empire.  Meets Obiwan Kenobi who teaches him to trust the force.  That empowers Luke to defeat the Empire avoiding the destruction of the rebellion.
+
+At every point in these stories, you can answer these questions:
+
+1. What does the hero want?
+2. Who or what is opposing the hero from getting what they want?
+3. What does the hero's life look like if they do or don't get what they want?
+
+### The Grunt Test: Testing The CLarity of our message
+
+In marketing, there are also simple questions that should be answered at all times if we expect customers to engage with our brand.  If customers can't quickly answer these questions, they will check out...
+
+1. What do you offer?
+2. How will it make my life better?
+3. What do I need to do to buy it?
+
+
 ## Section 2: Building A Storybrand
 
 ### Section 2.1: A Character
