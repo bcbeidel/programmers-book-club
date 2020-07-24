@@ -24,9 +24,9 @@ Notes on [_Building a Storybrand: Clarify Your Message So Customers Will Listen_
 
 ## Section 3: Implementing Your Storybrand Brandscript
 
-## Section 3.1 Building a Better Websites
+### Section 3.1 Building a Better Websites
 
-## Section 3.2 Using Storybrand To Transform Company Culture
+### Section 3.2 Using Storybrand To Transform Company Culture
 
 ## Additional Resources
 
