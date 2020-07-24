@@ -23,6 +23,8 @@ Examples:
 
 > [Hunger Games] Katniss has to compete in fight to the death tournament.  Meets Haymitch who teaches her to play the PR game and get sponsors.  That gives her the edge to survive and avoided death to win.
 
+Or consider Star Wars...
+
 > [Star Wars] Luke must defeat the Empire.  Meets Obiwan Kenobi who teaches him to trust the force.  That empowers Luke to defeat the Empire avoiding the destruction of the rebellion.
 
 At every point in these stories, you can answer these questions:
@@ -31,7 +33,7 @@ At every point in these stories, you can answer these questions:
 2. Who or what is opposing the hero from getting what they want?
 3. What does the hero's life look like if they do or don't get what they want?
 
-### The Grunt Test: Testing The CLarity of our message
+### The Grunt Test: Testing The Clarity of our message
 
 In marketing, there are also simple questions that should be answered at all times if we expect customers to engage with our brand.  If customers can't quickly answer these questions, they will check out...
 
