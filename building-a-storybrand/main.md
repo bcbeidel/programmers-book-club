@@ -13,7 +13,7 @@ In short, noise is your enemy. Your customer is the hero. Don't make them think 
 
 ### Anecdote: Apple And Story
 
-Apple started with multi-page tech focused writeup for macs, those ads bombed; simplified to the 'Think Different' billboard met with success.
+Apple started with multi-page tech focused writeup for macs, those ads bombed; simplified to the '[Think Different](https://en.wikipedia.org/wiki/Think_different)' billboard met with success.
 
 ### Story in a Nutshell
 
@@ -37,7 +37,6 @@ In marketing, there are also simple questions that should be answered at all tim
 1. What do you offer?
 2. How will it make my life better?
 3. What do I need to do to buy it?
-
 
 ## Section 2: Building A Storybrand
 
