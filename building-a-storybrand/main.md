@@ -57,7 +57,7 @@ Steps.  Read Each chapter.  Brainstorm Potential Messages To Fill Each Section o
 
 The customer is the hero, not your brand. The story opens with a hero who wants something.  Framing the message around the customer and their desires, should be the focus. **Pare down the Customer's Ambition to a Single Focus**, having too many desires dilutes your objectives.
 
-**Defining Something The Customer Wants**
+#### Defining Something The Customer Wants: Examples
 
 Financial Advisor
 : "A Plan for Your Retirement"
@@ -94,6 +94,8 @@ By survival, the author means the primitive desire we all have to be safe, healt
 > Imagine your customer is a hitchhiker.  You pull over to give them a ride, and the one burning question on his mind is simply _Where are you going?_.  But has he approaches you roll down the window and start talking about your mission statement, or how your grandfather built this car with his bare hands, or how your road-trip playlist is all 1980's alternative.  This person does not care.  All he wants to do is to get to San Francisco with a flower in his hair.
 
 The customer should know exactly where we want to take them.  Would they be able to repeat back exactly what your brand offers?
+
+#### Action Required: Clarify The Message So Customers Listen
 
 1. **Stop, Breathe.**
 2. Brainstorm answers to the the question "What does the character want?"
