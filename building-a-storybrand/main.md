@@ -13,7 +13,7 @@ In short, noise is your enemy. Your customer is the hero. Don't make them think 
 
 ### Anecdote: Apple And Story
 
-Apple started with multi-page tech focused writeup for macs, those ads bombed; simplified to the '[Think Different](https://en.wikipedia.org/wiki/Think_different)' billboard met with success.
+Apple started with multi-page tech focused writeup for macs, those ads bombed; simplified to the '[Think Different](https://en.wikipedia.org/wiki/Think_different)' campaign met with success.
 
 ### Story in a Nutshell
 
@@ -38,7 +38,19 @@ In marketing, there are also simple questions that should be answered at all tim
 2. How will it make my life better?
 3. What do I need to do to buy it?
 
-## Section 2: Building A Storybrand
+## Section 2: Building A Storybrand (SB7 Framework)
+
+The rest of the book walks us through how to hone the story.  It suggests that at each stage, you stop to complete a draft for each component of the story before moving to the next.  From the introduction of the framework there were some principles attached to each section.
+
+1. **A Character**: The customer is the hero, not your brand.
+2. **Has a Problem**: Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
+3. **And Meets a Guide**: Customer's aren't looking for another hero; they're looking for a guide.
+4. **Who Gives Them a Plan**: Customers trust a guide who has a plan.
+5. **And Calls Them To Action**: Customers do not take action unless they are challenged to take action.
+6. **That Helps Them Avoid Failure**: Every Human is trying to avoid a tragic ending.
+7. **And Ends in a Success**: Never assume people understand how your brand can change their lives.  Tell them.
+
+Steps.  Read Each chapter.  Brainstorm Potential Messages To Fill Each Section of the [script](./Building-a-StoryBrand-Audio-Book-Images.pdf).  Review and pick one of your messages to use.  Move to next chapter.
 
 ### Section 2.1: A Character
 
