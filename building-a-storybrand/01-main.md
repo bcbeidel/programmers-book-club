@@ -45,7 +45,7 @@ In marketing, there are also simple questions that should be answered if we expe
 
 The rest of the book walks us through how to hone the story.  It suggests that you stop to complete a draft for each component of the story at each stage before moving to the next.  From the introduction of the framework, there were some principles attached to each section.
 
-1. [**A Character**](./02-1-A-Character.md): The customer is the hero, not your brand. 
+1. [**A Character**](./02-1-A-Character.md): The customer is the hero, not your brand.
 2. [**Has a Problem**](./02-2-Has-a-Problem.md): Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
 3. [**And Meets a Guide**](./02-3-And-Meets-a-Guide.md): Customers aren't looking for another hero; they're looking for a guide.
 4. [**Who Gives Them a Plan**](./02-4-Who-Gives-Them-A-Plan.md): Customers trust a guide who has a plan.
@@ -55,15 +55,10 @@ The rest of the book walks us through how to hone the story.  It suggests that y
 
 ## Next Steps
 
-Steps.  Read Each chapter.  Brainstorm Potential Messages To Fill Each Section of the [script](./Building-a-StoryBrand-Audio-Book-Images.pdf).  Review and pick one of your messages to use.  Move to the next chapter.
-
-### Section 2.8: People Want Your Brand To Participate In Their transformation
-
-## Section 3: Implementing Your Storybrand Brandscript
-
-### Section 3.1 Building a Better Websites
-
-### Section 3.2 Using Storybrand To Transform Company Culture
+1. Read Each chapter.  
+2. Brainstorm Potential Messages To Fill Each Section of the [script](./Building-a-StoryBrand-Audio-Book-Images.pdf).  
+3. Review and pick one of your messages to use.
+4. Move to the next chapter.
 
 ## Additional Resources
 
