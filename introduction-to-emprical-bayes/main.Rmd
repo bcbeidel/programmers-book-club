@@ -103,4 +103,34 @@ The expected mean of the Beta distribution can be described as:
 
 > alpha / (alpha + beta)
 
+## 2.3 Conjugate Prior
+
+Why is the update so easy?  It is becuase the beta distribution is the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior#Example) of the Binomial distribution.  Which means there are clear cut rules on how to update the prior to get to the posterier distribution. [Wikipedia has a list](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions).  If a prior is not a conjugate pior, then the update can get messy.
+
+
+Consider a player who got exactly 100 hits in the first 300 at bats.  So, let's simulate some batting statistics for the first 300 at bats.  Starting with our prior belief regarding the distribution of batting averages we start with Beta(81, 219)
+
+
+```{r}
+library(dplyr)
+num_trials <- 10e6
+
+# Simulate batting statistica based on our existing Prior for our Beta
+# Get to a count using the binomial and the true average
+simulations <- tibble::tibble(
+  true_average = rbeta(num_trials, 81, 219),
+  hits = rbinom(num_trials, 300, true_average)
+)
+
+# Consider the player who got exactly 100 hits, what is the expected range of their true batting average?
+simulations %>% 
+            dplyr::filter(hits == 100) %>% 
+            ggplot2::ggplot(aes(x=true_average)) + 
+                     geom_bar(stat="bin", aes(y=..density.., line="grey")) + 
+                     geom_density(aes(color="red"))  + 
+                      ggplot2::theme_bw()
+```
+
+
+
 

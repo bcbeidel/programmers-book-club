@@ -72,3 +72,24 @@ update rule.
 The expected mean of the Beta distribution can be described as:
 
 > alpha / (alpha + beta)
+
+## 2.3 Conjugate Prior
+
+Why is the update so easy? It is becuase the beta distribution is the
+[conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior#Example)
+of the Binomial distribution. Which means there are clear cut rules on
+how to update the prior to get to the posterier distribution. [Wikipedia
+has a
+list](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions).
+If a prior is not a conjugate pior, then the update can get messy.
+
+Consider a player who got exactly 100 hits in the first 300 at bats. So,
+let’s simulate some batting statistics for the first 300 at bats.
+Starting with our prior belief regarding the distribution of batting
+averages we start with Beta(81, 219)
+
+    ## Warning: Ignoring unknown aesthetics: line
+
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](main_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
