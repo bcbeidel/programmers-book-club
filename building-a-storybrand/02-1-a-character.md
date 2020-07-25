@@ -44,4 +44,4 @@ The customer should know exactly where we want to take them.  Would they be able
 
 1. **Stop, Breathe.**
 2. Brainstorm answers to the question, "What does the character want?"
-3. Capture the ideas, select one before moving forward.
+3. Capture the ideas in the [worksheet](./building-a-storybrand-worksheet.pdf)

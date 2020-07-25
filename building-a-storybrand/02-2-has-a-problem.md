@@ -59,4 +59,4 @@ We should position our brand as the resolution to external, internal, and philos
 3. Brainstorm all the external problems that your brand resolves.  Is there one that represents the broadest swath of products?
 4. Brainstorm all the internal problems (frustration or doubt).  Is there one that stands out as universal to all your customers?
    - Is your brand part of a larger, more important story?  Is there a philosophical wrong you stand against?
-5. Capture the ideas.
+4. Capture the ideas in the [worksheet](./building-a-storybrand-worksheet.pdf)
