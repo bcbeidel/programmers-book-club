@@ -45,24 +45,24 @@ In marketing, there are also simple questions that should be answered if we expe
 
 The rest of the book walks us through how to hone the story.  It suggests that you stop to complete a draft for each component of the story at each stage before moving to the next.  From the introduction of the framework, there were some principles attached to each section.
 
-1. [**A Character**](./02-1-A-Character.md): The customer is the hero, not your brand.
-2. [**Has a Problem**](./02-2-Has-A-Problem.md): Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
-3. [**And Meets a Guide**](./02-3-And-Meets-a-Guide.md): Customers aren't looking for another hero; they're looking for a guide.
-4. [**Who Gives Them a Plan**](./02-4-Who-Gives-Them-A-Plan.md): Customers trust a guide who has a plan.
-5. [**And Calls Them To Action**](./02-5-And-Calls-Them-To-Action.md): Customers do not take action unless they are challenged to take action.
-6. [**That Helps Them Avoid Failure**](./02-6-That-Helps-Them-Avoid-Failure.md): Every Human is trying to avoid a tragic ending.
-7. [**And Ends in a Success**](./02-7-And-Ends-in-a-Success.md): Never assume people understand how your brand can change their lives.  Tell them.
+1. [**A Character**](./02-1-a-character.md): The customer is the hero, not your brand.
+2. [**Has a Problem**](./02-2-has-a-problem.md): Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
+3. [**And Meets a Guide**](./02-3-and-meets-a-guide.md): Customers aren't looking for another hero; they're looking for a guide.
+4. [**Who Gives Them a Plan**](./02-4-who-gives-them-a-plan.md): Customers trust a guide who has a plan.
+5. [**And Calls Them To Action**](./02-5-and-calls-them-to-action.md): Customers do not take action unless they are challenged to take action.
+6. [**That Helps Them Avoid Failure**](./02-6-that-helps-them-avoid-failure.md): Every Human is trying to avoid a tragic ending.
+7. [**And Ends in a Success**](./02-7-and-ends-in-a-success.md): Never assume people understand how your brand can change their lives.  Tell them.
 
 ## Next Steps
 
 1. Read Each chapter.  
-2. Brainstorm Potential Messages To Fill Each Section of the [script](./Building-a-StoryBrand-Audio-Book-Images.pdf).  
+2. Brainstorm Potential Messages To Fill Each Section of the [script](./building-a-storybrand-worksheet.pdf).  
 3. Review and pick one of your messages to use.
 4. Move to the next chapter.
 
 ## Additional Resources
 
-- [[PDF] Audio Book Images](./Building-a-StoryBrand-Audio-Book-Images.pdf)
+- [[PDF] Worksheet](./building-a-storybrand-worksheet.pdf)
 - [[Online Tool] MyStoryBrand.com](https://www.mystorybrand.com/)
 - [[Video] How to Become a Communication Ninja](https://storybrand.com/how-to-become-a-communication-ninja-video/)
 - [[Audio] The Secret of How Customers Think](https://storybrand.com/basb-pre-order-dl-video-audio-bonus/)
