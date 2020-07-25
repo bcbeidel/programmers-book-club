@@ -1,4 +1,4 @@
-# Section 2.7: And Ends In Success
+# Chapter 10: And Ends In Success
 
 **Never assume people understand how your brand can change their lives. Tell them.**  Successful brands and leaders make it clear what life will look like if somebody engages their products or services.  Without vision, people and brands will both perish.  The ending should be specific and clear, with a simple before and after.  Consider the exercise with the following grid.
 

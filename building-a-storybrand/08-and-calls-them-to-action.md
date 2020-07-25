@@ -1,4 +1,4 @@
-# Section 2.5: And Calls Them To Action
+# Chapter 8: And Calls Them To Action
 
 **Customers do not take action unless they are challenged to take action.**  At this point, we have spoken directly to the customer.  We identified their challenges, empathized with their feelings, established our competence, and layed out a plan, but that is not enough.  They need a call to action.  Customers do not have ESP; we have to make a clear invitation to join us. Otherwise, they won't take that first step.
 

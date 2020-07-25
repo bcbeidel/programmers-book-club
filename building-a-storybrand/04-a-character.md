@@ -1,4 +1,4 @@
-# Section 2.1: A Character
+# Chapter 4: A Character
 
 The customer is the hero, not your brand. The story opens with a hero who wants something.  Framing the message around the customer and their desires should be the focus. **Pare down the Customer's Ambition to a Single Focus**, having too many desires dilutes your objectives.
 

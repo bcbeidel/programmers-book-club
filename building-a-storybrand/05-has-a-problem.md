@@ -1,4 +1,4 @@
-# Section 2.2: Has A Problem
+# Chapter 5: Has A Problem
 
 **Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.**  That problem is the `hook` that draws people into the story.  The more we talk about our customers' experience, the more interest they will have in the brand.
 
