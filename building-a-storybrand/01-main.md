@@ -41,17 +41,17 @@ In marketing, there are also simple questions that should be answered if we expe
 2. How will it make my life better?
 3. What do I need to do to buy it?
 
-## Section 2: Building A Storybrand (SB7 Framework)
+## Building A Storybrand (SB7 Framework)
 
 The rest of the book walks us through how to hone the story.  It suggests that you stop to complete a draft for each component of the story at each stage before moving to the next.  From the introduction of the framework, there were some principles attached to each section.
 
-1. [**A Character**](./02-1-a-character.md): The customer is the hero, not your brand.
-2. [**Has a Problem**](./02-2-has-a-problem.md): Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
-3. [**And Meets a Guide**](./02-3-and-meets-a-guide.md): Customers aren't looking for another hero; they're looking for a guide.
-4. [**Who Gives Them a Plan**](./02-4-who-gives-them-a-plan.md): Customers trust a guide who has a plan.
-5. [**And Calls Them To Action**](./02-5-and-calls-them-to-action.md): Customers do not take action unless they are challenged to take action.
-6. [**That Helps Them Avoid Failure**](./02-6-that-helps-them-avoid-failure.md): Every Human is trying to avoid a tragic ending.
-7. [**And Ends in a Success**](./02-7-and-ends-in-a-success.md): Never assume people understand how your brand can change their lives.  Tell them.
+1. [**A Character**](./04-a-character.md): The customer is the hero, not your brand.
+2. [**Has a Problem**](./05-has-a-problem.md): Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.
+3. [**And Meets a Guide**](./06-and-meets-a-guide.md): Customers aren't looking for another hero; they're looking for a guide.
+4. [**Who Gives Them a Plan**](./07-who-gives-them-a-plan.md): Customers trust a guide who has a plan.
+5. [**And Calls Them To Action**](./08-and-calls-them-to-action.md): Customers do not take action unless they are challenged to take action.
+6. [**That Helps Them Avoid Failure**](./09-that-helps-them-avoid-failure.md): Every Human is trying to avoid a tragic ending.
+7. [**And Ends in a Success**](./10-and-ends-in-a-success.md): Never assume people understand how your brand can change their lives.  Tell them.
 
 ## Next Steps
 
