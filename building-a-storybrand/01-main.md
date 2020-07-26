@@ -62,6 +62,10 @@ Finally, we need to leverage the script to describe [how the customer will trans
 3. Review and pick one of your messages to use.
 4. Move to the next chapter.
 
+## Template
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQBXVaK70uP6s7uiZ5qeLu2TSwrqrL9Ols-k78nx4XnWHXb-7QkU0TyNi3FhZQgr2sXkQ0ajsMwqVY/pubhtml?widget=true&amp;headers=false"></iframe>
+
 ## Additional Resources
 
 - [[PDF] Worksheet](./building-a-storybrand-worksheet.pdf)
