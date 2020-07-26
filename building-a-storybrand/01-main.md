@@ -53,6 +53,8 @@ The rest of the book walks us through how to hone the story.  It suggests that y
 6. [**That Helps Them Avoid Failure**](./09-that-helps-them-avoid-failure.md): Every Human is trying to avoid a tragic ending.
 7. [**And Ends in a Success**](./10-and-ends-in-a-success.md): Never assume people understand how your brand can change their lives.  Tell them.
 
+Finally, we need to leverage the script to describe [how the customer will transform](./11-people-want-your-brand-to-participate-in-their-transformation.md)
+
 ## Next Steps
 
 1. Read Each chapter.  
