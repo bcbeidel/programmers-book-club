@@ -1,5 +1,5 @@
 ---
-title: "Introduction To Empirical Bayes Notes"
+title: "Introduction To Empirical Bayes Notes."
 output: github_document
 ---
 
@@ -20,16 +20,16 @@ Notes from [Introduction to Empirical Bayes: Examples from Baseball Statistics](
 
 ## Why Empirical Bayes?
 
-Empirical Bayesian methods are an approximation to more exact methods, but come with some controversy. However, EB methods are well suited for Data Science because
+Empirical Bayesian methods are an approximation to more exact methods but come with some controversy. However, EB methods are well suited for Data Science because
 
-- Though EB is Inacurate with few observations, with large datasets performance can be comperable to traditional Baysiean methods
-- EB provides shortcuts that allow easy computation at scale; Approximate in a fraction of the time of full Baysien Methos
+- Though EB is Inaccurate with few observations, with large datasets performance can be comparable to traditional Bayesian methods
+- EB provides shortcuts that allow easy computation at scale; Approximate in a fraction of full Bayesian Methods time.
 
-We can use EB as a fast approximation technique, when we have many observations.
+We can use EB as a fast approximation technique when we have many observations.
 
 ## 2 The beta distribution
 
-The _beta distribtion_ is a probability distribution with two Parameters $\alpha$ (alpha) and $\beta$ (beta).  The distribution is constrained between 0 an 1.  In practice, it is good at representing a probabilty distribution of probabilities.
+The _beta distribtion_ is a probability distribution with two Parameters $\alpha$ (alpha) and $\beta$ (Beta).  The distribution is constrained between 0 and 1.  In practice, it is good at representing a probability distribution of probabilities.
 
 ```{r, echo = FALSE, assorted-betas}
 size = 1e6
@@ -50,13 +50,13 @@ tibble::tibble(
 
 ### 2.1 The Binomial Distribution
 
-The _binomial distribution_ models a count of successes out of the total.  To follow the baseball analogy, for 100 at-bats we would say the number of hits a player will get is distribted according to `Binomial(100, p)` where `p` is the probability that at-bat `AB` will be a hit `H`.  In the baseball case, the `p` the thing we want estimate is a batting average.
+The _binomial distribution_ models a count of successes out of the total.  To follow the baseball analogy, for 100 at-bats, we would say the number of hits a player will get is distributed according to `Binomial(100, p)` where `p` is the probability that at-bat `AB` will be a hit `H.`  In the baseball case, the `p` the thing we want estimate is a batting average.
 
 > Batting Average = Hits / At Bats
 
 ### 2.2 Updating The Beta Distribution
 
-We can build an existing belief (prior) regarding what a reasonable batting average should be.  The text suggests that belief is 0.27, with an alpha = 81, and beta of 219.  However, a batting average could reasonably range from 0.21 to 0.35 (see plot below).  So if we start with this existing belief of where any players true batting average _could be_, how do we update our prior beliefs based on new information as the player gets at-bats in.
+We can build an existing belief (prior) regarding what a reasonable batting average should be.  The text suggests that belief is 0.27, with an alpha = 81, and Beta of 219.  However, a batting average could reasonably range from 0.21 to 0.35 (see plot below).  So if we start with this existing belief of where any players true batting average _could be_, how do we update our prior beliefs based on new information as the player gets at-bats in.
 
 ```{r, echo = FALSE, beta_for_batting_averages}
 size = 1e6
@@ -75,13 +75,13 @@ tibble::tibble(
   theme_bw()
 ```
 
-This idea, `prior expectations + new information = new expectation` is a simplificiation of the Bayesian Philosopy.  In the case of updating our beta distribution, the update rule is very simple.
+This idea, `prior expectations + new information = new expectation`, is a simplification of the Bayesian Philosophy.  In the case of updating our beta distribution, the update rule is straightforward.
 
 > Beta(alpha<sub>0</sub> + hits, beta<sub>0</sub> + misses)
 
-So, if a player were to have a hit on their first at-bat, the new beta would be be Beta(82, 219).  When we plot both distributions we can see that the posterior distribution shifts slightly to the right.  The movement is very small, however, if we were to consider a batter who has hit 200 out of 600 at bats, the new posterier would be be Beta(282, 619), a much bigger shift, since we have collected more evidence for the update rule.
+So, if a player were to have a hit on their first at-bat, the new Beta would be Beta (82, 219).  When we plot both distributions, we can see that the posterior distribution shifts slightly to the right.  However, the movement is minimal if we were to consider a batter who has hit 200 out of 600 at-bats. The new posterior would be Beta (282, 619), a much more significant shift, since we have collected more evidence for the update rule.
 
-```{r, echo = FALSE, update-the-betas-a-little-and-a-lot}
+```{r, echo = TRUE, update-the-betas-a-little-and-a-lot}
 size = 1e6
 tibble::tibble(
   alpha = c(81, 82, 282),
@@ -98,21 +98,21 @@ tibble::tibble(
   theme_bw()
 ```
 
-### 2.2.1 Calculating The Posterier Mean
+#### 2.2.1 Calculating The Posterier Mean
 
 The expected mean of the Beta distribution can be described as:
 
 > alpha / (alpha + beta)
 
-## 2.3 Conjugate Prior
+### 2.3 Conjugate Prior
 
-Why is the update so easy?  It is becuase the beta distribution is the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior#Example) of the Binomial distribution.  Which means there are clear cut rules on how to update the prior to get to the posterier distribution. [Wikipedia has a list](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions).  If a prior is not a conjugate pior, then the update can get messy.
-
-
-Consider a player who got exactly 100 hits in the first 300 at bats.  What is the true value of their batting average?  We can get a better sense of possible values by simulating many players based on our prior belief regarding the distribution of batting averages we start with Beta(81, 219).
+Why is the update so easy?  It is because the beta distribution is the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior#Example) of the Binomial distribution.  This means there are clear cut rules on updating the prior to get to the posterior distribution. [Wikipedia has a list](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions).  If a prior is not a conjugate prior, then the update can get messy.
 
 
-```{r}
+Consider a player who got exactly 100 hits in the first 300 at-bats.  What is the true value of their batting average?  We can get a better sense of possible values by simulating many players based on our prior belief regarding the distribution of batting averages we start with Beta (81, 219).
+
+
+```{r echo=TRUE}
 library(dplyr)
 num_trials <- 10e6
 
@@ -129,11 +129,11 @@ simulations %>%
             ggplot2::ggplot(aes(x=true_average)) + 
                      geom_bar(stat="bin", binwidth = 0.004, ggplot2::aes(y=..density..)) + 
                      geom_density()  + 
-                     xlab("Batting average of players who got 100 H / 300 AB.")
+                     xlab("Batting average of players who got 100 H / 300 AB.") +
                      ggplot2::theme_bw()
 ```
 
-What if our player had 60, 80 or 100 hits instead.  The simulations would look like plot below.  The shapes are simliar, but they are shifted to accomodate our new information.  The simulations are not required long term, but helpful for demonstration.  Eventually we will rely on the update rule "add `hits` to `alpha`, and add `misses` to `beta`"
+What if our player had 60, 80, or 100 hits instead.  The simulations would look like the plot below.  The shapes are similar, but they are shifted to accommodate our new information.  The simulations are not required long term, but helpful for demonstration.  Eventually, we will rely on the update rule "add `hits` to `alpha,` and add `misses` to `beta`"
 
 ```{r}
 simulations %>%
@@ -145,11 +145,11 @@ simulations %>%
 
 ## 2. Empirical Bayes Estimation
 
-Which sounds higher, `4 out of 10`, or `300 out of 1000`?  Obviously 4/10 = 0.4 and 300/1000 = 0.3.  `0.4` > `0.3` so the answer is clear, but 10 AB is not nearly as much evidence as 1000 AB, so we would have different levels of confidence regarding each.  This sort of hits / attempts analysis is not limited to baseball, consider online advertising for a simliar "proportion of success" analysis.
+Which sounds higher, `4 out of 10`, or `300 out of 1000`?  Obviously 4/10 = 0.4 and 300/1000 = 0.3.  `0.4` > `0.3` so the answer is clear, but 10 AB is not nearly as much evidence as 1000 AB so that we would have different levels of confidence regarding each.  This sort of hits/attempts analysis is not limited to baseball, consider online advertising for a similar "proportion of success" analysis.
 
 ### 2.1 The Lahman baseball dataset
 
-Let's look at real baseball stats wth `Lahman`.
+Let's look at real baseball stats wth `Lahman.`
 
 
 ```{r}
@@ -176,9 +176,9 @@ career <- Master %>%
 career
 ```
 
-## 3.2 Estimating A Prior From All Your Data
+### 3.2 Estimating A Prior From All Your Data
 
-Our first step of empirical Baeys estimation is to esitmate a beta prior, using the data.  Debate exists if an when it is appropriate to use Empirical Bayes methods, but it basically comes down to how many observations we have.  The less dependent we are on a single observation, the better.  Ultimately, Empircal Bayes is an **approximation** of more exeact Baysian methods.  If we have a lot of data, it is a good approximation.
+Our first step of empirical Bayes estimation is to estimate a beta prior, using the data.  Debate exists if an when it is appropriate to use Empirical Bayes methods, but it comes down to how many observations we have.  The less dependent we are on a single observation, the better.  Ultimately, Empirical Bayes is an **approximation** of more exact Bayesian methods.  If we have a lot of data, it is a good approximation.
 
 ```{r}
 career %>% 
@@ -190,10 +190,9 @@ career %>%
 
 We need to fit a model such that we fix a beta distribution to this dataset.  We can think of the model we want to fit as
 
-`X ~ Beta(alpha0, beta0)` where `alpha0` and `beta0` are the hyperparamters we are trying to estimate.  One technique for estimating is using maximum likelihood, another is based on population mean and variance
+`X ~ Beta(alpha0, beta0)` where `alpha0` and `beta0` are the hyperparameters we are trying to estimate.  One technique for estimating is using maximum likelihood, and another is based on population mean and variance. 
 
-
-```{r fitting-alpha0-and-beta0}
+```{r echo=TRUE}
 career_filtered <- career %>% filter(AB > 500)
 
 estimate_beta_parameters <- function(mu, var) {
@@ -209,27 +208,27 @@ parms <- estimate_beta_parameters(average_mu, average_var)
 parms
 ```
 
-We can use these paramters to create an estimated batting average.
+We can use these parameters to create an estimated batting average.
 
-```{r}
+```{r echo=TRUE}
 career_eb <- career %>% mutate(eb_estimate = (H + parms$alpha) / (AB + parms$alpha + parms$beta))
 ```
 
-Looking more closely at the results, the best and words are not simply the players with small numbers of at bats with particularly good or bad records.
+Looking more closely at the results, the best and words are not merely the players with small numbers of bats with, particularly good or bad records.
 
-```{r}
+```{r echo=TRUE}
 career_eb %>% dplyr::arrange(eb_estimate)
 ```
 
-```{r}
+```{r echo=TRUE}
 career_eb %>% dplyr::arrange(desc(eb_estimate))
 ```
 
-### 3.4 Visulizing The Results
+### 3.4 Visualizing The Results
 
-Moving our estimates towards an average is often called `shrinkage`. _Extraordinatry outliers require extraordinary evidence._
+Moving our estimates towards an average is often called `shrinkage.` _Extraordinatry outliers require extraordinary evidence._
 
-```{r}
+```{r echo=TRUE}
 career_eb %>% 
           ggplot(aes(x = average, y = eb_estimate, color = AB)) + 
           geom_point() +
@@ -237,15 +236,94 @@ career_eb %>%
           ylab("Empirical Bayes Batting Average")
 ```
 
-## 3.5 So easy it feels like cheating
+### 3.5 So comfortable it feels like cheating
 
 The steps for using EB are:
 
-1. Estimate overall distribution of your data
-2. User that distribution as a prior for estimating your average
+1. Estimate the overall distribution of your data
+2. Use that distribution as a prior for estimating your average
 
-> "empirical Bayesian shrinkage towards a Beta prior"
+> "empirical Bayesian shrinkage towards a Beta prior."
+
+## 4. Credible Intervals
+
+Rather than estimating the 'best guess,' we want to know how much uncertainty is in our point estimates.  In this case, we are talking about a `credible interval.`
+
+### 4.2 Posterior distribution
+
+We are calculating a new posterior distribution for each player based on the update rules.
+
+```{r echo=TRUE}
+# values estimated by maximum likelihood in Chapter 3
+alpha0 <- 101.4 
+beta0  <- 287.3
+
+# calculate our `point estimate` applying shrinkage to a beta prior
+career_eb <- career %>% 
+                    mutate(eb_estimate = (H + alpha0) / (AB + alpha0 + beta0)) %>% 
+                    mutate(alpha1 = alpha0 + H, beta1 = beta0 + AB - H)
+
+# apply our update rules to calculate a new posterior beta distribution for every player
+sampled_players <- career_eb %>% sample_n(7)
+```  
+
+### 4.3 Credible intervals
+
+A credible interval means that some percentage (say 95%) lies within a particular region.  Consider the plot below, showing Derek Jeter's 95% Confidence Interval.
+
+```{r jeterinterval"}
+# Adapted from https://github.com/dgrtwo/empirical-bayes-book/blob/master/credible-intervals.Rmd#L69-L88
+jeter <- career_eb %>%
+  filter(name == "Derek Jeter") %>%
+  crossing(x = seq(.18, .33, .0002)) %>%
+  ungroup() %>%
+  mutate(density = dbeta(x, alpha1, beta1))
+ 
+jeter_pred <- jeter %>%
+  mutate(cumulative = pbeta(x, alpha1, beta1)) %>%
+  filter(cumulative > .025, cumulative < .975)
+
+jeter_low <- qbeta(.025, jeter$alpha1[1], jeter$beta1[1])
+jeter_high <- qbeta(.975, jeter$alpha1[1], jeter$beta1[1])
+jeter %>%
+  ggplot(aes(x, density)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = 0, ymax = density), data = jeter_pred,
+              alpha = .25, fill = "red") +
+  stat_function(fun = function(x) dbeta(x, alpha0, beta0),
+                lty = 2, color = "black") +
+  geom_errorbarh(aes(xmin = jeter_low, xmax = jeter_high, y = 0), height = 3.5, color = "red") +
+  xlim(.18, .34)
+```
 
 
-## 4
+> You can compute the edges of the credible interval quite easily using the [qbeta](https://stat.ethz.ch/R-manual/R-patched/library/stats/html/Beta.html) (quantile of Beta) function in R. We just provide it the posterior `alpha1` and `beta1` parameters for each player. [Source: GitHub](https://github.com/dgrtwo/empirical-bayes-book/blob/master/credible-intervals.Rmd#L121)
+
+```{r echo=TRUE}
+sampled_players <- sampled_players %>%
+  mutate(low  = qbeta(.025, alpha1, beta1),
+         high = qbeta(.975, alpha1, beta1))
+
+sampled_players %>% unique()
+```
+
+### 4.4 Credible Intervals and confidence intervals
+
+Distinguishing between Confidence Intervals and Credible Intervals, let's assume we have chosen a confidence level and a credible interval of 95%.  How we would interpret these would differ as such:
+
+- Confidence Interval (Frequentist):
+  - Out of 100 experiments, at least 95 of those experiments would be expected to provide confidence intervals containing true value. The other five could be wrong, or nonsense, but that is ok, we care about the 95.
+- Credible Interval (Bayesian):
+  - The true value of our parameter is unknown. However, we have established a probability density estimate that represents our belief about that true value. A 95% credible interval will include 95% of the probability distribution that we have estimated for that estimated parameters
+
+Credible and confidence intervals start looking more and more identical when:
+
+1. We have a larger volume of observations, providing more information (large n),
+2. the prior is less informative (small alpha0 and beta0)
+
+---
+
+## 5. Hypothesis Testing and FDR
+
+## 6. Bayesian A/B Testing
 
