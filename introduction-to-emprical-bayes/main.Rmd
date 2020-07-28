@@ -13,6 +13,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(purrr)
+ggplot2::theme_set(ggplot2::theme_bw())
 ```
 
 Notes from [Introduction to Empirical Bayes: Examples from Baseball Statistics](http://varianceexplained.org/r/empirical-bayes-book/) by David Robinson
@@ -108,7 +109,7 @@ The expected mean of the Beta distribution can be described as:
 Why is the update so easy?  It is becuase the beta distribution is the [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior#Example) of the Binomial distribution.  Which means there are clear cut rules on how to update the prior to get to the posterier distribution. [Wikipedia has a list](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions).  If a prior is not a conjugate pior, then the update can get messy.
 
 
-Consider a player who got exactly 100 hits in the first 300 at bats.  So, let's simulate some batting statistics for the first 300 at bats.  Starting with our prior belief regarding the distribution of batting averages we start with Beta(81, 219)
+Consider a player who got exactly 100 hits in the first 300 at bats.  What is the true value of their batting average?  We can get a better sense of possible values by simulating many players based on our prior belief regarding the distribution of batting averages we start with Beta(81, 219).
 
 
 ```{r}
@@ -126,11 +127,125 @@ simulations <- tibble::tibble(
 simulations %>% 
             dplyr::filter(hits == 100) %>% 
             ggplot2::ggplot(aes(x=true_average)) + 
-                     geom_bar(stat="bin", aes(y=..density.., line="grey")) + 
-                     geom_density(aes(color="red"))  + 
-                      ggplot2::theme_bw()
+                     geom_bar(stat="bin", binwidth = 0.004, ggplot2::aes(y=..density..)) + 
+                     geom_density()  + 
+                     xlab("Batting average of players who got 100 H / 300 AB.")
+                     ggplot2::theme_bw()
 ```
 
+What if our player had 60, 80 or 100 hits instead.  The simulations would look like plot below.  The shapes are simliar, but they are shifted to accomodate our new information.  The simulations are not required long term, but helpful for demonstration.  Eventually we will rely on the update rule "add `hits` to `alpha`, and add `misses` to `beta`"
+
+```{r}
+simulations %>%
+  filter(hits %in% c(60, 80, 100)) %>% ggplot(aes(true_average, color = factor(hits))) + geom_density() +
+  labs(x = "True average of players with H hits / 300 at-bats",
+  color = "H") +                
+  ggplot2::theme_bw()
+```
+
+## 2. Empirical Bayes Estimation
+
+Which sounds higher, `4 out of 10`, or `300 out of 1000`?  Obviously 4/10 = 0.4 and 300/1000 = 0.3.  `0.4` > `0.3` so the answer is clear, but 10 AB is not nearly as much evidence as 1000 AB, so we would have different levels of confidence regarding each.  This sort of hits / attempts analysis is not limited to baseball, consider online advertising for a simliar "proportion of success" analysis.
+
+### 2.1 The Lahman baseball dataset
+
+Let's look at real baseball stats wth `Lahman`.
 
 
+```{r}
+library(dplyr) 
+library(tidyr) 
+library(Lahman)
+# Filter out pitchers
+career <- Batting %>%
+                  filter(AB > 0) %>%
+                  anti_join(Pitching, by = "playerID") %>% 
+                  group_by(playerID) %>%
+                  summarize(H = sum(H), AB = sum(AB)) %>% 
+                  mutate(average = H / AB) %>%
+                  tibble::as_tibble()
+
+# Include names along with the player IDs
+career <- Master %>%
+            tibble::as_tibble() %>%
+            dplyr::select(playerID, nameFirst, nameLast) %>% 
+            unite(name, nameFirst, nameLast, sep = " ") %>% 
+            inner_join(career, by = "playerID") %>% 
+            dplyr::select(-playerID)
+
+career
+```
+
+## 3.2 Estimating A Prior From All Your Data
+
+Our first step of empirical Baeys estimation is to esitmate a beta prior, using the data.  Debate exists if an when it is appropriate to use Empirical Bayes methods, but it basically comes down to how many observations we have.  The less dependent we are on a single observation, the better.  Ultimately, Empircal Bayes is an **approximation** of more exeact Baysian methods.  If we have a lot of data, it is a good approximation.
+
+```{r}
+career %>% 
+  dplyr::filter(AB > 500) %>%
+  ggplot2::ggplot(aes(x=average)) + 
+  geom_histogram(bins = 40) +
+  ggtitle("Batting Averages of all players with more than 500 At-Bats.")
+```
+
+We need to fit a model such that we fix a beta distribution to this dataset.  We can think of the model we want to fit as
+
+`X ~ Beta(alpha0, beta0)` where `alpha0` and `beta0` are the hyperparamters we are trying to estimate.  One technique for estimating is using maximum likelihood, another is based on population mean and variance
+
+
+```{r fitting-alpha0-and-beta0}
+career_filtered <- career %>% filter(AB > 500)
+
+estimate_beta_parameters <- function(mu, var) {
+  alpha <- ((1 - mu) / var - 1 / mu) * mu ^ 2
+  beta <- alpha * (1 / mu - 1)
+  return(params = list(alpha = alpha, beta = beta))
+}
+
+average_mu = mean(career_filtered$average)
+average_var = var(career_filtered$average)
+
+parms <- estimate_beta_parameters(average_mu, average_var)
+parms
+```
+
+We can use these paramters to create an estimated batting average.
+
+```{r}
+career_eb <- career %>% mutate(eb_estimate = (H + parms$alpha) / (AB + parms$alpha + parms$beta))
+```
+
+Looking more closely at the results, the best and words are not simply the players with small numbers of at bats with particularly good or bad records.
+
+```{r}
+career_eb %>% dplyr::arrange(eb_estimate)
+```
+
+```{r}
+career_eb %>% dplyr::arrange(desc(eb_estimate))
+```
+
+### 3.4 Visulizing The Results
+
+Moving our estimates towards an average is often called `shrinkage`. _Extraordinatry outliers require extraordinary evidence._
+
+```{r}
+career_eb %>% 
+          ggplot(aes(x = average, y = eb_estimate, color = AB)) + 
+          geom_point() +
+          xlab("Batting Average") +
+          ylab("Empirical Bayes Batting Average")
+```
+
+## 3.5 So easy it feels like cheating
+
+The steps for using EB are:
+
+1. Estimate overall distribution of your data
+2. User that distribution as a prior for estimating your average
+
+> "empirical Bayesian shrinkage towards a Beta prior"
+
+
+## 4
 
