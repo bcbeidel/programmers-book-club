@@ -330,15 +330,15 @@ sampled_players %>% unique()
 ```
 
     ## # A tibble: 7 x 9
-    ##   name                H    AB average eb_estimate alpha1 beta1   low  high
-    ##   <chr>           <int> <int>   <dbl>       <dbl>  <dbl> <dbl> <dbl> <dbl>
-    ## 1 Dick Brown        455  1866   0.244       0.247   556. 1698. 0.229 0.265
-    ## 2 Charlie Vinson      4    22   0.182       0.257   105.  305. 0.216 0.300
-    ## 3 Rabbit Warstler   935  4088   0.229       0.232  1036. 3440. 0.219 0.244
-    ## 4 Starlin Castro   1617  5773   0.280       0.279  1718. 4443. 0.268 0.290
-    ## 5 David Bote        122   487   0.251       0.255   223.  652. 0.227 0.284
-    ## 6 Wally Joyner     2060  7127   0.289       0.288  2161. 5354. 0.277 0.298
-    ## 7 Roy Hartsfield    266   976   0.273       0.269   367.  997. 0.246 0.293
+    ##   name                  H    AB average eb_estimate alpha1 beta1   low  high
+    ##   <chr>             <int> <int>   <dbl>       <dbl>  <dbl> <dbl> <dbl> <dbl>
+    ## 1 Ned Harris          211   814   0.259       0.260   312.  890. 0.235 0.285
+    ## 2 Billy Cox           974  3712   0.262       0.262  1075. 3025. 0.249 0.276
+    ## 3 Red Thomas            8    30   0.267       0.261   109.  309. 0.220 0.304
+    ## 4 Mario Encarnacion    14    69   0.203       0.252   115.  342. 0.213 0.293
+    ## 5 Chuck Oertel          2    12   0.167       0.258   103.  297. 0.216 0.302
+    ## 6 John Murphy           6    25   0.24        0.260   107.  306. 0.219 0.303
+    ## 7 Donnie Scott         96   443   0.217       0.237   197.  634. 0.209 0.267
 
 ### 4.4 Credible Intervals and confidence intervals
 
@@ -368,5 +368,248 @@ when:
 -----
 
 ## 5\. Hypothesis Testing and FDR
+
+`False Discovery Rate` is a mechanism for conceptualizing the rate of
+type 1 errors (i.e., False Positive).
+
+    ## `summarise()` ungrouping output (override with `.groups` argument)
+
+    ## Warning: `tbl_df()` is deprecated as of dplyr 1.0.0.
+    ## Please use `tibble::as_tibble()` instead.
+    ## This warning is displayed once every 8 hours.
+    ## Call `lifecycle::last_warnings()` to see where this warning was generated.
+
+### 5.2 Posterier Error Probabilities
+
+> Consider the legendary player Hank Aaron. His career batting average
+> is 0.3050, but we’d like to base our Hall of Fame admission on his
+> “true probability” of hitting. Should he be permitted in our \>.300
+> Hall of Fame?
+
+``` r
+career_eb %>%
+  filter(name == "Hank Aaron")
+```
+
+    ## # A tibble: 1 x 8
+    ##   playerID  name           H    AB average eb_estimate alpha1 beta1
+    ##   <chr>     <chr>      <int> <int>   <dbl>       <dbl>  <dbl> <dbl>
+    ## 1 aaronha01 Hank Aaron  3771 12364   0.305       0.304  3872. 8880.
+
+``` r
+# https://github.com/dgrtwo/empirical-bayes-book/blob/master/hypothesis-testing.Rmd#L70-L81
+career_eb %>%
+  filter(name == "Hank Aaron") %>%
+  do(tibble(x = seq(.27, .33, .0002),
+                density = dbeta(x, .$alpha1, .$beta1))) %>%
+  ggplot(aes(x, density)) +
+  ggtitle("Visualizing the `PEP` for Hank Aaron for a batting average of `0.300`") +
+  geom_line() +
+  geom_ribbon(aes(ymin = 0, ymax = density * (x < .3)),
+              alpha = .1, fill = "red") +
+  geom_vline(color = "red", lty = 2, xintercept = .3) +
+  labs(x = "Batting average")
+```
+
+![](main_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+
+Given our selected threshold of `0.300`, we can use a cumulative
+distribution function to calculate Hank Aaron’s true batting average
+below 0.3 (see plot above). The probability that his true batting
+average is less than `0.300` is called the `Posterior Error Probability`
+or `PEP.` As the shrunken batting average approaches our threshold of
+`0.300`, the `PEP` approaches `0.5`. This is because the shrunken
+batting-average is the center point of the distribution. For example, if
+the shrunken batting average of a player were `0.500`, exactly half of
+their updated beta distribution would be below `0.300`, and one half
+would be above. Take Manny Mota, for example, his shrunken batting
+average rounds to 0.3 when rounded to 4 significant digits, let’s
+visualize his `PEP.`
+
+``` r
+manny_mota <- career_eb %>%
+  filter(round(eb_estimate, 4) == 0.3)
+
+manny_mota
+```
+
+    ## # A tibble: 1 x 8
+    ##   playerID name           H    AB average eb_estimate alpha1 beta1
+    ##   <chr>    <chr>      <int> <int>   <dbl>       <dbl>  <dbl> <dbl>
+    ## 1 motama01 Manny Mota  1149  3779   0.304       0.300  1250. 2917.
+
+``` r
+manny_mota %>%
+  do(tibble(x = seq(.27, .33, .0002),
+                density = dbeta(x, .$alpha1, .$beta1))) %>%
+  ggplot(aes(x, density)) +
+  ggtitle("Visualizing the `PEP` for Manny Mota for a batting average of `0.300`") +
+  geom_line() +
+  geom_ribbon(aes(ymin = 0, ymax = density * (x < .3)),
+              alpha = .1, fill = "red") +
+  geom_vline(color = "red", lty = 2, xintercept = .3) +
+  labs(x = "Batting average")
+```
+
+![](main_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+
+The probability that Manny’s actual batting average is less than
+`0.300`, we can use our `PEP` calculation, with our updated `alpha` and
+`beta` values to calculate it with the `pbeta` function.
+
+``` r
+manny_PEP <- pbeta(0.3, manny_mota$alpha1[1], manny_mota$beta1[1])
+manny_PEP
+```
+
+    ## [1] 0.5005843
+
+So, building on the intuition, the estimated batting average represents
+the middle range of possible true batting averages. As Manny’s batting
+average sits nearly centered on our decision threshold of `0.300`, we
+can see that `0.5005843` sits below the threshold and the remainder
+sites above.
+
+### 5.3 False Discovery Rate
+
+> Now, we want to set some threshold for inclusion in our Hall of Fame.
+> This criterion is up to us: what kind of goal do we want to set? There
+> are many options, but I’ll propose one common in statistics: let’s try
+> to include as many players as possible while ensuring that no more
+> than 5% of the Hall of Fame was mistakenly included. Put another way;
+> we want to ensure that if you’re in the Hall of Fame, the probability
+> you belong is at least 95%. This criterion is called false
+> \*\*discovery rate control. It’s particularly relevant in scientific
+> studies, where we might want to come up with a set of candidates
+> (e.g., genes, countries, individuals) for future study. There’s
+> nothing special, about 5%: if we wanted to be more strict, we could
+> choose the same policy, but change our desired FDR to 1% or .1%.
+> Similarly, if we wanted a broader set of candidates to study, we could
+> set an FDR of 10% or 20%.
+> <https://github.com/dgrtwo/empirical-bayes-book/blob/master/hypothesis-testing.Rmd#L125-L127>
+
+So, suppose `PEP` represents the probability that a batter’s true
+average is less than our threshold. We can begin by examining players
+with high values for their estimated batting average and low PEPs. We
+can start with observations whose posterior distributions are above our
+threshold while minimizing our `PEP`.
+
+``` r
+career_eb <- career_eb %>% mutate(PEP = pbeta(.3, alpha1, beta1))
+
+top_players <- career_eb %>% arrange(PEP) %>% head(100)
+
+top_players
+```
+
+    ## # A tibble: 100 x 9
+    ##    playerID  name              H    AB average eb_estimate alpha1 beta1      PEP
+    ##    <chr>     <chr>         <int> <int>   <dbl>       <dbl>  <dbl> <dbl>    <dbl>
+    ##  1 hornsro01 Rogers Horns…  2930  8173   0.358       0.354  3031. 5530. 3.10e-27
+    ##  2 delahed01 Ed Delahanty   2597  7510   0.346       0.342  2698. 5200. 7.81e-16
+    ##  3 keelewi01 Willie Keeler  2932  8591   0.341       0.338  3033. 5946. 5.45e-15
+    ##  4 jacksjo01 Shoeless Joe…  1772  4981   0.356       0.349  1873. 3496. 6.62e-15
+    ##  5 lajoina01 Nap Lajoie     3243  9590   0.338       0.335  3344. 6634. 1.72e-14
+    ##  6 gwynnto01 Tony Gwynn     3141  9288   0.338       0.335  3242. 6434. 4.73e-14
+    ##  7 heilmha01 Harry Heilma…  2660  7787   0.342       0.338  2761. 5414. 8.90e-14
+    ##  8 gehrilo01 Lou Gehrig     2721  8001   0.340       0.336  2822. 5567. 3.08e-13
+    ##  9 hamilbi01 Billy Hamilt…  2164  6283   0.344       0.340  2265. 4406. 1.64e-12
+    ## 10 collied01 Eddie Collins  3315  9949   0.333       0.330  3416. 6921. 1.05e-11
+    ## # … with 90 more rows
+
+> Well, we know the PEP of each of these 100 players, which is the
+> probability that that individual player is a false positive. This
+> means we can just add up these probabilities to get the expected
+> value.
+
+``` r
+sum(top_players$PEP)
+```
+
+    ## [1] 6.076899
+
+This suggests we should expect 6 of our 100 players to have a batting
+average less than `0.300`.
+
+> Note that we’re calculating the FDR as 6.07/100 = 6.07%. Thus, we’re
+> computing the mean PEP: the average Posterior Error Probability.
+
+``` r
+mean(top_players$PEP)
+```
+
+    ## [1] 0.06076899
+
+## 5.4 Q-Values
+
+The `False Discovery Rate` is above our desired threshold, so 100
+players are too many, we could go through an iterative process of
+picking various player counts until we get an `FDR` we are comfortable
+with, OR, we could use the concept of a cumulative mean of all the
+(sorted) posterior error probabilities or `q-value` to help us pick our
+threshold.
+
+We arrange our observations in descending order of PEP and then
+calculate our `q-value` as the running mean of our `posterior error
+probability`. We then use that `q-value` to pick the cutoff point for
+our dataset that meets our `FDR` threshold
+
+``` r
+career_eb <- career_eb %>% 
+  dplyr::arrange(PEP) %>% 
+  dplyr::mutate(qvalue = dplyr::cummean(PEP))
+```
+
+> The q-value is convenient because we can say “to control the FDR at
+> X%, collect only hypotheses where q \< X”.
+
+``` r
+hall_of_fame <- career_eb %>% filter(qvalue < .05)
+count(hall_of_fame)
+```
+
+    ## # A tibble: 1 x 1
+    ##       n
+    ##   <int>
+    ## 1    94
+
+In this case, at a 5% `FDR`, we would only include 94 players in the
+hall of fame. We can change our threshold and see how that affects entry
+into the hall of fame.
+
+``` r
+strict_hall_of_fame <- career_eb %>% filter(qvalue < .01)
+count(strict_hall_of_fame)
+```
+
+    ## # A tibble: 1 x 1
+    ##       n
+    ##   <int>
+    ## 1    61
+
+Increasing the threshold to 1% acceptable `FDR` lowers the number of
+players we can let into only 61 players. Consider the following plot, as
+we increase the acceptable `q-value` we increase the number of players
+we would allow into our hall-of-fame.
+
+``` r
+career_eb %>%
+  filter(qvalue < .3) %>%
+  ggplot(aes(qvalue, rank(PEP))) +
+  geom_line() +
+  scale_x_continuous(labels = scales::percent_format()) +
+  xlab("q-value threshold") +
+  ylab("Number of players included at this threshold")
+```
+
+![](main_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+
+To reiterate and contrast.
+
+  - `PEP` represents the probability than an individual observation is a
+    false positive
+  - `q-value` represents the expected false discovery rate for all
+    included observations including the individual (average of PEP for
+    obersvations)
 
 ## 6\. Bayesian A/B Testing
