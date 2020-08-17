@@ -485,3 +485,25 @@ To reiterate and contrast.
 
 ## 6. Bayesian A/B Testing
 
+Which option is better?  That is a common request 
+
+We want to know _the probability that one beta distribution is greater than another_.  There are four common approaches.
+
+1. Simulation of posterier draws
+  - sample both distributions many times over, calculate the fraction of time where one option is greater than the other.
+2. Numerical integration
+  - Create a joint distribution, determine the fraction of that joint distribution that resides with one option over the other
+3. Closed-form solution
+4. Closed-form approxiamtions
+
+
+### 6.2 Comparing Posterier Distributions
+
+### 6.2.1 Simulation of posterier draws
+### 6.2.2 Numerical Integration
+### 6.2.1 Closed-form solution
+### 6.2.1 Closed-form approximation
+
+
+### 6.3 Confidence and credible intervals
+
