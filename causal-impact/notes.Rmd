@@ -38,10 +38,10 @@ What is the `CausalImpact` approach to this problem?
 
 In order to use the `CausalImpact` package, we need a few things.
 
-1. Treatment at the time (t)
-2. A time series of our target observation (`Y`)
-   - This time series must be broken up into a `pre-period` and a `post-period` groups.
-3. One more co-variate, "predictor" time-series sets (`X1`, and `X2`), that they themselves are not impacted by the treatment at the time (t).
+1. A time series of our target observation (`Y`)
+   - This time series must designate a `pre-period` and a `post-period` group.
+2. One more co-variate, "predictor" time-series sets (`X1`, and `X2`), that they themselves are not impacted by the treatment at the time (t).
+3. In a Bayesian Framework, any priors we want include (i.e., from previous studies)
 
 We leverage these co-variate sets to estimate the synthetic-control, which we use to estimate our causal effect in the `post-period`.
 
