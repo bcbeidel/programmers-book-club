@@ -1,6 +1,9 @@
 ---
 title: "KDD2020: Casual Inference Meets Machine Learning"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    number_sections: true
 ---
 
 ```{r setup, include=FALSE}

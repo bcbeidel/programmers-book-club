@@ -378,12 +378,34 @@ summary {
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#overview"><span class="toc-section-number">0.1</span> <span>Overview</span></a>
+<ul>
+<li><a href="#correlation-does-not-imply-causation"><span class="toc-section-number">0.1.1</span> Correlation does not imply causation</a></li>
+<li><a href="#causal-inference-and-causal-discovery"><span class="toc-section-number">0.1.2</span> Causal Inference and Causal Discovery</a></li>
+<li><a href="#experimental-study"><span class="toc-section-number">0.1.3</span> Experimental Study</a></li>
+<li><a href="#observational-study"><span class="toc-section-number">0.1.4</span> Observational Study</a></li>
+<li><a href="#tutorial-objectives"><span class="toc-section-number">0.1.5</span> Tutorial Objectives</a></li>
+</ul></li>
+<li><a href="#causal-inference-background-and-challenges"><span class="toc-section-number">0.2</span> <span>Causal Inference: Background and Challenges</span></a>
+<ul>
+<li><a href="#causal-inference-paradigms"><span class="toc-section-number">0.2.1</span> Causal Inference Paradigms</a></li>
+<li><a href="#potential-outcome-framework-key-terms"><span class="toc-section-number">0.2.2</span> Potential Outcome Framework: Key Terms</a></li>
+<li><a href="#potential-outcome-framework-an-example"><span class="toc-section-number">0.2.3</span> Potential Outcome Framework: An Example</a></li>
+</ul></li>
+<li><a href="#key-terms"><span class="toc-section-number">0.3</span> Key Terms</a></li>
+<li><a href="#external-refernces"><span class="toc-section-number">0.4</span> External Refernces</a></li>
+<li><a href="#tutorial-resources"><span class="toc-section-number">0.5</span> Tutorial Resources</a></li>
+<li><a href="#tutors"><span class="toc-section-number">0.6</span> Tutors</a></li>
+</ul>
+</div>
 
-<div id="overview" class="section level2">
-<h2><a href="https://www.youtube.com/watch?time_continue=39&amp;v=g_2dMQCU0zo&amp;feature=emb_logo">Overview</a></h2>
+<div id="overview" class="section level2" number="0.1">
+<h2 number="0.1"><span class="header-section-number">0.1</span> <a href="https://www.youtube.com/watch?time_continue=39&amp;v=g_2dMQCU0zo&amp;feature=emb_logo">Overview</a></h2>
 <p><strong>Causality</strong> is also referred to as “<em>causation</em>” or “<em>cause and effect</em>”.</p>
-<div id="correlation-does-not-imply-causation" class="section level3">
-<h3>Correlation does not imply causation</h3>
+<div id="correlation-does-not-imply-causation" class="section level3" number="0.1.1">
+<h3 number="0.1.1"><span class="header-section-number">0.1.1</span> Correlation does not imply causation</h3>
 <p>For two correlated events A and B, the <strong>possible relations</strong> might be:</p>
 <ol style="list-style-type: decimal">
 <li>A causes B</li>
@@ -391,8 +413,8 @@ summary {
 <li>A and B are consequences of a common cause, but do not cause each other</li>
 </ol>
 </div>
-<div id="causal-inference-and-causal-discovery" class="section level3">
-<h3>Causal Inference and Causal Discovery</h3>
+<div id="causal-inference-and-causal-discovery" class="section level3" number="0.1.2">
+<h3 number="0.1.2"><span class="header-section-number">0.1.2</span> Causal Inference and Causal Discovery</h3>
 <ul>
 <li><strong>Causal Discovery</strong> is identifying relationships from large quantities of data through computational methods. The</li>
 <li><strong>Causal Inference</strong> is the process of drawing a conclusion about a causal connection based on the conditions of the occurrence of an effect.
@@ -402,8 +424,8 @@ summary {
 </ul></li>
 </ul>
 </div>
-<div id="experimental-study" class="section level3">
-<h3>Experimental Study</h3>
+<div id="experimental-study" class="section level3" number="0.1.3">
+<h3 number="0.1.3"><span class="header-section-number">0.1.3</span> Experimental Study</h3>
 <ul>
 <li>Randomized Control Trial (RCT)</li>
 <li>Assignment to control/treatment is random</li>
@@ -412,8 +434,8 @@ summary {
 <li>Expensive and time consuming</li>
 </ul>
 </div>
-<div id="observational-study" class="section level3">
-<h3>Observational Study</h3>
+<div id="observational-study" class="section level3" number="0.1.4">
+<h3 number="0.1.4"><span class="header-section-number">0.1.4</span> Observational Study</h3>
 <ul>
 <li>Unlike RCTs, treatment assignment in observational study is NOT random</li>
 <li>Because it is not random, approaches must remove bias from data, emulating the RCT.</li>
@@ -422,8 +444,8 @@ summary {
 <li>Potential to leverage large datasets</li>
 </ul>
 </div>
-<div id="tutorial-objectives" class="section level3">
-<h3>Tutorial Objectives</h3>
+<div id="tutorial-objectives" class="section level3" number="0.1.5">
+<h3 number="0.1.5"><span class="header-section-number">0.1.5</span> Tutorial Objectives</h3>
 <p>Causal Inference is an active research area with many topics, this tutorial focus on the <strong>potential outcome framework</strong> in <strong>observational study</strong>. Machine learning could assist causal inference at different stages, in this tutorial we focus on how to design <strong>representation learning</strong> approaches for causal inference. Relevant resources include:</p>
 <ul>
 <li>A Survey On Causal Inference (02/2020) <a href="https://arxiv.org/abs/2002.02770">arXiv:2002.02770</a></li>
@@ -431,10 +453,10 @@ summary {
 </ul>
 </div>
 </div>
-<div id="causal-inference-background-and-challenges" class="section level2">
-<h2><a href="https://www.youtube.com/watch?v=I6yi_wd4r94">Causal Inference: Background and Challenges</a></h2>
-<div id="causal-inference-paradigms" class="section level3">
-<h3>Causal Inference Paradigms</h3>
+<div id="causal-inference-background-and-challenges" class="section level2" number="0.2">
+<h2 number="0.2"><span class="header-section-number">0.2</span> <a href="https://www.youtube.com/watch?v=I6yi_wd4r94">Causal Inference: Background and Challenges</a></h2>
+<div id="causal-inference-paradigms" class="section level3" number="0.2.1">
+<h3 number="0.2.1"><span class="header-section-number">0.2.1</span> Causal Inference Paradigms</h3>
 <ul>
 <li><strong>Graphical Causal Models</strong>
 <ul>
@@ -453,8 +475,8 @@ summary {
 </ul></li>
 </ul>
 </div>
-<div id="potential-outcome-framework-key-terms" class="section level3">
-<h3>Potential Outcome Framework: Key Terms</h3>
+<div id="potential-outcome-framework-key-terms" class="section level3" number="0.2.2">
+<h3 number="0.2.2"><span class="header-section-number">0.2.2</span> Potential Outcome Framework: Key Terms</h3>
 <ul>
 <li><p><strong>Unit</strong>: A unit is the atomic research object in the causal study</p>
 <ul>
@@ -498,8 +520,8 @@ summary {
 </ul></li>
 </ul>
 </div>
-<div id="potential-outcome-framework-an-example" class="section level3">
-<h3>Potential Outcome Framework: An Example</h3>
+<div id="potential-outcome-framework-an-example" class="section level3" number="0.2.3">
+<h3 number="0.2.3"><span class="header-section-number">0.2.3</span> Potential Outcome Framework: An Example</h3>
 <ul>
 <li><strong>Task</strong>: Evaluate the treatment effects of several medications for one disease, by exploiting observational data (i.e., EHR)</li>
 <li><strong>Observational Data</strong> may include
@@ -514,23 +536,23 @@ summary {
 </ul>
 </div>
 </div>
-<div id="key-terms" class="section level2">
-<h2>Key Terms</h2>
+<div id="key-terms" class="section level2" number="0.3">
+<h2 number="0.3"><span class="header-section-number">0.3</span> Key Terms</h2>
 <ul>
 <li><p><strong>Causal Graph / Bayesian Network:</strong> in statistics, econometrics, epidemiology, genetics and related disciplines, causal graphs (also known as path diagrams, causal Bayesian networks or DAGs) are probabilistic graphical models that represents a set of variables and their conditional dependencies via a directed acyclic graph (DAG). Bayesian networks are ideal for taking an event that occurred and predicting the likelihood that any one of several possible known causes was the contributing factor. For example, a Bayesian network could represent the probabilistic relationships between diseases and symptoms. Given symptoms, the network can be used to compute the probabilities of the presence of various diseases. <a href="https://en.wikipedia.org/wiki/Bayesian_network">Wikipedia: Bayesian Network</a></p></li>
 <li><p>Potential Outcome Framework</p></li>
 </ul>
 </div>
-<div id="external-refernces" class="section level2">
-<h2>External Refernces</h2>
+<div id="external-refernces" class="section level2" number="0.4">
+<h2 number="0.4"><span class="header-section-number">0.4</span> External Refernces</h2>
 <ul>
 <li>[Pearl, 2009] Judea Pearl. <em>Causality</em>. Cambridge University Press, 2009.</li>
 <li>[Rubin, 2005] Donald Rubin. Causal inference using potential outcomes. <em>Journal of the American Statistical Association</em>, 2005.</li>
 <li>[Holland, 1986] P. Holland, “Statistics and causal inference.” <em>Journal of the American Statistical Association</em>, 81.396 (1986): 945-960.</li>
 </ul>
 </div>
-<div id="tutorial-resources" class="section level2">
-<h2>Tutorial Resources</h2>
+<div id="tutorial-resources" class="section level2" number="0.5">
+<h2 number="0.5"><span class="header-section-number">0.5</span> Tutorial Resources</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?time_continue=39&amp;v=g_2dMQCU0zo&amp;feature=emb_logo">Session 1 of 6: Overview</a></li>
 <li><a href="https://www.youtube.com/watch?v=I6yi_wd4r94">Session 2 of 6: Causal Inference: Background and Challenges</a></li>
@@ -542,8 +564,8 @@ summary {
 <li>Tutorial Website <a href="http://kdd2020tutrorial.thumedialab.com/" class="uri">http://kdd2020tutrorial.thumedialab.com/</a></li>
 </ul>
 </div>
-<div id="tutors" class="section level2">
-<h2>Tutors</h2>
+<div id="tutors" class="section level2" number="0.6">
+<h2 number="0.6"><span class="header-section-number">0.6</span> Tutors</h2>
 <ul>
 <li>Peng Cui (Tsinghua University);</li>
 <li>Zheyan Shen(Tsinghua University);</li>
