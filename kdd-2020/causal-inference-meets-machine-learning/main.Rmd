@@ -1,6 +1,6 @@
 ---
 title: "KDD2020: Casual Inference Meets Machine Learning"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -49,17 +49,78 @@ Causal Inference is an active research area with many topics, this tutorial focu
 - A Survey On Causal Inference (02/2020) [arXiv:2002.02770](https://arxiv.org/abs/2002.02770)
 - Tutorial Website <http://kdd2020tutorial.thumedialab.com>
 
-## Tutors
+## [Causal Inference: Background and Challenges](https://www.youtube.com/watch?v=I6yi_wd4r94)
 
-- Peng Cui (Tsinghua University); 
-- Zheyan Shen(Tsinghua University); 
-- Sheng Li (University of Georgia); 
-- Liuyi Yao (University at Buffalo, USA); 
-- Yaliang Li (Alibaba Group); 
-- Zhixuan Chu (University of Georgia ); 
-- Jing Gao (University at Buffalo)
+### Causal Inference Paradigms
 
-## Resources
+- **Graphical Causal Models**
+  - Causal graphs are probabilistic graphical models to encode assumptions about data-generating process [Pearl, 2009]
+  - Also referred to as Bayesian Network
+  - Related approach: structural equation modeling (SEM)
+  - The direction of the edges (arrows) implies causality. For instance
+    - `X` -> `Y` implies that `Y` will respond to any changes in `X`, or `X` is a cause of `Y`
+- **Potential Outcome Framework** <<--
+  - An approach to statistical analysis of cause and effect based on potential outcomes [Rubin, 2005]
+  - a.k.a., Rubin causal model (RCM), or Neyman-Rubin causal model
+
+### Potential Outcome Framework: Key Terms
+
+- **Unit**: A unit is the atomic research object in the causal study
+  - Single object, e.g., a patient or a website visitor
+  - A collection of objects, e.g., a group of students
+  - This is the individual level of observation for the study
+
+- **Treatment**: An action that applies to a unit
+  - In the binary treatment case (i.e., `W = 0` or `W = 1`), the treated group contains units who received treatment `W = 1`, while the control group contains units who received treatment `W = 0`
+  - Multiple treatments are possible, not only the binary.  For instance, consider different sizes and content of ads
+  
+- **Potential Outcome**: For each unit-treatment pair, the outcome of the treatment when applied on that unit is the potential outcome $Y(W=w)$
+  - For instance, consider a simple drug trial.  If a patient has a disease and receives a treatement, two potential outcomes could be that the patient is cured of the disease, or that the disease is not cured.
+
+- **Observed (Factual) Outcome**: Outcome of treatment that is actually applied. In the binary case, $Y^F = Y(W = w)$.  This is the observed outcome.
+
+- **Counterfactual Outcome**: Potential outcome of the treatments that were not applied to the unit.  In the binary case, $Y^{CF} = Y( W = 1 - w)$.  This outcome cannot be observed.
+
+- A unit can only take one treatment, The the counterfactual outcomes are not observed, leading to the well-known "missing data problem" [Holland, 1986]
+
+- **Treatment Effects** can be defined at the population, treated group, subgroup and individual levels. (Examples in the binary example)
+  - Population Level: Average Treatment Effect (**ATE**)
+    - $ATE = \mathbb{E}[Y(W = 1) - Y(W = 0)]$
+    - e.g., The difference in mean (average) outcomes between units assigned to the treatment $Y(W = 1)$ and units assigned to the control $Y(W = 0)$
+  - Treated Group: Average Treatment Effect on the Treated Group (**ATT**)
+    - $ATT = \mathbb{E}[Y(W = 1| W = 1)] - \mathbb{E}[Y(W = 0| W = 1)]$
+    - e.g., ATT is the difference between the expected outcome of the treatment group (observed), minus the expected outcome if the same group was not treated (counterfactual)
+  - Subgroup: Conditional Average Treatment Effect (**CATE**)
+    - $CATE = \mathbb{E}[Y(W = 1)|X = x] - \mathbb{E}[Y(W = 0)|X = x]$
+  - Individual: Individual Treatment Effect (**ITE**)
+    - $ITE_{i} = Y_{i}(W = 1) - Y_{i}(W = 0)$
+    - e.g., on the individual level, what is the expected outcome under the treatment less the outcome with no treatment.
+    
+### Potential Outcome Framework: An Example
+
+- **Task**: Evaluate the treatment effects of several medications for one disease, by exploiting observational data (i.e., EHR)
+- **Observational Data** may include
+  1. Demographic data from patients 
+  2. Specific medication dosage taken by patients (treatment)
+  3. Outcome of medical tests
+- **Units**: patients
+- **Treatments**: different medications
+- **Outcome**: recover status, blood test results, etc.
+
+## Key Terms
+
+- **Causal Graph / Bayesian Network:** in statistics, econometrics, epidemiology, genetics and related disciplines, causal graphs (also known as path diagrams, causal Bayesian networks or DAGs) are probabilistic graphical models that represents a set of variables and their conditional dependencies via a directed acyclic graph (DAG). Bayesian networks are ideal for taking an event that occurred and predicting the likelihood that any one of several possible known causes was the contributing factor. For example, a Bayesian network could represent the probabilistic relationships between diseases and symptoms. Given symptoms, the network can be used to compute the probabilities of the presence of various diseases. [Wikipedia: Bayesian Network](https://en.wikipedia.org/wiki/Bayesian_network)
+
+- Potential Outcome Framework
+
+## External Refernces
+
+- [Pearl, 2009] Judea Pearl. _Causality_. Cambridge University Press, 2009.
+- [Rubin, 2005] Donald Rubin. Causal inference using potential outcomes. _Journal of the American Statistical Association_, 2005.
+- [Holland, 1986] P. Holland, "Statistics and causal inference." _Journal of the American Statistical Association_, 81.396 (1986): 945-960.
+
+
+## Tutorial Resources
 
 - [Session 1 of 6: Overview](https://www.youtube.com/watch?time_continue=39&v=g_2dMQCU0zo&feature=emb_logo)
 - [Session 2 of 6: Causal Inference: Background and Challenges](https://www.youtube.com/watch?v=I6yi_wd4r94)
@@ -69,3 +130,13 @@ Causal Inference is an active research area with many topics, this tutorial focu
 - [Session 6 of 6: Applications and Potential Directions](https://www.youtube.com/watch?time_continue=1&v=roVS6LQS6tk&feature=emb_logo)
 - A Survey On Causal Inference (02/2020) [arXiv:2002.02770](https://arxiv.org/abs/2002.02770)
 - Tutorial Website <http://kdd2020tutrorial.thumedialab.com/>
+
+## Tutors
+
+- Peng Cui (Tsinghua University); 
+- Zheyan Shen(Tsinghua University); 
+- Sheng Li (University of Georgia); 
+- Liuyi Yao (University at Buffalo, USA); 
+- Yaliang Li (Alibaba Group); 
+- Zhixuan Chu (University of Georgia ); 
+- Jing Gao (University at Buffalo)
