@@ -1,9 +1,8 @@
 ---
-title: "KDD2020: Casual Inference Meets Machine Learning"
+title: "KDD2020: Casual Inference Meets Machine Learning - Notes"
 output: 
   html_document:
     toc: true
-    number_sections: true
 ---
 
 ```{r setup, include=FALSE}
@@ -104,24 +103,82 @@ Causal Inference is an active research area with many topics, this tutorial focu
 - **Task**: Evaluate the treatment effects of several medications for one disease, by exploiting observational data (i.e., EHR)
 - **Observational Data** may include
   1. Demographic data from patients 
-  2. Specific medication dosage taken by patients (treatment)
-  3. Outcome of medical tests
+  2. Specific medication dosage taken by patients (treatment) `W = 0` or `W = 1`
+  3. Outcome of medical tests `Y`
 - **Units**: patients
 - **Treatments**: different medications
 - **Outcome**: recover status, blood test results, etc.
 
+### Potential Outcome Framework: Assumptions
+
+There are three primary assumptions required to leverage this potential outcome framework
+
+#### Assumption: Stable Unit Treatement Value Assumption (SUTVA)
+
+> The potential outcomes for any unit do not vary with the treatment assigned to other units, and, for each unit, there are no different forms or versions of each treatement level, which leads to different potential outcomes.
+
+This assumption emphasizes the:
+
+- **Independence of each unit**, i.e., there are no interactions between units.  In our example, one patient's outcome would not affect other patients' outcomes
+- **Single version for each treatment.** For instance, once medicine with different dosage are different treatments under the SUTVA assumption
+
+#### Assumption: Ignorability
+
+> Given the background variable `X`, treatment assignment `W` is independent of the potential outcomes
+
+<p align = "center">$W \perp \!\!\! \perp Y(W = 0), Y(W = 1)|X$<p>
+
+> By randomly assigning treatment, researchers can ensure that the potential outcomes are independent of treatment assignment, so that the average difference in outcomes between the two groups can only be attributable to treatment. This assumption is formally called ignorability.
+
+Following our example, this assumption implies that:
+
+- If two patients have the background variable $X$, their potential outcome should be the **same** whatever the treatment assignment is.
+- If two patients have the same background variable value, their **treatment assignment mechanism** should be the same regardless of 
+
+#### Assumption: Positivity
+
+For any set of values of $X$, treatment assignment is not deterministic (e.g., some element of randomness in assignment):
+
+<p align = "center">$P(W = w | X = X) > 0$ $\forall w$ and $x$</p>
+
+> Positivity is the assumption that any individual has a positive probability of receiving all values of the treatment variable: Pr(A=a) > 0 for all values of a. In a randomized controlled trial, positivity holds because you will use a coin that has a positive probability of assigning people to either arm of the trial.
+
+- If treatment assignment for some values of X is deterministic, the outcomes of at least one treatment could never be observed.  It would be unable and meaningless to estimate causal effects
+- It implies "common support" or "overlap" of treated and control groups
+- When combined with ignorability it is also called **Strong Ignorability** or **Strongly Ignorable Treatment Assignment**
+
+## A Naive Solution
+
+- A core problem to causal inference, how do we estimate the average potential treated/control outcomes over a specific group? 
+- A naive solution, calculate the difference between the average treated and control outcomes:
+
+$$\hat{ATE} = \frac{1}{N_{T}}\sum^{N_{T}}_{i=1}{Y^{F}_{i}} - \frac{1}{N_{C}}\sum^{N_{C}}_{j=1}{Y^{F}_{j}}$$
+- However, this is not reasonable due to the existence of **confounders**
+
+## Confounders
+
+> In statistics, a confounder is a variable that influences both the dependent variable and independent variable, causing a spurious association. Confounding is a causal concept, and as such, cannot be described in terms of correlations or associations. [Wikipedia: Confounding](https://en.wikipedia.org/wiki/Confounding)
+
+- **Confounders**: Variables that affect both treatment assignment and outcome
+- In the example below, **age** is a confounder
+  - Age affects recovery rate
+  - Age also affects the choice of treatment
+  
+![](./00-confounders-table.png)
+
+## Selection Bias With Confounders
+
+![](./01-selection-bias.png)
+
 ## Key Terms
 
 - **Causal Graph / Bayesian Network:** in statistics, econometrics, epidemiology, genetics and related disciplines, causal graphs (also known as path diagrams, causal Bayesian networks or DAGs) are probabilistic graphical models that represents a set of variables and their conditional dependencies via a directed acyclic graph (DAG). Bayesian networks are ideal for taking an event that occurred and predicting the likelihood that any one of several possible known causes was the contributing factor. For example, a Bayesian network could represent the probabilistic relationships between diseases and symptoms. Given symptoms, the network can be used to compute the probabilities of the presence of various diseases. [Wikipedia: Bayesian Network](https://en.wikipedia.org/wiki/Bayesian_network)
-
-- Potential Outcome Framework
 
 ## External Refernces
 
 - [Pearl, 2009] Judea Pearl. _Causality_. Cambridge University Press, 2009.
 - [Rubin, 2005] Donald Rubin. Causal inference using potential outcomes. _Journal of the American Statistical Association_, 2005.
 - [Holland, 1986] P. Holland, "Statistics and causal inference." _Journal of the American Statistical Association_, 81.396 (1986): 945-960.
-
 
 ## Tutorial Resources
 
