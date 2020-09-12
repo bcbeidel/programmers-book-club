@@ -8,7 +8,7 @@ Notes on the [Workshop on Data Science with Human-in-the-loop (DaSH)](https://si
 
 ### Active Learning++: Incorporating Annotator’s Rationale using Local Model Explanation
 
-> Bhavya Ghai, Q. Vera Liao, Yunfeng Zhang and Klaus Mueller. Active Learning++: Incorporating Annotator’s Rationale using Local Model Explanation
+> Bhavya Ghai, Q. Vera Liao, Yunfeng Zhang and Klaus Mueller. [Active Learning++: Incorporating Annotator’s Rationale using Local Model Explanation](https://drive.google.com/file/d/1Mb7yLErq3gE9Ta0sdk4XOz0TS04Dz2rP/view)
 
 Rather than relying solely on the labels provided by the **oracle** how can we incorporate the **rationale** for their label into the workflow?
 
@@ -31,9 +31,9 @@ When taking in the **oracle** labels
 
 ### An Intuitive User Interface for Human-in-the-loop Entity Name Parsing and Entity Variant Generation
 
-> Kun Qian, Lucian Popa and Yunyao Li. An Intuitive User Interface for Human-in-the-loop Entity Name Parsing and Entity Variant Generation
+> Kun Qian, Lucian Popa and Yunyao Li. [An Intuitive User Interface for Human-in-the-loop Entity Name Parsing and Entity Variant Generation](https://drive.google.com/file/d/1-NT7dHEiMxaAjvIIbr1lll6XL-BelcCe/view) | [DEMO](https://www.youtube.com/watch?v=Q1zgmZCOs6A&feature=youtu.be)
 
-Built a system for comparing multiple interfaces on teh same date-parsing, oracle task.  Comparing the number of clicks, number of annotations, and F1 score.  [DEMO](https://www.youtube.com/watch?v=Q1zgmZCOs6A&feature=youtu.be)
+Built a system for comparing multiple interfaces on teh same date-parsing, oracle task.  Comparing the number of clicks, number of annotations, and F1 score.  
 
 #### **So what?**
 
@@ -46,9 +46,7 @@ Built a system for comparing multiple interfaces on teh same date-parsing, oracl
 
 ### Human-In-The-Loop Topic Discovery with Embedded Text Representations
 
-[Video](https://vimeo.com/445889795) | [Paper](https://drive.google.com/file/d/1c1JU5qABu_WtKcV-u3OIz-HbHUvHUYC0/view) | [Repo](https://github.com/AmFamMLTeam/hltm_welda) | [Team](https://www.ai-ml-amfam.com)
-
-> Eric Bunch, Qian You and Glenn Fung. Human-In-The-Loop Topic Discovery with Embedded Text Representations
+> Eric Bunch, Qian You and Glenn Fung. [Human-In-The-Loop Topic Discovery with Embedded Text Representations]((https://drive.google.com/file/d/1c1JU5qABu_WtKcV-u3OIz-HbHUvHUYC0/view) | [Video](https://vimeo.com/445889795) |  [Repo](https://github.com/AmFamMLTeam/hltm_welda) | [Team](https://www.ai-ml-amfam.com)
 
 Presenter is from an insurer, American Family Insurance, supporting business operations.  Much of their work involves:
 
@@ -78,9 +76,7 @@ WELDA alternates between iterations of Gibbs Sampler, and randomly replacing wor
 
 ### Rationale-based Human-in-the-Loop via Supervised Attention
 
-[Video](https://vimeo.com/445889811) | [Paper](https://drive.google.com/file/d/1t5YtwBpXGt2nYIh3-h1pnp8i-qwxTmF5/view) | [Team](https://www.ai-ml-amfam.com)
-
-> Teja Kanchinadam, Keith Westpfahl, Qian You and Glenn Fung. [Rationale-based Human-in-the-Loop via Supervised Attention](https://drive.google.com/file/d/1t5YtwBpXGt2nYIh3-h1pnp8i-qwxTmF5/view)
+> Teja Kanchinadam, Keith Westpfahl, Qian You and Glenn Fung. [Rationale-based Human-in-the-Loop via Supervised Attention](https://drive.google.com/file/d/1t5YtwBpXGt2nYIh3-h1pnp8i-qwxTmF5/view) | [Video](https://vimeo.com/445889811) | [Team](https://www.ai-ml-amfam.com)
 
 Additional topic from, American Family Insurance.  Dealing with similar problems as above:
 
@@ -107,12 +103,10 @@ Two novel incorporations; one with linear model; another with NN.
 
 ### WhyFlow: Explaining Errors in Data Flows Interactively
 
-[Video](https://vimeo.com/445889973) | [Paper](https://drive.google.com/file/d/1EROo3fYk8E1fnX5vBtB1TYtfs_PWsX-N/view) | [Speaker](https://www.google.com/search?q=nyu+whyflow&oq=nyu+whyflow&aqs=chrome..69i57.2685j0j7&sourceid=chrome&ie=UTF-8)
-
-> Maeda Hanafi, Azza Abouzied, Marina Danilevsky and Yunyao Li. WhyFlow: Explaining Errors in Data Flows Interactively
+> Maeda Hanafi, Azza Abouzied, Marina Danilevsky and Yunyao Li. [WhyFlow: Explaining Errors in Data Flows Interactively](https://drive.google.com/file/d/1EROo3fYk8E1fnX5vBtB1TYtfs_PWsX-N/view) | [Video](https://vimeo.com/445889973) | [Speaker](https://www.google.com/search?q=nyu+whyflow&oq=nyu+whyflow&aqs=chrome..69i57.2685j0j7&sourceid=chrome&ie=UTF-8)
 
 - User case; Business application sees errors at point of end-user interaction.
-- Determining where in code error occurred is difficult, and time cosuming, and full process may not be owned or known by a single user.
+- Determining where in code error occurred is difficult, and time consuming, and full process may not be owned or known by a single user.
   - "Determining Providence For The Error"
 - Given error conditions in end state
   - Builds view out of each code module with explainable predicates that correspond with output
@@ -125,9 +119,7 @@ Note: Unable to find any open source tooling, likely in hands of IBM research.
 
 ### Towards a What-If System for Point-Of-Interest Categorisation
 
-[Video](https://vimeo.com/445889927) | [Paper](https://europe.naverlabs.com/research/publications/point-of-interest-categorisation-towards-putting-the-human-back-in-the-loop/)
-
-> Nikolaos Lagos, Jose Miguel Perez, Michel Langlais and Adrian Mos. Towards a What-If System for Point-Of-Interest Categorisation
+> Nikolaos Lagos, Jose Miguel Perez, Michel Langlais and Adrian Mos. [Towards a What-If System for Point-Of-Interest Categorisation](https://europe.naverlabs.com/research/publications/point-of-interest-categorisation-towards-putting-the-human-back-in-the-loop) | [Video](https://vimeo.com/445889927) 
 
 - Consider map recommendations based on location; Restaurant near Eiffel tower
   - Recommendations may be incomplete (new restaurant), inaccurate (hours of operation), or otherwise not matching the category based on culture or geo (tapas may be breakfast in spain, but not in US) 
@@ -137,11 +129,50 @@ Note: Unable to find any open source tooling, likely in hands of IBM research.
 
 ### InMacs: Interactive modeling and comparison of sentiments from sequence data
 
-> Subhajit Das and Florina Dutt. InMacs: Interactive modeling and comparison of sentiments from sequence data
+> Subhajit Das and Florina Dutt. [InMacs: Interactive modeling and comparison of sentiments from sequence data](https://drive.google.com/file/d/1kbhBs5MtaiZHOeiVUUu0CHu0OGHjj0rZ/view) | [Video](https://vimeo.com/445889843)
+
+Problem: Urban planners mine social media data to compare people's sentiment and topics of discussion
+Provide a tool to allow them to conduct cross-geography analyses.  Current solutions rely on AutoML but don't allow for subjective feedback, or incremental adjustments. Results -->
+
+**InMacs**: Interactive Modeling and Comparison of Sentiments.  With the goals:
+- Build Models: Interactively construct sentiment classifiers and topic models
+    - Allows user to edit text to clean data
+    - Hyperopt AUTOML is under the hood
+- Compare Results: Compare sentiment prediction and topic analysis across multiple geos
+    - HeatMaps To Compare Sentiment Across Geos (Topic Content Matrix)
+    - Provide Temporal view of sentiment across geos
+- Incremental Feedback: Construct models over-time, and provide feedback at each step
+
+- Types of User Feedback Permitted
+    - Remove Data
+    - Delete Text
+    - Replace Text
+    - Update Labels
+    - Specify Text Length
+
+- Standardized Preprocessing
+   - tokenization
+   - stemming
+   - lemmatization
+   - stop word removal
+   
+- Hyperparameter Tuning With Hyperopt
+   
+![](./inmacs-screenshot.png)
+  
+#### TakeAways:
+
+- UI inspiration for Sentiment Analysis w/ Feedback
 
 ### Names Don't Fly: Smart Filters for Profanity Detection and Classification in User-Generated Content
 
-> Hamsa Shwetha Venkataram, Ian Colwell, Steven Liu, Philip Southam, Chris Mattmann and Tomas Soderstrom. Names Don't Fly: Smart Filters for Profanity Detection and Classification in User-Generated Content
+Hamsa Shwetha Venkataram, Ian Colwell, Steven Liu, Philip Southam, Chris Mattmann and Tomas Soderstrom. [Names Don't Fly: Smart Filters for Profanity Detection and Classification in User-Generated Content](https://drive.google.com/file/d/1MZUK6qwlQBnCIyIqF0YcP4aY0VATowbb/view)) | [Video](https://vimeo.com/445889863)
+
+> In this paper, we proposed a pipeline to the use case of detecting profanity in proper nouns, with little to no context. We also demonstrate intuitively, and empirically that incorporating human-in-the- loop validation along with data augmentation helped overcome lack of well-curated training datasets and noisy labels that improved model performance significantly. This work further emphasized the fact that characters can be important signals than the words themselves, and model can indeed deduce at atomic level of granularity without the need for context. Furthermore, we described the technical details for deploying such a framework at scale. 
+
+With Mars 2020 Rover, 11 Million names will be sent on a drone.  Task, classify names.  Problem, the internet is a terrible place. Spacey McSpaceFace, First Name, Last Name., E=mcc(-_-).... and your imagination can go from there...
+
+Classify name as appropriate or inappropriate.  Issues with bias, lack of training data, >1% were inappropriate. Built system to integrate human feedback and overcome those challenges.
 
 ---
 
@@ -149,20 +180,70 @@ Note: Unable to find any open source tooling, likely in hands of IBM research.
 
 ### Cultivating Human Expertise Through AI-Assisted Data Science
 
-> Josh Andres, Christine Wolf, Michael Muller, Justin Weisz, Narendra Nath Joshi, Aabhas Sharma, Krissy Brimijoin, Michael Desmond, Zahra Ashktorab, Qian Pan, Evelyn Duesterwald and Casey Dugan. Cultivating Human Expertise Through AI-Assisted Data Science
+> Josh Andres, Christine Wolf, Michael Muller, Justin Weisz, Narendra Nath Joshi, Aabhas Sharma, Krissy Brimijoin, Michael Desmond, Zahra Ashktorab, Qian Pan, Evelyn Duesterwald and Casey Dugan. [Cultivating Human Expertise Through AI-Assisted Data Science](https://drive.google.com/file/d/1c2X0RybLpXdqh2XMCN2luUPdDUhaQMRc/view) | [Video](https://vimeo.com/445889779)
+
+Data Science Automation systems help with time savings, but have have many concerns, including...
+
+- Over-reliance On Automated Systems
+- Lack Of Engagement
+- Knowledge Gaps; How does this automation fit in larger context?
+- Differing levels of expertise, should be considered
+    - Do workers have knowledge to understand challenge assumptions in model?
+    - Do they understand the impact of their labels, or changes?
+
+The authors frame this decision as an intersection between two forces.
+
+![Automation v. Human Extremes](./ml-automation-pipeline-extremes.png)
+
+Consider an adaptive way to the experience level of the user.  For example, conversational systems, with comparative and symbolic explanations (i.e., Speak to different levels of an audience, and grow with them as they grow.)
+
+#### So What?
+
+Not a lot of meat on the bone here, but the principle resonates with me.  As more and more ML is automated, finding a way to "level-up" with the user, seems relevant to developing effective data-based solutions.  Puts out the challenge that cultivation of human expertise as a goal of any system, not just predictive power or utility.
 
 ### The Next Decade of Data Science
 
-> Justin Weisz and Michael Muller. The Next Decade of Data Science
+> Justin Weisz and Michael Muller. [The Next Decade of Data Science](https://drive.google.com/file/d/1jS4g4SYCDDj6pUXAVK8kNBI82seEhv7_/view) | [Video](https://vimeo.com/445889876)
+
+Given the trend towards low-level automation? What will DS look like in 10 years?  Using survey data across multiple studies, the authors posit the following roles for DS in the future
+
+- **Translators**: Act as a mediator between the language of the business and the language of data and data science; translate business requirements into DS problems
+- **Label Wranglers**: Ensuring that the 'ground truth' labels fed into the model, are reflective of the desired outcomes of the business
+- **Interpreters**: Answer questions like the following:
+    - How was the model produced?
+    - How was the model evaluated?
+    - How does the model make decisions in general? In this instance?
+    - Why is the model trustworthy?
+- **Referees**: How do culturally defined definitions of fairness come into play? What techniques can be applied to address these concerns?
+- **Operators**: Once trained, how do you deploy it?  What guardrails are in place? How does it respond to the real world? 
+- **Hackers**: Ethical Hacking. How can we fool this system? How is it vulnerable to attack?
+- **Auditors** Independent Audits of systems, providing seals of approval
+
+#### So What?
+
+Helpful as framing of current responsibilities, and thinking about what might be next from a career perspective.  Feels like it misses the mark without considering researchers, educators,  and implementers of automl systems.
 
 ### Data Scientists and Designers Can Create The Jobs of The Future
 
-> Diarmuid Cahalane, Patrick Connolly, Andrew Dalton, Bogdan Saceleanu and Medb Corcoran. Data Scientists and Designers Can Create The Jobs of The Future
+> Diarmuid Cahalane, Patrick Connolly, Andrew Dalton, Bogdan Saceleanu and Medb Corcoran. [Data Scientists and Designers Can Create The Jobs of The Future](https://drive.google.com/file/d/1w9iKPs7acItGqZwlt_Pf-uZRg7mpfkel/view) | [Video](https://vimeo.com/445890009)
+
+Propose definition of symbiotic framing of interaction between AI and humans.  Example: Medical coders and machine learning system.  Built a human-in-the-loop system to integrate medical coders to apply their expertise to update ML system.
+
+Expectations for both humans and AI with success in the experiment:
+
+1. Learning - Foster collective expertise to improve performance
+2. Growth - Each party improves over time, to take on new or modified task
+3. Trust - Maintaining trust for continued success of system
+
+#### So what?
+
+Business friendly explanation of what a human-in-the-loop system is, and what value it might bring. 
 
 ### IBM AutoAI: Human-in-the-Loop Automated Machine Learning  Supports Data Scientists to Build Better Models
 
-> Dakuo Wang, Josh Andres, Justin Weisz, Erick Oduor, Udayan Khurana, Horst Samulowitz, Arunima Chaudhary, Abel Valente, Dustin Torres and Casey Dugan. IBM AutoAI: Human-in-the-Loop Automated Machine Learning  Supports Data Scientists to Build Better Models
+> Dakuo Wang, Josh Andres, Justin Weisz, Erick Oduor, Udayan Khurana, Horst Samulowitz, Arunima Chaudhary, Abel Valente, Dustin Torres and Casey Dugan. [IBM AutoAI: Human-in-the-Loop Automated Machine Learning  Supports Data Scientists to Build Better Models](https://drive.google.com/file/d/1RmuGOdwcalfV0YaJh8nTdL0zutF1_hx2/view)
 
+DS produced more models in same time with autoML tools, (duh...)
 
 ---
 
