@@ -375,7 +375,7 @@ summary {
 
 
 <h1 class="title toc-ignore">Data Pricing - From Economics To Data Science.</h1>
-<h3 class="subtitle">Notes On KDD 2020 Tutorial</h3>
+<h3 class="subtitle">Notes On KDD 2020 Tutorial.</h3>
 
 </div>
 
@@ -400,6 +400,17 @@ summary {
 <li><a href="#distinctions-between-digital-and-data-products">Distinctions between Digital and Data Products</a></li>
 <li><a href="#economics-of-data-pricing-summary">Economics of Data Pricing: Summary</a></li>
 </ul></li>
+<li><a href="#part-3-fundamental-principles-of-data-pricing"><span>Part 3: Fundamental Principles of Data Pricing</span></a>
+<ul>
+<li><a href="#versioning-a-fundemental-framework">Versioning: a fundemental framework</a></li>
+<li><a href="#concept-truthfulnesss-in-markets">Concept: Truthfulnesss in Markets</a></li>
+<li><a href="#concept-revenue-maximization">Concept: Revenue Maximization</a></li>
+<li><a href="#concept-fairness-in-markets">Concept: Fairness in Markets</a></li>
+<li><a href="#concept-arbitrage-free-pricing">Concept: Arbitrage-free Pricing</a></li>
+<li><a href="#concept-privacy-preservation">Concept: Privacy-preservation</a></li>
+<li><a href="#concept-computational-efficienty">Concept: Computational Efficienty</a></li>
+</ul></li>
+<li><a href="#fundamental-principles-of-data-pricing-summary">Fundamental Principles of Data Pricing: Summary</a></li>
 <li><a href="#key-terms">Key Terms</a></li>
 <li><a href="#resources">Resources</a></li>
 </ul>
@@ -621,12 +632,116 @@ summary {
 <h3>Economics of Data Pricing: Summary</h3>
 <ul>
 <li>Information goods are distinct from traditional physical goods, by a significant reduction in costs</li>
-<li>Information goods see a substantial reduction in search costs, production costs, replication costs, transportation costs, tracking and verification costs</li>
+<li>Information goods see a significant reduction of search costs, production costs, replication costs, transportation costs, tracking and verification costs</li>
 <li>Significant differences between digital products and data products: consumption units, aggregation, means of consumption, reuse and reselling</li>
 <li>The boundary between digital and data products is fuzzy.</li>
 </ul>
 <hr />
 </div>
+</div>
+<div id="part-3-fundamental-principles-of-data-pricing" class="section level2">
+<h2><a href="https://www.youtube.com/watch?v=JMQ4qmgfCrE&amp;feature=emb_logo">Part 3: Fundamental Principles of Data Pricing</a></h2>
+<p>Replication costs very low, approaching zero on many information goods. - Advantage: Economically Appealing - Disadvantage: Competitors may quickly enter the market</p>
+<div id="versioning-a-fundemental-framework" class="section level3">
+<h3>Versioning: a fundemental framework</h3>
+<ul>
+<li>Set price reflective of the value that a customer places on the information</li>
+<li>Versioning Strategy: make different versions for different types of customers</li>
+<li>ex: software, movies</li>
+<li>Versioning divides customers into subgroups who regard the value of features with differing upside, permitting discriminate pricing between versions.</li>
+</ul>
+<div id="producing-different-versions" class="section level4">
+<h4>Producing Different Versions</h4>
+<p>Most versions of Information goods are produced by subtracting value from the most technologically advanced version. Think instant stock information via API, vs. time-delayed information by an HTML page that requires scraping.</p>
+<ul>
+<li>Information Delay</li>
+<li>Access Convenience (format)</li>
+<li>The comprehensiveness of information (summary vs. full)</li>
+<li>Information manipulation (format for manipulation and use)</li>
+<li>User Community (Can I share posts)</li>
+<li>Annoyance (Go Ad-Free)</li>
+<li>Customer Support</li>
+</ul>
+</div>
+<div id="free-versions" class="section level4">
+<h4>Free Versions</h4>
+<p>Some customers may not realize the value of information good unless they try it. Free versions provide the opportunity for potential customers to try it out to</p>
+<ul>
+<li>Build awareness</li>
+<li>Gain follow-on sales</li>
+<li>Create customer network</li>
+<li>Attracting attention</li>
+<li>Gain competitive advantages (deter competition???)</li>
+</ul>
+</div>
+</div>
+<div id="concept-truthfulnesss-in-markets" class="section level3">
+<h3>Concept: Truthfulnesss in Markets</h3>
+<p>A market is truthful if every buyer is selfish and only offers the price that maximizes the buyer’s utility. I.e., I am only willing to pay a specific amount for that item. No buyer should pay more than is sufficient to purchase the product.</p>
+<p>If consumer A gets 4 dollars of utility out of a product, that is what they pay. If consumer B gets 10 dollars of utility from a product, that is their price.</p>
+</div>
+<div id="concept-revenue-maximization" class="section level3">
+<h3>Concept: Revenue Maximization</h3>
+<p>Rationale: For a business to be successful long term, a more immediate requirement is to win over as many customers as possible. Often this can be done instead of optimizing for cost, profit, or sales.</p>
+<ul>
+<li>Traditional products, revenue is maximized when marginal revenue goes to zero</li>
+<li>For information goods, with very low replication costs, the conditions may be quite different.</li>
+</ul>
+</div>
+<div id="concept-fairness-in-markets" class="section level3">
+<h3>Concept: Fairness in Markets</h3>
+<ul>
+<li>A market is fair if each seller gets the ‘fair share’ of the revenue in coalition</li>
+<li>Shapley fairness: <span class="math inline">\(k\)</span> sellers cooperatively participate in a transaction with payment <span class="math inline">\(v\)</span>
+<ul>
+<li>Balance: the payment is fully distributed to all sellers</li>
+<li>Symmetry: the same contribution to utility should be paid</li>
+<li>Zero elements: No contribution, no payment</li>
+<li>Additivity: If goods can be used for two tasks, <span class="math inline">\(T1\)</span> and <span class="math inline">\(T2\)</span> with payments <span class="math inline">\(v1\)</span> and <span class="math inline">\(v2\)</span>. Then payment for should be additive for the utility of both tasks <span class="math inline">\(v1 + v2\)</span></li>
+</ul></li>
+<li><strong>Shapley Value</strong>: unique allocation of payment that satisfies all requirements in Shapley fairness</li>
+</ul>
+<p>For information goods, the marginal production costs are close to zero; a seller can produce more units of the same information to obtain a larger Shapley value.</p>
+</div>
+<div id="concept-arbitrage-free-pricing" class="section level3">
+<h3>Concept: Arbitrage-free Pricing</h3>
+<p>Arbitrage is the activity that takes advantage of the price between two or more markets. Consider a scenario where a product could be purchased on one online store (Amazon) and resold on another (eBay) at a higher price. Another example, if a specific journal article costs $35 dollars, but the publisher offers a subscription at $25 per month, then the user could subscribe, get the article, and then unsubscribe.</p>
+<p>Arbitrage is often undesirable.</p>
+</div>
+<div id="concept-privacy-preservation" class="section level3">
+<h3>Concept: Privacy-preservation</h3>
+<ul>
+<li>Highly desirable to preserve privacy in marketplaces of information goods</li>
+<li>Transactions have multiple parties to consider
+<ul>
+<li>buyers</li>
+<li>providers of information goods</li>
+<li>third parties</li>
+</ul></li>
+<li>Lots of things were tried.</li>
+</ul>
+</div>
+<div id="concept-computational-efficienty" class="section level3">
+<h3>Concept: Computational Efficienty</h3>
+<p>Supplemental Reference: <a href="https://arxiv.org/pdf/1805.08125.pdf">A Marketplace for Data: An Algorithmic Solution</a></p>
+<p>Computing prices efficiently with respect to a large number of goods and a large number of buyers. - The complexity of computing prices as to be polynomial with respect to the number of sellers <span class="math inline">\(\theta(2^{sellers})\)</span>, and cannot grow concerning the number of goods/buyers when prices are updated - Auction efficiency must be fast.</p>
+</div>
+</div>
+<div id="fundamental-principles-of-data-pricing-summary" class="section level2">
+<h2>Fundamental Principles of Data Pricing: Summary</h2>
+<ul>
+<li>Versioning is a common mechanism in designing and pricing information goods</li>
+<li>Many essential requirements for pricing information goods, including
+<ul>
+<li>truthfulness</li>
+<li>revenue maximization</li>
+<li>fairness</li>
+<li>arbitrage-free pricing</li>
+<li>privacy preservation</li>
+<li>computational efficiency</li>
+</ul></li>
+</ul>
+<hr />
 </div>
 <div id="key-terms" class="section level2">
 <h2>Key Terms</h2>
@@ -635,12 +750,15 @@ summary {
 <li><strong>Data Products</strong>: Datasets as products and information services derived from datasets.</li>
 <li><strong>Information Goods</strong>: Include digital and data products</li>
 <li><strong>Platform businesses</strong>: provide matching services to customers, improve efficiencies</li>
-<li><strong>rival (rivalry)</strong>: In economics, a good is said to be rivalrous or a rival if one consumer’s consumption prevents simultaneous consumption by other consumers.</li>
+<li><strong>rival (rivalry)</strong>: In economics, a good is said to be rivalrous or a rival if one consumer’s consumption prevents other consumers’ simultaneous consumption.</li>
+<li><strong>Desiderata</strong>: something that is needed or wanted.</li>
+<li><strong>Shapley Value</strong>: unique allocation of payment that satisfies all requirements in Shapley fairness</li>
 </ul>
 </div>
 <div id="resources" class="section level2">
 <h2>Resources</h2>
 <ul>
+<li><a href="https://arxiv.org/pdf/2009.04462.pdf">A Survey on Data Pricing: from Economics to Data Science: Jian Pei</a></li>
 <li><a href="https://www.cs.sfu.ca/~jpei/DataPricingTutorial.html">Data Pricing – From Economics to Data Science: Full Tutorial</a></li>
 <li><a href="https://www.youtube.com/watch?v=csvxTf7Nfxc&amp;feature=emb_logo">Part 1: Introduction</a></li>
 <li><a href="https://www.youtube.com/watch?v=7pyHDkKWa3k&amp;feature=emb_logo">Part 2: Economics Of Data Pricing</a></li>

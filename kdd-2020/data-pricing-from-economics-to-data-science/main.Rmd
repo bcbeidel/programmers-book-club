@@ -1,6 +1,6 @@
 ---
 title: "Data Pricing - From Economics To Data Science."
-subtitle: "Notes On KDD 2020 Tutorial"
+subtitle: "Notes On KDD 2020 Tutorial."
 output: 
   html_document:
     toc: true
@@ -170,9 +170,106 @@ The boundary is fuzzy; consider social media.  In individual reading (digital pr
 ### Economics of Data Pricing: Summary
 
 - Information goods are distinct from traditional physical goods, by a significant reduction in costs
-- Information goods see a substantial reduction in search costs, production costs, replication costs, transportation costs, tracking and verification costs
+- Information goods see a significant reduction of search costs, production costs, replication costs, transportation costs, tracking and verification costs
 - Significant differences between digital products and data products: consumption units, aggregation, means of consumption, reuse and reselling
 - The boundary between digital and data products is fuzzy.
+
+---
+
+## [Part 3: Fundamental Principles of Data Pricing](https://www.youtube.com/watch?v=JMQ4qmgfCrE&feature=emb_logo)
+
+Replication costs very low, approaching zero on many information goods.
+- Advantage: Economically Appealing
+- Disadvantage: Competitors may quickly enter the market
+
+### Versioning: a fundemental framework
+
+- Set price reflective of the value that a customer places on the information
+- Versioning Strategy: make different versions for different types of customers
+- ex: software, movies
+- Versioning divides customers into subgroups who regard the value of features with differing upside, permitting discriminate pricing between versions.
+
+#### Producing Different Versions
+
+Most versions of Information goods are produced by subtracting value from the most technologically advanced version.  Think instant stock information via API, vs. time-delayed information by an HTML page that requires scraping.
+
+- Information Delay
+- Access Convenience (format)
+- The comprehensiveness of information (summary vs. full)
+- Information manipulation (format for manipulation and use)
+- User Community (Can I share posts)
+- Annoyance (Go Ad-Free)
+- Customer Support
+
+#### Free Versions
+
+Some customers may not realize the value of information good unless they try it. Free versions provide the opportunity for potential customers to try it out to
+
+- Build awareness
+- Gain follow-on sales
+- Create customer network
+- Attracting attention
+- Gain competitive advantages (deter competition???)
+
+### Concept: Truthfulnesss in Markets
+
+A market is truthful if every buyer is selfish and only offers the price that maximizes the buyer's utility. I.e., I am only willing to pay a specific amount for that item.  No buyer should pay more than is sufficient to purchase the product.
+
+If consumer A gets 4 dollars of utility out of a product, that is what they pay.  If consumer B gets 10 dollars of utility from a product, that is their price.
+
+### Concept: Revenue Maximization
+
+Rationale: For a business to be successful long term, a more immediate requirement is to win over as many customers as possible.  Often this can be done instead of optimizing for cost, profit, or sales.
+
+- Traditional products, revenue is maximized when marginal revenue goes to zero
+- For information goods, with very low replication costs, the conditions may be quite different.
+
+### Concept: Fairness in Markets
+
+- A market is fair if each seller gets the 'fair share' of the revenue in coalition
+- Shapley fairness: $k$ sellers cooperatively participate in a transaction with payment $v$
+    - Balance: the payment is fully distributed to all sellers
+    - Symmetry: the same contribution to utility should be paid
+    - Zero elements: No contribution, no payment
+    - Additivity: If goods can be used for two tasks, $T1$ and $T2$ with payments $v1$ and $v2$. Then payment for should be additive for the utility of both tasks $v1 + v2$
+
+- **Shapley Value**: unique allocation of payment that satisfies all requirements in Shapley fairness
+
+For information goods, the marginal production costs are close to zero; a seller can produce more units of the same information to obtain a larger Shapley value.
+
+### Concept: Arbitrage-free Pricing
+
+Arbitrage is the activity that takes advantage of the price between two or more markets.  Consider a scenario where a product could be purchased on one online store (Amazon) and resold on another (eBay) at a higher price. Another example, if a specific journal article costs \$35 dollars, but the publisher offers a subscription at \$25 per month, then the user could subscribe, get the article, and then unsubscribe.
+
+Arbitrage is often undesirable.
+
+### Concept: Privacy-preservation
+
+- Highly desirable to preserve privacy in marketplaces of information goods
+- Transactions have multiple parties to consider
+    - buyers
+    - providers of information goods
+    - third parties
+- Lots of things were tried.
+
+### Concept: Computational Efficienty
+
+Supplemental Reference: [A Marketplace for Data: An Algorithmic Solution](https://arxiv.org/pdf/1805.08125.pdf)
+
+Computing prices efficiently with respect to a large number of goods and a large number of buyers.
+- The complexity of computing prices as to be polynomial with respect to the number of sellers $\theta(2^{sellers})$, and cannot grow concerning the number of goods/buyers when prices are updated
+- Auction efficiency must be fast.
+
+## Fundamental Principles of Data Pricing: Summary
+
+- Versioning is a common mechanism in designing and pricing information goods
+- Many essential requirements for pricing information goods, including
+    - truthfulness
+    - revenue maximization
+    - fairness
+    - arbitrage-free pricing
+    - privacy preservation
+    - computational efficiency
 
 ---
 
@@ -182,10 +279,13 @@ The boundary is fuzzy; consider social media.  In individual reading (digital pr
 - **Data Products**: Datasets as products and information services derived from datasets.
 - **Information Goods**: Include digital and data products
 - **Platform businesses**: provide matching services to customers, improve efficiencies
-- **rival (rivalry)**: In economics, a good is said to be rivalrous or a rival if one consumer's consumption prevents simultaneous consumption by other consumers.
+- **rival (rivalry)**: In economics, a good is said to be rivalrous or a rival if one consumer's consumption prevents other consumers' simultaneous consumption.
+- **Desiderata**: something that is needed or wanted.
+- **Shapley Value**: unique allocation of payment that satisfies all requirements in Shapley fairness
 
 ## Resources
 
+- [A Survey on Data Pricing: from Economics to Data Science: Jian Pei](https://arxiv.org/pdf/2009.04462.pdf)
 - [Data Pricing – From Economics to Data Science: Full Tutorial](https://www.cs.sfu.ca/~jpei/DataPricingTutorial.html)
 - [Part 1: Introduction](https://www.youtube.com/watch?v=csvxTf7Nfxc&feature=emb_logo)
 - [Part 2: Economics Of Data Pricing](https://www.youtube.com/watch?v=7pyHDkKWa3k&feature=emb_logo)
