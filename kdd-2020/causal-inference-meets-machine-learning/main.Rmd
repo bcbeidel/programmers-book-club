@@ -147,7 +147,7 @@ For any set of values of $X$, treatment assignment is not deterministic (e.g., s
 - It implies "common support" or "overlap" of treated and control groups
 - When combined with ignorability it is also called **Strong Ignorability** or **Strongly Ignorable Treatment Assignment**
 
-## A Naive Solution
+### A Naive Solution
 
 - A core problem to causal inference, how do we estimate the average potential treated/control outcomes over a specific group? 
 - A naive solution, calculate the difference between the average treated and control outcomes:
@@ -155,7 +155,7 @@ For any set of values of $X$, treatment assignment is not deterministic (e.g., s
 $$\hat{ATE} = \frac{1}{N_{T}}\sum^{N_{T}}_{i=1}{Y^{F}_{i}} - \frac{1}{N_{C}}\sum^{N_{C}}_{j=1}{Y^{F}_{j}}$$
 - However, this is not reasonable due to the existence of **confounders**
 
-## Confounders
+### Confounders
 
 > In statistics, a confounder is a variable that influences both the dependent variable and independent variable, causing a spurious association. Confounding is a causal concept, and as such, cannot be described in terms of correlations or associations. [Wikipedia: Confounding](https://en.wikipedia.org/wiki/Confounding)
 
@@ -164,11 +164,35 @@ $$\hat{ATE} = \frac{1}{N_{T}}\sum^{N_{T}}_{i=1}{Y^{F}_{i}} - \frac{1}{N_{C}}\sum
   - Age affects recovery rate
   - Age also affects the choice of treatment
   
-![](./00-confounders-table.png)
+![Confounders](./00-confounders-table.png)
 
-## Selection Bias With Confounders
+### Selection Bias With Confounders
 
-![](./01-selection-bias.png)
+![Confounders With Selection Bias](./01-selection-bias.png)
+
+## [Classical Causal Inference Methods](https://www.youtube.com/watch?time_continue=4&v=f2dvVpDxD3A&feature=emb_logo)
+
+### Causal Inference Methods: Re-Weighting
+
+<http://www.rebeccacarter.com/blog/2017-07-05-ip-weighting/>
+
+Selection Bias creates a challenge due to distributions of treated and control groups. Sample re-weighting is a common way to overcome the selection bias problem, by **assigning appropriate weight to each sample** in the observation dataset. 
+
+#### Key Concept: **Balancing Score** $$b(X)$$ is a general weighting score, which is a function of the covariates $$X$$ such that the assignment to the treatment groups $$W$$ is independent of the covariats $$x$$ given the balancing score $$b(x)$$, or otherwise described as...
+
+$$W \perp \!\!\! \perp x | b(x)$$
+
+#### Key Concept: **Propensity Score**, a type of balancing score, the conditional probability of assignment to a treatment, given a vector of observed covariates
+
+### Causal Inference Methods: Matching
+
+### Causal Inference Methods: Tree-Based
+
+### Causal Inference Methods: Stratification
+
+### Causal Inference Methods: MultiTask
+
+### Causal Inference Methods: Meta-Learning
 
 ## Key Terms
 
@@ -179,6 +203,7 @@ $$\hat{ATE} = \frac{1}{N_{T}}\sum^{N_{T}}_{i=1}{Y^{F}_{i}} - \frac{1}{N_{C}}\sum
 - [Pearl, 2009] Judea Pearl. _Causality_. Cambridge University Press, 2009.
 - [Rubin, 2005] Donald Rubin. Causal inference using potential outcomes. _Journal of the American Statistical Association_, 2005.
 - [Holland, 1986] P. Holland, "Statistics and causal inference." _Journal of the American Statistical Association_, 81.396 (1986): 945-960.
+- Barter, R. (2017, July 5). The intuition behind inverse probability weighting in causal inference [Blog post]. Retrieved from <http://www.rebeccacarter.com/blog/2017-07-05-ip-weighting/>
 
 ## Tutorial Resources
 
