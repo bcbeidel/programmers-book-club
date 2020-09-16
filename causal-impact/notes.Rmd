@@ -1,6 +1,9 @@
 ---
 title: "Causal Inference with CausalImpact."
-output: github_document
+output: 
+  github_document:
+    toc: true
+    toc_depth: 2
 ---
 
 Notes related to Causal Inference with [CausalImpact](https://google.github.io/CausalImpact/CausalImpact.html), R Package from Google. 

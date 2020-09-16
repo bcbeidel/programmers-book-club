@@ -1,14 +1,17 @@
 ---
 title: "Data Pricing - From Economics To Data Science."
 subtitle: "Notes On KDD 2020 Tutorial."
-output: 
-  html_document:
+output:
+  github_document:
     toc: true
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+[Slides](https://www2.cs.sfu.ca/~jpei/publications/Data%20Pricing%20by%20Jian%20Pei%20KDD%202020.pdf) | [Website](https://www.cs.sfu.ca/~jpei/DataPricingTutorial.html) | [Video Playlist](https://www.youtube.com/playlist?list=PL8n-erTbIhTMvdXs657kBOp2pXFJVyAnB)
 
 ## Instructor Summary
 
@@ -257,7 +260,7 @@ Arbitrage is often undesirable.
 Supplemental Reference: [A Marketplace for Data: An Algorithmic Solution](https://arxiv.org/pdf/1805.08125.pdf)
 
 Computing prices efficiently with respect to a large number of goods and a large number of buyers.
-- The complexity of computing prices as to be polynomial with respect to the number of sellers $\theta(2^{sellers})$, and cannot grow concerning the number of goods/buyers when prices are updated
+- The complexity of computing prices as to be polynomial with respect to the number of sellers $\theta(n^{sellers})$, and cannot grow concerning the number of goods/buyers when prices are updated
 - Auction efficiency must be fast.
 
 ## Fundamental Principles of Data Pricing: Summary
@@ -270,6 +273,24 @@ Computing prices efficiently with respect to a large number of goods and a large
     - arbitrage-free pricing
     - privacy preservation
     - computational efficiency
+
+---
+
+## [Part 4: Pricing Digital Products](https://www.youtube.com/watch?v=cNMF392mm0M&feature=emb_logo)
+
+### Streams of Revenue
+
+Three primary potential streams of revenue for digital products
+- Money
+- Inofrmation privary
+- Time and Attention
+
+
+### Concept: Micropayments
+
+### Pricing Model: Bundling
+
+### Pricing Model: Auctions
 
 ---
 

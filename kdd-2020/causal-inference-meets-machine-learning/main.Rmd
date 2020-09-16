@@ -1,8 +1,9 @@
 ---
 title: "KDD2020: Casual Inference Meets Machine Learning - Notes"
-output: 
-  html_document:
+output:
+  github_document:
     toc: true
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
