@@ -1,3 +1,10 @@
+---
+tags: [aws, cloud-guru]
+title: 01-exam-overview
+created: '2020-07-09T17:15:34.123Z'
+modified: '2020-09-30T23:51:25.261Z'
+---
+
 # AWS Certified Developer Associate 
 
 ## Exam: Weighting

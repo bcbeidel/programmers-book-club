@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 08-and-calls-them-to-action
+created: '2020-07-25T19:13:42.738Z'
+modified: '2020-09-30T23:50:06.417Z'
+---
+
 # Chapter 8: And Calls Them To Action
 
 **Customers do not take action unless they are challenged to take action.**  At this point, we have spoken directly to the customer.  We identified their challenges, empathized with their feelings, established our competence, and layed out a plan, but that is not enough.  They need a call to action.  Customers do not have ESP; we have to make a clear invitation to join us. Otherwise, they won't take that first step.

@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 05-has-a-problem
+created: '2020-07-25T19:00:15.342Z'
+modified: '2020-09-30T23:50:06.370Z'
+---
+
 # Chapter 5: Has A Problem
 
 **Companies tend to sell solutions to external problems, but customers buy solutions to internal problems.**  That problem is the `hook` that draws people into the story.  The more we talk about our customers' experience, the more interest they will have in the brand.

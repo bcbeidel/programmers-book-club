@@ -1,3 +1,10 @@
+---
+tags: [clean-code]
+title: 01-DDD-For-Me
+created: '2020-07-09T17:15:35.179Z'
+modified: '2020-09-30T23:46:16.115Z'
+---
+
 # Chapter 1: DDD For Me
 
 > Your organization will benefit most from software models that explicitly reflect its core competencies. (p.1)

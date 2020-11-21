@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 06-and-meets-a-guide
+created: '2020-07-25T19:00:56.693Z'
+modified: '2020-09-30T23:50:06.386Z'
+---
+
 # Chapter 6: And Meets a Guide
 
 **Customers are not looking for another hero; they are looking for a guide.**  Frodo has Gandalf, Kathiss has Hamitch, Luke has Yoda, Hamlet was guided by his father's ghost. People wake up self-identifying as the hero in their own story, troubled by their own internal, external and philosophical conflicts. The fatal mistake that companies make is that they position themselves as the hero in the story.

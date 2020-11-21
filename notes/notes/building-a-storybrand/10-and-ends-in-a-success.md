@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 10-and-ends-in-a-success
+created: '2020-07-25T19:15:16.691Z'
+modified: '2020-09-30T23:50:06.450Z'
+---
+
 # Chapter 10: And Ends In Success
 
 **Never assume people understand how your brand can change their lives. Tell them.**  Successful brands and leaders make it clear what life will look like if somebody engages their products or services.  Without vision, people and brands will both perish.  The ending should be specific and clear, with a simple before and after.  Consider the exercise with the following grid.

@@ -281,16 +281,156 @@ Computing prices efficiently with respect to a large number of goods and a large
 ### Streams of Revenue
 
 Three primary potential streams of revenue for digital products
-- Money
-- Inofrmation privary
-- Time and Attention
 
+- Money (Sell Content To Customers)
+- Information Privacy (Collect Data; Sell Information)
+- Time and Attention (Sell Space To Advertisers)
+    - Embed ads in products
+    - Challenge: hard to accurately measure advertising effects
+
+Three streams are rarely independent, potentially competing. Companies must weigh and balance multiple streams.  Think free trials, freemium models, tiered features.
 
 ### Concept: Micropayments
 
+Customer can pay a very small amount. Typically impractical using standard credit cards via network service fees. Have distinct affects on consumer behavior.
+
 ### Pricing Model: Bundling
 
+- Combine products or services into grouped 'bundles' for sale in combined package.
+- A Combinatorial optimization problem.
+
 ### Pricing Model: Auctions
+
+#### Common Auction Models
+
+- **Ascending-bid auction (aka English auction)**: the price is raised successively
+until only one bidder remains, who wins the object at the final price
+• **Descending auction (aka the Dutch auction)**: start at a very high price and
+lower the price continuously, until the first bidder calls out and accepts the
+current price
+• **First-price sealed-bid auction**: every bidder submits a bid without knowing
+the others’ bids, and the one making the highest bid wins and pays at the
+named price
+• **Second-price sealed-bid auction (aka the Vickrey auction)**: every bidder
+submits a bid without knowing the others’ bids, and the one making the
+highest bid wins and pays only the second highest bid 
+
+
+#### Auctions: Value Infromation Paradigms
+
+How does information differ among bidders?
+
+- **Private-Value Model**: every bidder as an independent value for the object on sale
+- **Pure common-value model**: the actual value of the object for sale is the same for all bidders, but bidders have different private information RE: the actual value
+
+#### Auctions: Revenue Equivilence Therom
+
+Assuming:
+
+- risk neutral bidders
+- independent private valuation of object, drawn from cumulative distribution (increasing and atomless)
+
+Expect:
+
+Any auction mechanism yields the same expected revenue and same bidder making payment if
+
+1) The object is allocated to the bidder with the highest valuation
+2) Any bidder with valuation $$v_{min}$$ has expected utility of 0
+
+
+#### Auctions: Sponsered Search Auctions
+
+Content providers pay search engines for traffic to their websites (Google, Facebook)
+- pay-per-impression (PPM), pay-per-click (PPC), PPA (pay-per-action) all used.
+
+
+Lots of auction variants...
+
+## [Part 5A: Pricing Data Products](https://www.youtube.com/watch?v=plANqVZ_BV0&feature=emb_logo)
+
+- Three Types Of Data: open, public, private
+- Challenge: Non-rivalrous nature of data makes copyright difficult to enforce
+
+- Types of Queries:
+  - Estimate value of thing; compare value of things
+  - Show all details on thing
+- Beneficiaries
+  - Analysts
+  - Application Vendors
+  - data processing algorithm developers
+  - data providers
+  - consulstant
+  - licensing entitites
+  - data market owners
+- market structures
+  - monopoly
+  - oligopoly
+  - strong market competitors
+
+### Data Pricing Strategies
+
+  - Free Data
+  - Usage-Based Pricing
+    - fee per unit consumed
+  - Package Pricing
+    - set amount of usage, for fixed fee
+  - Flat-fee tariff model
+    - fixed fee
+  - Two-part tariff
+    - fixed fee, plus fee per unit consumed
+  - Freemium
+
+### Data Pricing: Versioning
+
+Two primary factors
+
+- Data Quality
+  - Difficult to estimate
+- Data Position
+  - Each view of data is a version,
+  - seller only needs to specify a few views, then prices can be decided algorithmically
+
+### Arbitrage Free Pricing
+
+Arbitrage is the activities that take advantage of price differences between two or more markets or channels 
+
+- Arbitrage is still possible to derive answers to a bundle of queries from another bundle of queries and their answers
+- Arbitrage is still possible on biased estimators for statistical queries?
+- Can we can obtain arbitrage-free pricing maximizing profit given the distribution of buyer demands?
+
+### Types Of Arbitrage
+
+- Price-Based: If prices quoted by queries, answers should not be deduced by prices
+- Separate Account: a buyer may use multiple accounts to derive answers to query bundle
+- Post-Processing: If the answers to `q'` can be derived from another `q` then `q` should be no cheaper than `q'`
+- Serendipitous: For a specific instance, `q` may be derived from `q'`
+- Almost-Certain: Two queries are almost identical, but prices are dramatically different
+
+### Quirana: Effienct Pricing For Queies
+
+- Regard a query as an uncertainty reduction mechanism
+- A buyer faces a set of possible databases I defined by a database schema, primary keys and predefined constraints
+- Once a buyer obtains the answer E to a query Q, all possible databases D such that 𝐸≠ 𝑄(𝐷) are eliminated 
+
+### Fair and Truthful Pricing
+
+Given a data-stream $X$ supplied by multiple sellers.  Each input would have a value associated with it.  Estimating that contribution weight (i.e., estimating Shapley Value).  
+
+Computationally intensive, the speaker covers multiple techniques.
+
+### Privacy Preservation
+
+- Distinction in pricing is possible between sensitive and non-sensitive data
+
+- Due to the privacy concerns, when a company may have opportunities to collect data about its customers, should it do it (i.e., collecting and revealing the data) or not (i.e., a blanket policy of never colleccng)?
+- Should not collect customer data if the total gains from trading the data cannot cover the privacy loss 
+- Should offer two contracts on their services and products
+
+### History-aware Pricing
+
+- Buyers are charged only once for data purchased and not updated 
+- Refund – a user can ask for refunds of data they she/he has bought before
+- For each query, the seller issues a coupon in addition to the query result, where the coupon records the identify information of the data in the query result
 
 ---
 

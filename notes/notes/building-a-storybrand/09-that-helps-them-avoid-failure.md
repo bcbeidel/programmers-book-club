@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 09-that-helps-them-avoid-failure
+created: '2020-07-25T19:14:23.248Z'
+modified: '2020-09-30T23:50:06.433Z'
+---
+
 # Chapter 9: That Helps Them Avoid Failure
 
 **Every human is trying to avoid a tragic ending.**  The only two motivations a hero has in a story are to escape something bad or experience something good. A story with nothing to lose lacks motivation for the hero.  This does not mean that we should be fear-mongers.  The concerns raised should be realistic and helpful framing for the customer.  However, the author suggests that most businesses do not convey the risks and their message falls flat.

@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 07-who-gives-them-a-plan
+created: '2020-07-25T19:10:03.951Z'
+modified: '2020-09-30T23:50:06.401Z'
+---
+
 # Chapter 7: Who Gives Them A Plan
 
 **Customers trust a guide who has a plan.** Commitments are risky for customers because, as soon as they commit, they can lose something.  Consider the customer on the edge of a rushing creek.  If they genuinely want the thing on the other side, but here a waterfall downstream.  There is a risk associated with their journey.  Our goal as the guide is to provide stones in the water to allow the customer to cross to their final objective. The

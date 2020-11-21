@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 04-a-character
+created: '2020-07-25T18:58:19.188Z'
+modified: '2020-09-30T23:50:06.348Z'
+---
+
 # Chapter 4: A Character
 
 The customer is the hero, not your brand. The story opens with a hero who wants something.  Framing the message around the customer and their desires should be the focus. **Pare down the Customer's Ambition to a Single Focus**, having too many desires dilutes your objectives.

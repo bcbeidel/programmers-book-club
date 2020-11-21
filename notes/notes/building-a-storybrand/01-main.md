@@ -1,3 +1,10 @@
+---
+tags: [building-a-story-brand]
+title: 01-main
+created: '2020-07-24T01:58:56.117Z'
+modified: '2020-09-30T23:48:51.471Z'
+---
+
 # Building A Storybrand
 
 Notes on [_Building a Storybrand: Clarify Your Message So Customers Will Listen_](https://buildingastorybrand.com/) by Donald Miller.
