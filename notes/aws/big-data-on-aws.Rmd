@@ -178,3 +178,16 @@ Again, not every job is created equally.
 
 ![](./img/11-data-store-comparison.png)
 
+## Module 5: Big Data Processing And Analytics
+
+> Process of inspecting, cleaning, transforming, and modeling data in order to dicover useful information, draw conclusions and support decision making.
+
+This is a challenge because volume of data in increasing, the questions are complex, and often they are ad-hoc.
+
+Training makes the case for tools like AWS Athena, RedShift Spectrum.
+
+For Athena, things to reduce costs
+
+- Partition Data
+- Compresss data
+- Use formats like OCR or parquet

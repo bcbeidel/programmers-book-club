@@ -18,6 +18,8 @@ Big Data On AWS
     Solutions](#module-4-big-data-storage-solutions)
     -   [Key Concepts: Data Lake](#key-concepts-data-lake)
     -   [Key Concepts: NoSQL DB](#key-concepts-nosql-db)
+-   [Module 5: Big Data Processing And
+    Analytics](#module-5-big-data-processing-and-analytics)
 
 Module 2: Overview Big Data Pipeline on AWS
 -------------------------------------------
@@ -212,3 +214,21 @@ Again, not every job is created equally.
 ![](./img/10-access-pattern.png)
 
 ![](./img/11-data-store-comparison.png)
+
+Module 5: Big Data Processing And Analytics
+-------------------------------------------
+
+> Process of inspecting, cleaning, transforming, and modeling data in
+> order to dicover useful information, draw conclusions and support
+> decision making.
+
+This is a challenge because volume of data in increasing, the questions
+are complex, and often they are ad-hoc.
+
+Training makes the case for tools like AWS Athena, RedShift Spectrum.
+
+For Athena, things to reduce costs
+
+-   Partition Data
+-   Compresss data
+-   Use formats like OCR or parquet
