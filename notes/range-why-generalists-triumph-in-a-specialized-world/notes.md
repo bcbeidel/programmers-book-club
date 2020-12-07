@@ -20,7 +20,7 @@ Some of the bite-size take-aways for me were.
 
 ## Key Terms
 
-- **kind learning environments**: patterns repeat over and over, and feedback is extremely accurate and usually rapid.  Think golf or chess.  The scenarios (piece positions) or (golf strokes repeat) over and over. Accommodating to deliberate practice.
+- **kind learning environments**: patterns repeat over and over, and feedback is extremely accurate and usually rapid.  Think golf or chess.  The scenarios occur (piece positions) or (golf strokes repeat) repeatedly, accommodating to deliberate practice.
 
 - **wicked learning environments**: the 'rules of the game' are unclear or incomplete, no repetitive patterns may exist or may not be obvious, and feedback is delayed, inaccurate, or both.  These are the environments where broad 
 
