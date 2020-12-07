@@ -1,5 +1,7 @@
 # Takeaways from Range
 
+> Epstein, David J. Range: Why Generalists Triumph in a Specialized World. , 2019. Print.
+
 I perceived this book as the counterpoint to the 10,000 hour rule.  Through examples in sports, business, politics, science and other stories of history the author makes a case for broad, sampled experiences, and mental models that those experiences provide.  
 
 The underlying thesis requires the identification of an area of pursuit as either _kind_ or _wicked_.  The author makes the case that deliberate practice (i.e., the 10,000 hour rule) can provide value in _kind_ learning environments where the rules don't change and feedback is quick deliberate (think Golf, Chess, spelling bees, etc.).  
